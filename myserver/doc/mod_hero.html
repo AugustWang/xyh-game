@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset= UTF-8">
+<title>Module mod_hero</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" title="EDoc">
+</head>
+<body bgcolor="white">
+<div class="navbar"><a name="#navbar_top"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
+<hr>
+
+<h1>Module mod_hero</h1>
+<ul class="index"><li><a href="#description">Description</a></li><li><a href="#index">Function Index</a></li><li><a href="#functions">Function Details</a></li></ul>Hero.
+
+<p><b>Authors:</b> Rolong (<a href="mailto:rolong@vip.qq.com"><tt>rolong@vip.qq.com</tt></a>).</p>
+
+<h2><a name="description">Description</a></h2>Hero
+<h2><a name="index">Function Index</a></h2>
+<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#add_hero-2">add_hero/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#add_hero-3">add_hero/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#add_hero_exp-2">add_hero_exp/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#add_hero_exp-3">add_hero_exp/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#add_heroes_exp-3">add_heroes_exp/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#calc_power-1">calc_power/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#calc_power-2">calc_power/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#db_delete-2">db_delete/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#db_init-1">db_init/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#db_init_tavern-1">db_init_tavern/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#db_insert-2">db_insert/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#db_update-2">db_update/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#db_update_tavern-1">db_update_tavern/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_combat_heroes-2">get_combat_heroes/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_hero-2">get_hero/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#hero_notice-2">hero_notice/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#init_hero-1">init_hero/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#init_hero-2">init_hero/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#init_hero-3">init_hero/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#pack_hero-1">pack_hero/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#set_hero-2">set_hero/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#set_pos-2">set_pos/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#tavern_refresh-1">tavern_refresh/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#tavern_rest_time-1">tavern_rest_time/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#unzip-1">unzip/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#upgrade_quality-1">upgrade_quality/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#zip-1">zip/1</a></td><td></td></tr>
+</table>
+
+<h2><a name="functions">Function Details</a></h2>
+
+<h3 class="function"><a name="add_hero-2">add_hero/2</a></h3>
+<div class="spec">
+<p><tt>add_hero(Rs, Tid) -&gt; {ok, NewRs, NewHero}</tt>
+<ul class="definitions"><li><tt>Rs = #role{}</tt></li><li><tt>NewRs = #role{}</tt></li><li><tt>NewHero = #hero{}</tt></li><li><tt>Tid = integer()</tt></li></ul></p>
+</div>
+
+<h3 class="function"><a name="add_hero-3">add_hero/3</a></h3>
+<div class="spec">
+<p><tt>add_hero(Rs, Tid, Quality) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="add_hero_exp-2">add_hero_exp/2</a></h3>
+<div class="spec">
+<p><tt>add_hero_exp(Hero, AddExp) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="add_hero_exp-3">add_hero_exp/3</a></h3>
+<div class="spec">
+<p><tt>add_hero_exp(Id, AddExp, Heroes) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="add_heroes_exp-3">add_heroes_exp/3</a></h3>
+<div class="spec">
+<p><tt>add_heroes_exp(CombatHeroes, SumExp, Heroes) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="calc_power-1">calc_power/1</a></h3>
+<div class="spec">
+<p><tt>calc_power(Heroes::[#hero{}]) -&gt; Power::integer()</tt><br></p>
+</div>
+
+<h3 class="function"><a name="calc_power-2">calc_power/2</a></h3>
+<div class="spec">
+<p><tt>calc_power(T, Power) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="db_delete-2">db_delete/2</a></h3>
+<div class="spec">
+<p><tt>db_delete(Rid, Hid) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="db_init-1">db_init/1</a></h3>
+<div class="spec">
+<p><tt>db_init(Rs) -&gt; {ok, NewRs} | {error, Reason}</tt>
+<ul class="definitions"><li><tt>Rs = #role{}</tt></li><li><tt>NewRs = #role{}</tt></li><li><tt>Reason = term()</tt></li></ul></p>
+</div>
+
+<h3 class="function"><a name="db_init_tavern-1">db_init_tavern/1</a></h3>
+<div class="spec">
+<p><tt>db_init_tavern(Rs) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="db_insert-2">db_insert/2</a></h3>
+<div class="spec">
+<p><tt>db_insert(Rid, Hero) -&gt; {ok, Num} | {error, Reason}</tt>
+<ul class="definitions"><li><tt>Rid = integer()</tt></li><li><tt>Hero = #hero{}</tt></li><li><tt>Num = integer()</tt></li><li><tt>Reason = term()</tt></li></ul></p>
+</div>
+
+<h3 class="function"><a name="db_update-2">db_update/2</a></h3>
+<div class="spec">
+<p><tt>db_update(Rid, Heroes) -&gt; {true, NewHeroes} | {false, NewHeroes}</tt>
+<ul class="definitions"><li><tt>Rid = integer()</tt></li><li><tt>Heroes = NewHeroes</tt></li><li><tt>NewHeroes = [#hero{}]</tt></li></ul></p>
+</div>
+
+<h3 class="function"><a name="db_update_tavern-1">db_update_tavern/1</a></h3>
+<div class="spec">
+<p><tt>db_update_tavern(Rs) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_combat_heroes-2">get_combat_heroes/2</a></h3>
+<div class="spec">
+<p><tt>get_combat_heroes(Heroes, Items) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_hero-2">get_hero/2</a></h3>
+<div class="spec">
+<p><tt>get_hero(Id, Heroes) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="hero_notice-2">hero_notice/2</a></h3>
+<div class="spec">
+<p><tt>hero_notice(Sender, Hero) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="init_hero-1">init_hero/1</a></h3>
+<div class="spec">
+<p><tt>init_hero(Id) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="init_hero-2">init_hero/2</a></h3>
+<div class="spec">
+<p><tt>init_hero(Id, Tid) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="init_hero-3">init_hero/3</a></h3>
+<div class="spec">
+<p><tt>init_hero(Id, Tid, Quality) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="pack_hero-1">pack_hero/1</a></h3>
+<div class="spec">
+<p><tt>pack_hero(Hero) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="set_hero-2">set_hero/2</a></h3>
+<div class="spec">
+<p><tt>set_hero(Hero, Heroes) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="set_pos-2">set_pos/2</a></h3>
+<div class="spec">
+<p><tt>set_pos(Rs, L) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="tavern_refresh-1">tavern_refresh/1</a></h3>
+<div class="spec">
+<p><tt>tavern_refresh(Tavern) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="tavern_rest_time-1">tavern_rest_time/1</a></h3>
+<div class="spec">
+<p><tt>tavern_rest_time(Rs) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="unzip-1">unzip/1</a></h3>
+<div class="spec">
+<p><tt>unzip(X1) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="upgrade_quality-1">upgrade_quality/1</a></h3>
+<div class="spec">
+<p><tt>upgrade_quality(Hero) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="zip-1">zip/1</a></h3>
+<div class="spec">
+<p><tt>zip(H) -&gt; any()</tt></p>
+</div>
+<hr>
+
+<div class="navbar"><a name="#navbar_bottom"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
+<p><i>Generated by EDoc, Dec 28 2013, 11:58:21.</i></p>
+</body>
+</html>

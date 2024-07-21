@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset= UTF-8">
+<title>Module db</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" title="EDoc">
+</head>
+<body bgcolor="white">
+<div class="navbar"><a name="#navbar_top"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
+<hr>
+
+<h1>Module db</h1>
+<ul class="index"><li><a href="#description">Description</a></li><li><a href="#index">Function Index</a></li><li><a href="#functions">Function Details</a></li></ul>数据库API.
+
+<p><b>Authors:</b> Rolong (<a href="mailto:rolong@vip.qq.com"><tt>rolong@vip.qq.com</tt></a>).</p>
+
+<h2><a name="description">Description</a></h2>数据库API
+<h2><a name="index">Function Index</a></h2>
+<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#execute-1">execute/1</a></td><td>Equivalent to <a href="#execute-2"><tt>execute(Sql, [])</tt></a>.
+</td></tr>
+<tr><td valign="top"><a href="#execute-2">execute/2</a></td><td>执行一个SQL语句，返回影响的行数.</td></tr>
+<tr><td valign="top"><a href="#format_sql-2">format_sql/2</a></td><td>(<em>Deprecated</em>.) 格式化sql语句，SQL语句中变量用~s表示，.</td></tr>
+<tr><td valign="top"><a href="#get_all-1">get_all/1</a></td><td>Equivalent to <a href="#get_all-2"><tt>get_all(Sql, [])</tt></a>.
+</td></tr>
+<tr><td valign="top"><a href="#get_all-2">get_all/2</a></td><td>取出查询结果中的所有行，未找到时返回{error, null}.</td></tr>
+<tr><td valign="top"><a href="#get_one-1">get_one/1</a></td><td>Equivalent to <a href="#get_one-2"><tt>get_one(Sql, [])</tt></a>.
+</td></tr>
+<tr><td valign="top"><a href="#get_one-2">get_one/2</a></td><td>取出查询结果中的第一行第一列，未找到时返回{error, null}.</td></tr>
+<tr><td valign="top"><a href="#get_row-1">get_row/1</a></td><td>Equivalent to <a href="#get_row-2"><tt>get_row(Sql, [])</tt></a>.
+</td></tr>
+<tr><td valign="top"><a href="#get_row-2">get_row/2</a></td><td>取出查询结果中的第一行第一列，未找到时返回{error, null}.</td></tr>
+</table>
+
+<h2><a name="functions">Function Details</a></h2>
+
+<h3 class="function"><a name="execute-1">execute/1</a></h3>
+<div class="spec">
+<p><tt>execute(Sql) -&gt; {ok, Num} | {error, Reason}</tt>
+<ul class="definitions"><li><tt>Sql = iolist()</tt></li><li><tt>Num = integer()</tt></li><li><tt>Reason = term()</tt></li></ul></p>
+</div><p>Equivalent to <a href="#execute-2"><tt>execute(Sql, [])</tt></a>.</p>
+
+<p><b>See also:</b> <a href="#execute-2">execute/2</a>.</p>
+
+<h3 class="function"><a name="execute-2">execute/2</a></h3>
+<div class="spec">
+<p><tt>execute(Sql, Args) -&gt; {ok, Num} | {error, Reason}</tt>
+<ul class="definitions"><li><tt>Sql = iolist()</tt></li><li><tt>Args = list()</tt></li><li><tt>Num = integer()</tt></li><li><tt>Reason = term()</tt></li></ul></p>
+</div><p>执行一个SQL语句，返回影响的行数</p>
+
+<h3 class="function"><a name="format_sql-2">format_sql/2</a></h3>
+<div class="spec">
+<p><tt>format_sql(Sql, Args) -&gt; bitstring()</tt>
+<ul class="definitions"><li><tt>Sql = list() | bitstring()</tt></li><li><tt>Args = list()</tt></li></ul></p>
+</div><p><b>This function is deprecated:</b> 此函数效率低，尽量使用list_to_binary格式的SQL</p>
+<p>格式化sql语句，SQL语句中变量用~s表示，</p>
+
+<h3 class="function"><a name="get_all-1">get_all/1</a></h3>
+<div class="spec">
+<p><tt>get_all(Sql) -&gt; any()</tt></p>
+</div><p>Equivalent to <a href="#get_all-2"><tt>get_all(Sql, [])</tt></a>.</p>
+
+<p><b>See also:</b> <a href="#get_all-2">get_all/2</a>.</p>
+
+<h3 class="function"><a name="get_all-2">get_all/2</a></h3>
+<div class="spec">
+<p><tt>get_all(Sql, Args) -&gt; {ok, Rows} | {error, Reason}</tt>
+<ul class="definitions"><li><tt>Sql = term()</tt></li><li><tt>Args = list()</tt></li><li><tt>Rows = list()</tt></li><li><tt>Reason = null | term()</tt></li></ul></p>
+</div><p>取出查询结果中的所有行，未找到时返回{error, null}</p>
+
+<h3 class="function"><a name="get_one-1">get_one/1</a></h3>
+<div class="spec">
+<p><tt>get_one(Sql) -&gt; any()</tt></p>
+</div><p>Equivalent to <a href="#get_one-2"><tt>get_one(Sql, [])</tt></a>.</p>
+
+<p><b>See also:</b> <a href="#get_one-2">get_one/2</a>.</p>
+
+<h3 class="function"><a name="get_one-2">get_one/2</a></h3>
+<div class="spec">
+<p><tt>get_one(Sql, Args) -&gt; {ok, Value} | {error, Reason}</tt>
+<ul class="definitions"><li><tt>Sql = iolist()</tt></li><li><tt>Args = list()</tt></li><li><tt>Value = term()</tt></li><li><tt>Reason = null | term()</tt></li></ul></p>
+</div><p>取出查询结果中的第一行第一列，未找到时返回{error, null}</p>
+
+<h3 class="function"><a name="get_row-1">get_row/1</a></h3>
+<div class="spec">
+<p><tt>get_row(Sql) -&gt; any()</tt></p>
+</div><p>Equivalent to <a href="#get_row-2"><tt>get_row(Sql, [])</tt></a>.</p>
+
+<p><b>See also:</b> <a href="#get_row-2">get_row/2</a>.</p>
+
+<h3 class="function"><a name="get_row-2">get_row/2</a></h3>
+<div class="spec">
+<p><tt>get_row(Sql, Args) -&gt; {ok, Row} | {error, Reason}</tt>
+<ul class="definitions"><li><tt>Sql = term()</tt></li><li><tt>Args = list()</tt></li><li><tt>Row = list()</tt></li><li><tt>Reason = null | term()</tt></li></ul></p>
+</div><p>取出查询结果中的第一行第一列，未找到时返回{error, null}</p>
+<hr>
+
+<div class="navbar"><a name="#navbar_bottom"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
+<p><i>Generated by EDoc, Dec 28 2013, 11:58:20.</i></p>
+</body>
+</html>
