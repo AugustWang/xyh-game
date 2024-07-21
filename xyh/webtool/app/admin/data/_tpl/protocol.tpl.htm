@@ -1,0 +1,50 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>生成协议<?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+        <?php 
+        echo '<div style="margin: 12px;">';
+        echo $info;
+        echo '</div>';
+        ?>
+<div class="tableWrapper">
+    <form name=form1 method="POST">
+        <table class="grid" id="gridview">
+            <tbody>
+            <?php foreach($files as $file):?>
+            <tr>
+                <td><input type="CHECKBOX" name="files[]" value="<?php echo $file['name']?>"></td>
+                <td><?php echo $file['name']?></td>
+                <td><?php echo $file['time']?></td>
+                <td><?php echo $file['size']?></td>
+            </tr>
+            <?php endforeach;?>
+            </tbody>
+            <thead>
+                <tr>
+                    <td>
+					<input type="checkbox" name="chk_all" id="chk_all" /></td>
+                    <td colspan="3">
+                        <?php $this->loadBlock('pager')?>
+                        全选/取消全选
+                        <input type="BUTTON" value="生成协议文件" onclick="javascript:{this.disabled=true;document.form1.submit();}">
+                    </td>
+                </tr>
+				<tr>
+                    <td width="30">选择</td>
+                    <td>文件名称</td>
+                    <td>修改时间</td>
+                    <td>文件大小(K)</td>
+                </tr>
+            </thead>
+        </table>
+    </form>
+</div>
+<script type="text/javascript">
+$("#chk_all").click(function(){
+     $("input[name='files[]']").attr("checked",$(this).attr("checked"));
+});
+</script>
+<?php $this->endBlock('content');?>
+

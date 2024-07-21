@@ -1,0 +1,11 @@
+%% @author Rolong<rolong@vip.qq.com>
+{application, game_server,
+    [{description, "Game Server"},
+        {vsn, "1"},
+        {modules, []},
+        {registered, []},
+        {applications, [kernel,stdlib]},
+        {mod, {game_server, []}}
+    ]}.
+
+%% vim: ft=erlang :

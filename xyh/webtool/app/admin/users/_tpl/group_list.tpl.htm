@@ -1,0 +1,58 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>用户组列表<?php $this->endBlock('title');?>
+
+<?php $this->block('buttons');?>
+<input type="button" class="btn" value="添加用户组" onclick="location.replace('?mod=users&act=group_edit');"/>
+<?php $this->endBlock('buttons');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post">
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr><td style="width:20px;"><input type="checkbox" style="display:none;"/></td>
+                    <td style="width:15%">组名称</td>
+                    <td>权限</td>
+                    <td style="width:5%">操作</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($data['list'] as $v):?>
+                <tr>
+                    <td style="text-align:center;"><input name="id[]" type="checkbox" value="<?php echo $v['id']?>"></td>
+                    <td><?php echo $v['name']?></td>
+                    <td><?php echo $v['menu'];?></td>
+                    <td><a href="?mod=users&act=group_edit&do=edit&id=<?php echo $v['id']?>">编辑</a> <a onclick="return confirm('确认要删除吗？');" href="?mod=users&act=group_list&do=del&id=<?php echo $v['id']?>">删除</a></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="text-align:center;">↑</td>
+                    <td colspan="8">
+                        <?php $this->loadBlock('pager')?>
+                        <input name="check" type="button" id="check" class="btnCheck" value="反选"/>
+                        <input name="uncheck" type="button" id="uncheck" class="btnUncheck" value="取消选中"/>
+                        <?php echo $op?>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+<?php $this->endBlock('content');?>

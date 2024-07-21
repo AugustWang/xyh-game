@@ -1,0 +1,24 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>生成任务数据<?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+        <?php 
+        echo '<div style="margin: 12px;">';
+        echo $info;
+        echo '</div>';
+        ?>
+<div class="tableWrapper">
+    <form name=form1 method="POST">
+        <input type="hidden" name="do" value="ok" >
+        <input type="BUTTON" name="do" value="生成数据" onclick="javascript:{this.disabled=true;document.form1.submit();}">
+    </form>
+    
+</div>
+<script type="text/javascript">
+$("#chk_all").click(function(){
+     $("input[name='files[]']").attr("checked",$(this).attr("checked"));
+});
+</script>
+<?php $this->endBlock('content');?>
+

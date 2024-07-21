@@ -1,0 +1,39 @@
+%%---------------------------------------------------------
+%% @doc Automatic Generation Of Protocol File
+%% 
+%% NOTE: 
+%%     Please be careful,
+%%     if you have manually edited any of protocol file,
+%%     do NOT commit to SVN !!!
+%%
+%% Shenzhen Turbo Technology Co., Ltd. All Rights Reserved.
+%% http://www.szturbotech.com
+%% Tool Release Time: 2014.3.21
+%%
+%% @author Rolong<rolong@vip.qq.com>
+%%---------------------------------------------------------
+
+%%---------------------------------------------------------
+%% define cmd
+%%---------------------------------------------------------
+
+<?php foreach($data as $pt):?>
+-define(CMD_<?php echo $pt['name']?>, <?php echo $pt['cmd']?>).
+<?php endforeach;?>
+
+%%---------------------------------------------------------
+%% define cmd struct
+%%---------------------------------------------------------
+
+<?php foreach($data as $pt):?>
+-record(pk_<?php echo $pt['name']?>, {
+        <?php 
+    $first = true;
+    foreach($pt['data'] as $k => $v){
+    if($first){$first = false;}else{echo ",\n        ";}
+    echo $k;
+    }
+    echo "\n";
+    ?>
+	}).
+<?php endforeach;?>

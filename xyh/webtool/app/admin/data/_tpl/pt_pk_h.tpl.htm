@@ -1,0 +1,46 @@
+/************************************************************
+ * @doc Automatic Generation Of Protocol File
+ * 
+ * NOTE: 
+ *     Please be careful,
+ *     if you have manually edited any of protocol file,
+ *     do NOT commit to SVN !!!
+ *
+ * Shenzhen Turbo Technology Co., Ltd. All Rights Reserved.
+ * http://www.szturbotech.com
+ * Tool Release Time: 2014.3.21
+ *
+ * @author Rolong<rolong@vip.qq.com>
+ ************************************************************/
+
+#pragma  once 
+#include <vector> 
+#include "NetDef.h" 
+
+using namespace std;
+
+namespace pk{
+
+<?php foreach($data as $pt):?>
+struct <?php echo $pt['name']?>
+
+{
+<?php 
+foreach($pt['data'] as $k => $v){
+    echo "    $v $k;\n";
+}?>
+<?php if($pt['type'] == '->' || $pt['type'] == '<->'):?>
+	void Send();
+<?php endif;?>
+};
+void Write<?php echo $pt['name']?>(char*& buf,<?php echo $pt['name']?>& value);
+<?php if($pt['type'] == '<-' || $pt['type'] == '<->'):?>
+void On<?php echo $pt['name']?>(<?php echo $pt['name']?>* value);
+<?php endif;?>
+void Read<?php echo $pt['name']?>(char*& buf,<?php echo $pt['name']?>& value);
+
+<?php endforeach;?>
+
+};
+
+// vim: set foldmethod=marker filetype=c foldmarker=%%',%%.:

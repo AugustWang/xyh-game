@@ -1,0 +1,244 @@
+%%-----------------------------------------------------------
+%% @doc Automatic Generation Of Package(read/write/send) File
+%% 
+%% NOTE: 
+%%     Please be careful,
+%%     if you have manually edited any of protocol file,
+%%     do NOT commit to SVN !!!
+%%
+%% Shenzhen Turbo Technology Co., Ltd. All Rights Reserved.
+%% http://www.szturbotech.com
+%% Tool Release Time: 2014.3.21
+%%
+%% @author Rolong<rolong@vip.qq.com>
+%%-----------------------------------------------------------
+
+-module(msg_<?php echo $file_id; ?>).
+-import(pack, [write_array/2, read_array/2]).
+-export([send/2,dealMsg/3]).
+-include("pack_<?php echo $file_id; ?>.hrl").
+<?php 
+foreach($data as $pt):
+    $enter = false;
+    $field_count = count($pt['data']);
+    if($field_count > 2) $enter = true;
+?>
+
+<?php if($pt['type'] != '->'):?>
+write_<?php echo $pt['name']?>(#pk_<?php echo $pt['name']?>{<?php 
+    $first = true;
+    foreach($pt['data'] as $k => $v){
+        if($first){
+            $first = false;
+            if($enter) echo "\n        ";
+        }else{
+            if($enter) echo ",\n        ";
+            else echo ", ";
+        }
+        echo $k.' = V'.$k;
+    }
+    if($enter) echo "\n    ";
+    ?>}) ->
+<?php 
+    foreach($pt['data'] as $k => $v){
+        if($v == 'int8'){
+        }else if($v == 'int16'){
+        }else if($v == 'int'){
+        }else if($v == 'int64'){
+        }else if($v == 'string'){
+            echo "    L{$k} = byte_size(V{$k}),\n";
+        }else{
+            preg_match('/vector[\s|\\t]*<\s*([\w]+)\s*>/', $v, $match);
+            if($match[1]){
+                $vv = $match[1];
+                if($vv == 'int8'){
+                    $fun = '<<X:8/little>>';
+                }else if($vv == 'int16'){
+                    $fun = '<<X:16/little>>';
+                }else if($vv == 'int'){
+                    $fun = '<<X:32/little>>';
+                }else if($vv == 'int64'){
+                    $fun = '<<X:64/little>>';
+                }else if($vv == 'string'){
+                    $fun = 'L = byte_size(X), <<L:16/little, X/binary>>';
+                }else{
+                    $fun = "write_{$match[1]}(X)";
+                }
+                echo "    A{$k} = write_array(V{$k}, fun(X) -> $fun end),\n";
+            }else if(array_key_exists ( $k, $pt['data'] )){
+                echo '    A'.$k.' = write_'.$v.'(V'.$k.'),'."\n";
+            }else{
+                exit($pt['name'].' Error Type:'.$v);
+            }
+        }
+    }
+    ?>
+    <<<?php 
+    $index = 0;
+    foreach($pt['data'] as $k => $v){
+    if(!$index){
+            $index++;
+            if($enter) echo "\n        ";
+    }else{
+        if($enter) echo ",\n        ";
+        else echo ", ";
+    }
+    if($v == 'int8'){
+        echo 'V'.$k.':8/little';
+    }else if($v == 'int16'){
+        echo 'V'.$k.':16/little';
+    }else if($v == 'int'){
+        echo 'V'.$k.':32/little';
+    }else if($v == 'int64'){
+        echo 'V'.$k.':64/little';
+    }else if($v == 'string'){
+        echo 'L'.$k.':16/little, V'.$k.'/binary';
+    }else{
+        preg_match('/vector[\s|\\t]*<\s*([\w]+)\s*>/', $v, $match);
+        if($match[1]){
+            echo 'A'.$k.'/binary';
+        }else if(array_key_exists ( $k, $pt['data'] )){
+            echo 'A'.$k.'/binary';
+        }else{
+            exit($pt['name'].' Error Type:'.$v);
+        }
+    }
+    }
+    if($enter) echo "\n    ";
+    ?>>>.
+
+<?php endif;?>
+<?php if($pt['type'] != '<-'):?>
+binary_read_<?php echo $pt['name']?>(Bin0) -><?php 
+    $index = true;
+    $array_index = 0;
+    foreach($pt['data'] as $k => $v){
+        if($index){
+            if($array_index){
+                echo ",\n    <<";
+            }else{
+                echo "\n    <<";
+            }
+            if($enter) echo "\n        ";
+            $index = false;
+        }else{
+            if($enter) echo ",\n        ";
+            else echo ", ";
+        }
+        if($v == 'int8'){
+            echo 'V'.$k.':8/little';
+        }else if($v == 'int16'){
+            echo 'V'.$k.':16/little';
+        }else if($v == 'int'){
+            echo 'V'.$k.':32/little';
+        }else if($v == 'int64'){
+            echo 'V'.$k.':64/little';
+        }else if($v == 'string'){
+            echo 'L'.$k.':16/little, V'.$k.':'.'L'.$k.'/binary';
+        }else{
+            preg_match('/vector[\s|\\t]*<\s*([\w]+)\s*>/', $v, $match);
+            if($match[1]){
+                $vv = $match[1];
+                echo 'RestBin'.$array_index.'/binary';
+                echo ">> = Bin" . $array_index . ",\n";
+                $index = true;
+                $array_index1 = $array_index + 1;
+                if($vv == 'int8'){
+                    $fun = '<<X1:8/little, B1/binary>> = X, {X1, B1, 0}';
+                }else if($vv == 'int16'){
+                    $fun = '<<X1:16/little, B1/binary>> = X, {X1, B1, 0}';
+                }else if($vv == 'int'){
+                    $fun = '<<X1:32/little, B1/binary>> = X, {X1, B1, 0}';
+                }else if($vv == 'int64'){
+                    $fun = '<<X1:64/little, B1/binary>> = X, {X1, B1, 0}';
+                }else if($vv == 'string'){
+                    $fun = '<<L1:16/little, X1:L1/binary, B1/binary>> = X, {X1, B1, 0}';
+                }else{
+                    $fun = "binary_read_{$match[1]}(X)";
+                }
+                $fun = "fun(X) -> $fun end";
+                echo "    {V{$k}, Bin{$array_index1}} = read_array(RestBin{$array_index}, {$fun})";
+                $array_index = $array_index1;
+            }else if(array_key_exists ( $k, $pt['data'] )){
+                echo 'RestBin'.$array_index.'/binary';
+                echo ">> = Bin" . $array_index . ",\n";
+                $index = true;
+                $array_index1 = $array_index + 1;
+                $fun = "fun(X) -> binary_read_{$match[1]}(X) end";
+                echo "    {V{$k}, Bin{$array_index1}} = binary_read_{$v}(RestBin{$array_index})";
+                $array_index = $array_index1;
+            }else{
+                exit($pt['name'].' Error Type:'.$v);
+            }
+        }
+    }
+    if($index){
+        $index = false;
+        if($array_index) echo ',';
+        echo "\n    <<";
+        if($enter) echo "\n        ";
+    }else{
+        if($enter) echo ",\n        ";
+        else echo ", ";
+    }
+    echo "RestBin{$array_index}/binary";
+    if($enter) echo "\n    ";
+    echo ">> = Bin{$array_index},\n";
+    ?>
+    {#pk_<?php echo $pt['name']?>{<?php 
+        $index = true;
+        foreach($pt['data'] as $k => $v){
+            if($index){
+                $index = false;
+                if($enter) echo "\n        ";
+            }else{
+                if($enter) echo ",\n        ";
+                else echo ", ";
+            }
+        echo $k.' = V'.$k;
+        }
+        if($enter) echo "\n    ";
+    ?>}, <?php echo "RestBin{$array_index}"; ?>, 0}.
+<?php endif;?>
+
+<?php endforeach;?>
+
+%%-----------------------------------------------------------
+%% @doc Send Data To Socket
+%%-----------------------------------------------------------
+<?php 
+/***********************生成发包函数 Start***********************/ 
+foreach($data as $pt):
+if($pt['type'] == '<-' || $pt['type'] == '<->'):
+?>
+send(Socket, #pk_<?php echo $pt['name']?>{} = P) ->
+	Bin = write_<?php echo $pt['name']?>(P),
+	pack:send(Socket, ?CMD_<?php echo $pt['name']?>, Bin);
+<?php 
+endif;
+endforeach;
+/***********************生成发包函数 End .***********************/ 
+?>
+
+send(_,_)-> 
+	noMatch.
+
+%%-----------------------------------------------------------
+%% @doc Deal Socket Message
+%%-----------------------------------------------------------
+dealMsg(Socket, Cmd, Bin) -> 
+	case Cmd of
+<?php foreach($data as $pt):
+if($pt['type'] == '->' || $pt['type'] == '<->') {
+?>
+        ?CMD_<?php echo $pt['name']?>->
+            {Data, _, _} = binary_read_<?php echo $pt['name']?>(Bin),
+            messageOn:on_<?php echo $pt['name']?>(Socket, Data);
+<?php
+}
+endforeach;?>
+        _-> 
+            noMatch
+	end.
+
+%%  vim: set foldmethod=marker filetype=erlang foldmarker=%%',%%.:

@@ -1,0 +1,15 @@
+{
+	[
+		'src/*'
+		,'src/lib/*'
+		,'src/kernel/*'
+		,'src/Mysql/*'
+		,'src/Event/*'
+		,'src/Script/*'
+	]
+	,[
+		debug_info
+		,{i, "include"}
+		,{outdir, "ebin"}
+	]
+}.

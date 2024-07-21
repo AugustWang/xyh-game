@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<title>
+<?php $this->loadBlock('title');?>
+-<?php echo Config::getInstance()->get('server_name')?></title>
+<link rel="stylesheet" type="text/css" href="admin.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="admin.js"></script>
+<script type="text/javascript" src="gridview.js"></script>
+<link rel="stylesheet" type="text/css" href="datepick/redmond.datepick.css" />
+<script type="text/javascript" src="datepick/jquery.datepick.js"></script>
+<script type="text/javascript" src="datepick/jquery.datepick-zh-CN.js"></script>
+<script type="text/javascript" src="js/jqmessagebox.js"></script>
+<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="js/jquery.json.js"></script>
+<script type="text/javascript" src="js/ui.core.js"></script>
+<script type="text/javascript" src="js/ui.sortable.js"></script>
+<script type="text/javascript" src="Charts/assets/ui/js/lib.js" ></script>
+<script type="text/javascript" src="Charts/FusionCharts.js"></script>
+<?php $this->loadBlock('header'); ?>
+</head>
+<body>
+<div id="wrapper">
+  <div id="header"> <span style="position:absolute;right:5px; top:2px;">
+    <input type="button" value="退出" class="bigBtn" onclick="location.replace('?mod=default&act=logoff')" />
+    </span> 你好，<?php echo $_SESSION['admin_name']?>！欢迎登录 <strong><?php echo Config::getInstance()->get('server_name')?></strong> 管理后台 </div>
+  <div id="memu">
+    <table height="100%" cellspacing="0" cellpadding="0" width="171" border="0">
+    <tr>
+      <td valign="top" align="center">
+        <table cellspacing="0" cellpadding="0" width="100%" border="0">
+          <tr>
+            <td height="10"></td>
+          </tr>
+        </table>
+<?php
+    	$menu = Admin::getShowMenu();
+		foreach($menu as $mkey=>$mparent):
+?>
+        <table cellspacing="0" cellpadding="0" width="151" border="0">
+          <tr height="22">
+            <td style="padding-left:30px;" class="menuPtd" align="left"><a class="menuParent" href="javascript:void(0);" onclick="expand(<?php echo $mkey; ?>);"><?php echo $mparent['title']; ?></a></td>
+          </tr>
+          <tr height="4">
+            <td></td>
+          </tr>
+        </table>
+
+<table class="js_menu_child" id="child<?php echo $mkey; ?>" cellspacing="0" cellpadding="0" width="150" border="0">
+<?php foreach($mparent['sub'] as $skey=>$sub): ?>
+          <tr height="20">
+            <td align="center" width="15"><img height="9" src="images/menu_icon.gif" width="9" /></td>
+            <td align="left"><a id="js_menu_<?php echo $mkey; ?>_<?php echo $skey; ?>" class="menuChild" href="<?php echo $sub['url']; ?>"><?php echo $sub['title']; ?></a></td>
+          </tr>
+<?php endforeach; ?>
+		<tr height="4">
+            <td></td>
+          </tr>
+        </table>
+<?php
+	  endforeach;
+?>
+        </table>
+      </td>
+
+      <td width="1" bgcolor="#D1E6F7"></td>
+    </tr>
+  </table>
+  </div>
+  <div id="mContent">
+  	<?php if($GLOBALS['erl_error']): ?>
+	<div style="background:none repeat scroll 0 0 #FFFFDD;color:#FF0000;border:2px solid #FFD700;font-size:14px;margin:4px;padding:3px;">Erlang节点连接失败，请刷新!：&nbsp;<?php echo $GLOBALS['erl_error'];?></div>
+	<?php endif; ?>
+    <div class="title"><span class="buttons">
+      <?php $this->loadBlock('buttons')?>
+      </span>
+      <?php $this->loadBlock('title'); ?>
+    </div>
+    <?php $this->loadBlock('content'); ?>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>导入地图数据<?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+        <?php 
+        echo '<div style="margin: 12px;">';
+        echo $info;
+        echo '</div>';
+        ?>
+<div class="tableWrapper">
+    <form name=form1 method="POST">
+        <input type="hidden" name="do" value="ok" >
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td>
+					<input type="checkbox" name="chk_all" id="chk_all" checked="checked" disabled="disabled" /></td>
+                    <td colspan="3">
+                        <?php $this->loadBlock('pager')?>
+                        
+                        <input type="BUTTON" value="导入地图数据" onclick="javascript:{this.disabled=true;document.form1.submit();}">
+                    </td>
+                </tr>
+				<tr>
+                    <td width="30">选择</td>
+                    <td>文件名称</td>
+                    <td>修改时间</td>
+                    <td>文件大小(K)</td>
+                </tr>
+            </thead>
+            <tbody>
+            <?php foreach($files as $file):?>
+            <tr>
+                <td><input type="CHECKBOX" name="files[]" value="<?php echo $file['name']?>" checked="checked" disabled="disabled" /></td>
+                <td><?php echo $file['name']?></td>
+                <td><?php echo $file['time']?></td>
+                <td><?php echo $file['size']?></td>
+            </tr>
+            <?php endforeach;?>
+            </tbody>
+        </table>
+    </form>
+</div>
+<?php $this->endBlock('content');?>
+

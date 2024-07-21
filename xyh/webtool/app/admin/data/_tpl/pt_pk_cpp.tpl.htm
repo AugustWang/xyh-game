@@ -1,0 +1,105 @@
+/************************************************************
+ * @doc Automatic Generation Of Protocol File
+ * 
+ * NOTE: 
+ *     Please be careful,
+ *     if you have manually edited any of protocol file,
+ *     do NOT commit to SVN !!!
+ *
+ * Shenzhen Turbo Technology Co., Ltd. All Rights Reserved.
+ * http://www.szturbotech.com
+ * Tool Release Time: 2014.3.21
+ *
+ * @author Rolong<rolong@vip.qq.com>
+ ************************************************************/
+
+#include "NetDef.h" 
+
+#include "package.h" 
+
+#include "message.h" 
+
+
+namespace pk{
+
+<?php 
+foreach($data as $pt):
+
+//if($pt['type'] != '<-'):
+if(1):
+?>
+void Write<?php echo $pt['name']?>(char*& buf,<?php echo $pt['name']?>& value)
+{
+<?php
+foreach($pt['data'] as $k => $v):
+    if($v == 'int8'){
+        echo "    Write{$v}(buf,value.{$k});\n";
+    }else if($v == 'int16'){
+        echo "    Write{$v}(buf,value.{$k});\n";
+    }else if($v == 'int'){
+        echo "    Write{$v}(buf,value.{$k});\n";
+    }else if($v == 'int64'){
+        echo "    Write{$v}(buf,value.{$k});\n";
+    }else if($v == 'string'){
+        echo "    Write{$v}(buf,value.{$k});\n";
+    }else{
+        preg_match('/vector[\s|\\t]*<\s*([\w]+)\s*>/', $v, $match);
+        if($match[1]){
+            echo "    WriteArray(buf,{$match[1]},value.{$k});\n";
+        }else if(array_key_exists ( $k, $pt['data'] )){
+            echo "    Write{$v}(buf,value.{$k});\n";
+        }else{
+            exit('['.$pt['name'].'] Error Type:'.$v);
+        }
+    }
+endforeach;
+?>
+}
+<?php
+endif;
+?>
+<?php if($pt['type'] == '->' || $pt['type'] == '<->'):?>
+void <?php echo $pt['name']?>::Send(){
+    BeginSend(<?php echo $pt['name']?>);
+    Write<?php echo $pt['name']?>(buf,*this);
+    EndSend();
+}
+<?php endif;?>
+<?php
+//if($pt['type'] != '->'):
+if(1):
+?>
+void Read<?php echo $pt['name']?>(char*& buf,<?php echo $pt['name']?>& value)
+{
+<?php
+foreach($pt['data'] as $k => $v):
+    if($v == 'int8'){
+        echo "    Read{$v}(buf,value.{$k});\n";
+    }else if($v == 'int16'){
+        echo "    Read{$v}(buf,value.{$k});\n";
+    }else if($v == 'int'){
+        echo "    Read{$v}(buf,value.{$k});\n";
+    }else if($v == 'int64'){
+        echo "    Read{$v}(buf,value.{$k});\n";
+    }else if($v == 'string'){
+        echo "    Read{$v}(buf,value.{$k});\n";
+    }else{
+        preg_match('/vector[\s|\\t]*<\s*([\w]+)\s*>/', $v, $match);
+        if($match[1]){
+            echo "    ReadArray(buf,{$match[1]},value.{$k});\n";
+        }else if(array_key_exists ( $k, $pt['data'] )){
+            echo "    Read{$v}(buf,value.{$k});\n";
+        }else{
+            exit('['.$pt['name'].'] Error Type:'.$v);
+        }
+    }
+endforeach;
+?>
+}
+<?php
+endif;
+?>
+<?php endforeach;?>
+};
+
+// vim: set foldmethod=marker filetype=c foldmarker=%%',%%.:

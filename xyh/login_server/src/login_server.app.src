@@ -1,0 +1,18 @@
+%% -------------------------------------------------
+%% $Id$
+%% @author Rolong<rolong@vip.qq.com>
+%% -------------------------------------------------
+
+{application, login_server,
+    [
+        {description, "Login Server"}
+        ,{vsn, "1"}
+        ,{modules, []}
+        ,{registered, []}
+        ,{applications, [kernel, stdlib, sasl]}
+        ,{mod, {login_server,[]}}
+        ,{start_phases, []}
+    ]
+}.
+
+%% vim: ft=erlang :
