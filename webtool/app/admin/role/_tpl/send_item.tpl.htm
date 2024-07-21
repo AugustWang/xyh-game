@@ -1,0 +1,49 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>
+发送物品
+<?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+
+<div class="tableWrapper">
+    <form method="post">
+        <table class="grid">
+            <tr>
+                <td align="right">
+                    <select name="id_type">
+                        <option value="role_id" selected="selected">角色ＩＤ</option>
+                        <option value="name">角色名称</option>
+                        <option value="account_id">帐号名称</option>
+                    </select>
+                    ：</td>
+                <td align="left">
+                    <input name="id" type="text" value="<?php echo $id ?>" />                </td>
+            </tr>
+            <tr>
+              <td align="right">物品/分类ID                  ：</td>
+              <td align="left"><input type="text" name="tid" /></td>
+            </tr>
+            <tr>
+              <td align="right">物品数量                  ：</td>
+              <td align="left"><input type="text" name="num" />数量不要太大(<1000)</td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td align="left"><input type="submit" name="submit" value="发送" /></td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</div>
+
+<script>
+<?php
+if($alert){
+	echo "alert('{$alert}');";
+}
+?>
+</script>
+
+<?php $this->endBlock('content');?>

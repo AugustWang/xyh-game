@@ -1,0 +1,69 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>
+批量 禁言、封号、踢人、解除禁言、解除封号
+<?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+<div class="tableWrapper">
+  <form method="post" onsubmit="return check();">
+    <input type="hidden" name="memo" id="js_memo" />
+    <table class="grid">
+	  <tr>
+        <td>角色ID：</td>
+        <td><textarea cols="40" rows="3" name="role_id"><?php echo $this->input['role_id']; ?></textarea> 用英文,号分开</td>
+      </tr>
+	  <tr>
+        <td>角色名称：</td>
+        <td><textarea cols="40" rows="3" name="role_name"><?php echo $this->input['role_name']; ?></textarea> 用英文,号分开</td>
+      </tr>
+	  <tr>
+        <td>禁言、封号时间：</td>
+        <td><input name="timeout" value="<?php echo $this->input['timeout']; ?>" /> 单位：小时，0为无限久</td>
+      </tr>
+	  <tfoot>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+			<input name="submit" type="submit" value="禁言" onclick="window.req_memo=false;" />
+			<input name="submit" type="submit" value="封号" onclick="return require()" />
+			<input name="submit" type="submit" value="踢人" onclick="window.req_memo=false;" />
+			<input name="submit" type="submit" value="解除禁言" onclick="window.req_memo=false;" />
+			<input name="submit" type="submit" value="解除封号" onclick="return require()" />
+			
+		</td>
+      </tr>
+	  </tfoot>
+    </table>
+  </form>
+</div>
+<script>
+<?php 
+if($err){
+	echo "alert('{$err}');";
+}
+?>
+window.req_memo=false;
+function check()
+{
+  var memo = $.trim($('#js_memo').val());
+  if(window.req_memo && !memo)
+  {
+    alert('请填写备注！');
+    return false;
+  }
+  return true;
+}
+
+function require()
+{
+  var m = prompt("请输入原因：");
+  if(!m){
+    return false;
+  }
+  $('#js_memo').val(m);
+  window.req_memo=true;
+  return true;
+}
+</script>
+<?php $this->endBlock('content');?>

@@ -1,0 +1,6 @@
+level	coinType	coinCount	coinType1	coinCount1
+1	2	5	1	3000
+2	2	25	1	8000
+3	2	50	1	15000
+4	2	90	1	30000
+5	2	180	1	50000

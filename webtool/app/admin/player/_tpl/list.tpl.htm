@@ -1,0 +1,65 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>用户反馈<?php $this->endBlock('title');?>
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $page ?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+<?php $this->block('content');?>
+<form id="mainForm" method="post">
+	<div class="searchPanel">
+       角色名称：<input type="text" style="width:170px;" value="<?php echo $this->input['kw']['name'];?>" name="kw[name]" />
+       类型：<?php echo $kw['type']?>
+        日期：
+       <input type="text" style="width:170px;" class="js_starttime" value="<?php echo $this->input['kw']['start_time'];?>" name="kw[start_time]" />
+        - <input type="text" style="width:170px;" class="js_endtime" value="<?php echo $this->input['kw']['end_time'];?>" name="kw[end_time]" /><input type="submit" value="查看" />
+	</div>
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+				    <td style="width:30px;">ID</td>
+                    <td style="width:120px;">注册时间</td>
+                    <td style="width:120px;">角色名称</td>
+                    <td style="width:120px;">FBID</td>
+					<td>IP</td>
+                    <td>Other</td>
+                </tr>
+            </thead>
+            <tbody>
+              <?php if($data): ?>
+                <?php foreach($data as $k=>$v):?>
+                <tr>
+					<td><?php echo $k;?></td>
+                    <td><?php echo $v['reg_time']; ?></td>
+					<td><?php echo $v['name'];?></td>
+                    <td><?php echo $v['account_id'];?></td>
+					<td><?php echo $v['reg_ip']; ?></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <?php endforeach;?>
+                <?php else: ?>
+                <tr><td colspan="10">无玩家..</td></tr>
+                <?php endif; ?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6">
+                        <?php $this->loadBlock('pager')?>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+ 
+<?php $this->endBlock('content');?>

@@ -1,0 +1,38 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>商城购买天统计图<?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post">
+    <div class="searchPanel">请选择日期：<?php echo $dates; ?><input type="submit" value="查看" />
+    </div>
+  <div class="tableWrapper">
+    <table class="grid nohover" id="gridview">
+      <thead>
+        <tr>
+          <td colspan="2">按天统计图</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center">
+              <div id="chartdiv" align="center">Chart will load here</div>
+              <script type="text/javascript">
+var dataString ='<chart caption="商城购买/天统计图" baseFontColor="FFFFFF" bgColor="2E4A89,90B1DE" bgAlpha="100,100" pieYScale="30" pieSliceDepth="8" smartLineColor="FFFFFF">\n\
+<set label="商品<?php echo $prop?>" value="<?php echo $prop['num']?>" color="1160B8" />\n\
+<set label="商品<?php echo $jewel?>" value="<?php echo $jewel['num']?>" color="1160B8" />\n\
+<set label="商品<?php echo $other?>" value="<?php echo $other['num']?>" color="1160B8" />\n\
+</chart>';
+
+if (GALLERY_RENDERER && GALLERY_RENDERER.search(/javascript|flash/i)==0)  FusionCharts.setCurrentRenderer(GALLERY_RENDERER);
+var chart = new FusionCharts("Charts/Pie3D.swf", "ChartId", "100%", "<?php echo $hight?>", "0", "0");
+chart.setXMLData( dataString );
+chart.render("chartdiv");
+              </script>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>
+<?php $this->endBlock('content');?>

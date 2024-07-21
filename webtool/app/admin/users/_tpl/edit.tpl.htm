@@ -1,0 +1,70 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>编辑帐号资料<?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+<div class="tableWrapper">
+    <form method="post">
+        <table class="grid">
+            <tr>
+                <td class="label">帐号名称：</td>
+                <td>
+                    <?php echo $data['username']?>
+                    <input type="hidden" name="items[username]" value="<?php echo $data['username']?>">
+                    <input type="hidden" name="items[id]" value="<?php echo $data['id']?>">
+                </td>
+            </tr>
+            <tr>
+                <td class="label">真实姓名：</td>
+                <td><input type="text" name="items[name]" value="<?php echo $data['name']?>" /><?php echo $emsg['name']?></td>
+            </tr>
+            <tr>
+                <td class="label">密　　码：</td>
+                <td>
+                    <span class="tips">此项留空表示不修改密码</span>
+                    <input type="password" name="items[passwd]" />
+                    <?php echo $emsg['passwd']?>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">确认密码：</td>
+                <td><input type="password" name="items[passwd1]" /></td>
+            </tr>
+			<tr>
+                <td class="label">用户组：</td>
+                <td><?php echo $group; ?><?php echo $emsg['group_id'] ?></td>
+            </tr>
+            <tr>
+                <td class="label">下属成员(可协助修改下属密码等)：</td>
+                <td>
+                    <?php
+                    foreach($members as $mem)
+                    {
+                        echo '<label><input type="checkbox" name="items[members][]" value="'.$mem['username'].'" '.(in_array($mem['username'], $data['members']) ? 'checked="checked"' : '').' />'.$mem['username'].'</label>  ';
+                    }
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">限制登录IP：</td>
+                <td><input maxlength="150" type="text" name="items[ip_limit]" value="<?php echo $data['ip_limit']?>" />多个IP用英文,号分开</td>
+            </tr>
+            <tr>
+                <td class="label">登录错误次数：</td>
+                <td><input type="text" name="items[error_num]" value="<?php echo $data['error_num']?>" /></td>
+            </tr>
+            <tr>
+                <td class="label">描　　述：</td>
+                <td><textarea name="items[description]" style="width:500px; height:160px;"><?php echo $data['description']?></textarea></td>
+            </tr>
+            <tr>
+                <td class="label"></td>
+                <td>
+                    <input type="submit" name="submit" class="bigBtn" value="提交" />
+                    <input type="button" class="bigBtn" value="返回" onclick="location.replace('<?php echo $goback?>');" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<?php $this->endBlock('content');?>

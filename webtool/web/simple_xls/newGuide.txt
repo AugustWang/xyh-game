@@ -1,0 +1,31 @@
+id	client_step	server_step	scene	view	viewParam	viewData
+1	1	1	CityFace		a1,a3,a4
+2			MainWorld		b2
+3			MainWorld	PointsSelectDlg	b4	关卡,1
+4		2	BattleScene	EmBattleDlg	b6,b8
+5			BattleScene	WinView	b10
+6			MainWorld	PointsSelectDlg	b12,b13	关卡,1
+7	2		CityFace		c2,c3
+8		3	CityFace	LoginRewardDlg	c4,c5,c6
+9	3		CityFace		d1,d2
+10		4	BattleScene	EmBattleDlg	d3,d4,d5,d6,d7,d8
+11			BattleScene	WinView	d9,d11,d10
+12	4		CityFace		f1
+13			CityFace	HeroDlg	f2,f3,f4	1
+14		5	CityFace	BlacksmithDlg	f6,f7,f61,f8,f9
+15	5	6	CityFace	BlacksmithDlg	e3,e5,e4	2,1
+16	6	7	CityFace	BlacksmithDlg	e6,e8,e7,e9,e13,e10	2,1
+17			CityFace	HeroDlg	e11,e12	1
+18	7		CityFace		g1,g2
+19		8	BattleScene	EmBattleDlg	g3
+20			BattleScene	WinView	g5,g7,g6
+21	8		CityFace		h1,h2
+22		9	CityFace	AchievementDlg	h4,h41,h5
+23	9		CityFace		i1,i2
+24			MainWorld		i3
+25			MainWorld	PointsSelectDlg	i5	关卡,1
+26		10	BattleScene	EmBattleDlg	i66,i7,i9,i11,i13,i15,i16
+27			BattleScene	WinView	i17,i18,j1
+28	10	11	MainWorld		j1,j2,j4,j5,j6,j7
+29	11		CityFace		k1
+30		12	CityFace	PackDlg	k3,k4,k6,k8,k9

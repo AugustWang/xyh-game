@@ -1,0 +1,2 @@
+id	pos	photo	quality	job	name	caption
+30008	1	ui_denglu_kapai1	1	肉盾	牛头人	哈哈哈哈

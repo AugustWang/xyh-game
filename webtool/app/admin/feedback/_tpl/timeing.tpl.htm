@@ -1,0 +1,134 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>
+定时活动
+<?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+
+<div class="tableWrapper">
+    <form method="post">
+        <table class="grid">
+            <tr>
+                <td align="right">
+                    <select name="id_type">
+                        <option value="role_id" selected="selected">角色ＩＤ</option>
+                        <!--<option value="name">角色名称</option>
+                        <option value="account_id">帐号名称</option>-->
+                    </select>
+                    ：</td>
+                <td align="left">
+                    <input name="id" type="text" value="<?php if(is_array($id)){ echo join(',', $id); } else { echo $id; }?>" />                </td>
+            </tr>
+            <!--tr>
+              <td align="right">To_ID                  ：</td>
+              <td align="left"><input type="text" name="toid" />(0=系统,>0=收件人id,不能为空)</td>
+            </tr>
+            <tr>
+              <td align="right">From_ID                  ：</td>
+              <td align="left"><input type="text" name="fromid" />(0=系统,>0=发件人id,不能为空)</td>
+            </tr>
+            <tr>
+              <td align="right">发件人名字               ：</td>
+              <td align="left"><input type="text" name="name" />(非空字符串)</td>
+            </tr-->
+            <tr>
+              <td align="right">邮件内容                 ：</td>
+              <!--<td align="left"><input type="text" name="body" />(非空字符串)</td>-->
+              <td align="left"><textarea id="text" name="body" cols="30" rows="10" />输入内容...</textarea>(非空字符串)</td>
+            </tr>
+            <!--tr>
+              <td align="right">邮件附件                 ：</td>
+              <td align="left"><input type="text" name="items" />([{Type,Num},{Type,{HeroId,Quality}}])</td>
+            </tr-->
+            <tr>
+                <td align="right"><select name="money_type1">
+                        <option value="diamond">－钻石－</option>
+                        <option value="gold">－金币－</option>
+                        <option value="luck">－幸运星－</option>
+                        <option value="tired">－疲劳值－</option>
+                        <option value="horn">－喇叭－</option>
+                    </select>
+                    ：</td>
+                <td align="left"><input type="text" name="money1" /></td>
+            </tr>
+            <tr>
+                <td align="right"><select name="money_type2">
+                        <option value="diamond">－钻石－</option>
+                        <option value="gold">－金币－</option>
+                        <option value="luck">－幸运星－</option>
+                        <option value="tired">－疲劳值－</option>
+                        <option value="horn">－喇叭－</option>
+                    </select>
+                    ：</td>
+                <td align="left"><input type="text" name="money2" /></td>
+            </tr>
+            <tr>
+                <td align="right"><select name="money_type3">
+                        <option value="diamond">－钻石－</option>
+                        <option value="gold">－金币－</option>
+                        <option value="luck">－幸运星－</option>
+                        <option value="tired">－疲劳值－</option>
+                        <option value="horn">－喇叭－</option>
+                    </select>
+                    ：</td>
+                <td align="left"><input type="text" name="money3" /></td>
+            </tr>
+            <tr>
+                <td align="right"><select name="item_type">
+                        <option value="equ">－装备－</option>
+                        <option value="prop">－道具－</option>
+                        <option value="mat">－道具－</option>
+                    </select>
+                    ：</td>
+                <td align="left"><input type="text" name="itemid" /></td>
+            </tr>
+            <tr>
+                <td align="right"><select name="item_num">
+                        <option value="item">－物品数量－</option>
+                    </select>
+                    ：</td>
+                <td align="left"><input type="text" name="items" /></td>
+            </tr>
+            <tr>
+                <td align="right"><select name="heroes_id">
+                        <option value="hero">－英雄id－</option>
+                    </select>
+                    ：</td>
+                <td align="left"><input type="text" name="heroid" /></td></tr>
+            </tr>
+            <tr>
+                <td align="right"><select name="heroes_quality">
+                        <option value="heroq">－英雄quality－</option>
+                    </select>
+                    ：</td>
+                <td align="left"><input type="text" name="quality" />1~7</td>
+            </tr>
+            <tr>
+                <td align="right"><select name="time">
+                        <option value="timeing">－活动生效日期－</option>
+                    </select>
+                    ：</td>
+                <td align="left">
+                    <input type="text" class="js_starttime" name="kw[start_time]" value="<?php echo $_REQUEST['kw']['start_time'];?>" style="width:80px;" />-<input type="text" name="kw[end_time]" value="<?php echo $_REQUEST['kw']['end_time'];?>" class="js_endtime" style="width:80px;" />
+                必填,活动是需要日期的darling</td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td align="left"><input type="submit" name="submit" value="发送" />后悔还来得急</td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</div>
+
+<script>
+<?php
+if($alert){
+	echo "alert('{$alert}');";
+}
+?>
+</script>
+
+<?php $this->endBlock('content');?>

@@ -1,0 +1,81 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?><?php echo $_GET['kw']['title'] ? $_GET['kw']['title']:'' ?>注册数据<?php $this->endBlock('title');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post" action="?mod=feedback&act=register">
+          <!--
+    <div class="searchPanel">请选择日期：<?php echo $dates; ?><input type="submit" value="查看" />
+    </div>
+    <div class="searchPanel">
+        角色ID：<input type="text" id="js_rid" name="kw[id]" value="<?php echo $kw['kw_id']?>" style="width:40px;" />
+        账号名称：<input type="text" id="js_accname" name="kw[accname]" value="<?php echo $kw['kw_accname']?>" style="width:80px;" />
+        角色名称：<input type="text" id="js_rname" name="kw[name]" value="<?php echo $kw['kw_name']?>" style="width:80px;" />
+        <span id="js_extra_search">
+          充值次数：<input type="text" name="kw[pays_st]" value="<?php echo $_REQUEST['kw']['pays_st'];?>" style="width:80px;" />-<input type="text" name="kw[pays_et]" value="<?php echo $_REQUEST['kw']['pays_et'];?>" style="width:80px;" />
+          关卡：<input type="text" name="kw[lv_st]" value="<?php echo $_REQUEST['kw']['lv_st'];?>" style="width:80px;" />-<input type="text" name="kw[lv_et]" value="<?php echo $_REQUEST['kw']['lv_et'];?>" style="width:80px;" />
+          充值：<input type="text" name="kw[as_st]" value="<?php echo $_REQUEST['kw']['as_st'];?>" style="width:80px;" />-<input type="text" name="kw[as_et]" value="<?php echo $_REQUEST['kw']['as_et'];?>" style="width:80px;" />
+          首付日期：<input type="text" class="js_starttime" name="kw[pay_st]" value="<?php echo $_REQUEST['kw']['pay_st'];?>" style="width:80px;" />-<input type="text" name="kw[pay_et]" value="<?php echo $_REQUEST['kw']['pay_et'];?>" class="js_endtime" style="width:80px;" />
+          注册日期：<input type="text" class="js_starttime" name="kw[reg_st]" value="<?php echo $_REQUEST['kw']['reg_st'];?>" style="width:80px;" />-<input type="text" name="kw[reg_et]" value="<?php echo $_REQUEST['kw']['reg_et'];?>" class="js_endtime" style="width:80px;" />
+          日期：<input type="text" class="js_starttime" name="kw[time_st]" value="<?php echo $_REQUEST['kw']['time_st'];?>" style="width:80px;" />-<input type="text" name="kw[time_et]" value="<?php echo $_REQUEST['kw']['time_et'];?>" class="js_endtime" style="width:80px;" />
+        <input type="submit" value="搜索" class="btn" />
+        </span>
+    </div>
+          -->
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td>日期</td>
+                    <td>注册人数</td>
+                    <td>创建角色人数</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach($data as $v):
+                ?>
+                <tr>
+                    <td><?php echo $v['time']?></td>
+                    <td><?php echo $v['reg']?></td>
+                    <td><?php echo $v['name']?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <tfoot>
+                <tr><!--
+                    <td style="text-align:center;">↑</td>
+                -->
+                    <td colspan="9">
+                        <?php $this->loadBlock('pager')?>
+                        <input type="checkbox" name="chk_all" id="chk_all" />
+                        <input type="BUTTON" value="发邮件" onclick="javascript:{this.disabled=true;document.form1.submit();}">
+                        <input name="check" type="button" id="check" class="btnCheck" value="反选"/>
+                        <input name="uncheck" type="button" id="uncheck" class="btnUncheck" value="取消选中"/>
+                        <?php echo $op?>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+<script type="text/javascript">
+$("#chk_all").click(function(){
+     $("input[name='id[]']").attr("checked",$(this).attr("checked"));
+});
+</script>
+<?php $this->endBlock('content');?>

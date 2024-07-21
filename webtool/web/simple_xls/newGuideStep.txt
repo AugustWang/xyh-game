@@ -1,0 +1,83 @@
+id	tag	guide	excute	dialog	animation	sendStep
+1	a1		跳转主城		effect_eyes,effect_eyes,true	1
+2	a3			1*2*3*4*jump
+3	a4	主线按钮
+4	b2	fb第x章,0
+5	b4	第一关入口,0
+6	b6	自动布阵按钮
+7	b8	开始战斗按钮
+8	b10	返回按钮
+9	b12			5*6*7*jump
+10	b13		跳转主城
+11	c2			8*jump
+12	c3	签到按钮
+13	c4			9*jump
+14	c5	领取按钮				1
+15	c6	退出按钮
+16	d1			10*11*12*jump
+17	d2		加载关卡,2
+18	d3			13*jump
+19	d4	布阵,4
+20	d5			14*jump
+21	d6	英雄,0-4
+22	d7			15*jump
+23	d8	开始战斗按钮
+24	d9			16*jump
+25	d11	nextFun返回按钮
+26	d10		跳转主城
+27	f1	英雄之家
+28	f2			17*jump
+29	f3	选择英雄,30008
+30	f4	英雄装备,0
+31	f6			18*jump
+32	f7	背包装备,0
+33	f61	装备按钮				1
+34	f8			19*jump
+35	f9	强化标签
+36	e3			20*jump
+37	e5	强化石,0
+38	e4	强化按钮				1
+39	e6			21*jump
+40	e8	强化石,1
+41	e7	强化按钮				1
+42	e9			22*jump
+43	e13	退出按钮
+44	e10		英雄之家
+45	e11			23*24*jump
+46	e12		跳转主城
+47	g1			25*26*jump
+48	g2		加载关卡,3
+49	g3	开始战斗按钮
+50	g5			27*28*jump
+51	g7	nextFun返回按钮
+52	g6		跳转主城
+53	h1	成就按钮
+54	h2			29*jump
+55	h4	成就,0				1
+56	h41			30*jump
+57	h5		跳转主城
+58	i1			31*jump
+59	i2	主线按钮
+60	i3	fb第x章,0
+61	i5	第一关入口,3
+62	i66			32*33*34*jump
+63	i7	布阵,0-1			effect_bigfinger,zhiyin2,false|360,320
+64	i9	布阵,3-4			effect_bigfinger,zhiyin2,false|235,320
+65	i11	布阵,6
+66	i13	英雄,2-6
+67	i15			35*jump
+68	i16	开始战斗按钮
+69	i17			36*jump
+70	i18	nextFun返回按钮
+71	j1		世界地图
+72	j2	关卡礼包
+73	j4			37*jump
+74	j5	领取按钮				1
+75	j6			38*jump
+76	j7		主城界面
+77	k1	背包按钮
+78	k3			39*40*jump
+79	k4	背包行,3
+80	k6	确认按钮				1
+81	k8			41*jump
+82	k9		主城界面

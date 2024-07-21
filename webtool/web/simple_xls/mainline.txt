@@ -1,0 +1,529 @@
+id	chapterID	chapterName	chapterScope	pointID	pointName	scene	bgm	boss_level	boss_seat	points_ico	pco_effect	points_point
+1	1	1	1,20	1	潜入	map_0014	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+2	2	2	21,40	2	暗巷	map_0015	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+3	3	3	41,60	3	追杀	map_0016	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+4	4	4	61,80	4	清剿	map_0017	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+5	5	5	81,100	5	罗伦纪念碑	map_0018	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+6	6	6	101,120	6	士兵广场	map_0019	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+7	7	7	121,140	7	纳格兰小道	map_0020	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+8	8	8	141,160	8	战略转移	map_0021	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+9	9	9	161,180	9	突袭	map_0022	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+10	10	10	181,200	10	斥候撒克隆	map_001	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+11	11	11	201,220	11	祈祷之台	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+12	12	12	221,240	12	誓死守卫	map_001	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+13	13	13	241,260	13	阻挠	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+14	14	14	261,280	14	精神压制	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+15	15	15	281,300	15	第一波冲击	map_001	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+16	16	16	301,320	16	轻敌	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+17	17	17	321,340	17	第二波冲击	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+18	18	18	341,360	18	强袭者蒙卡托	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+19	19	19	361,380	19	拯救	map_001	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+20	20	20	381,400	20	光之障壁	map_001	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+21				21	整装待发	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+22				22	突破第一阶段	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+23				23	突破第二阶段	map_004	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+24				24	硝烟四起	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+25				25	迫在眉睫	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+26				26	杀戮之地	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+27				27	真正的希望	map_004	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+28				28	曙光	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+29				29	退却	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+30				30	死亡的气息	map_004	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+31				31	不败意志	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+32				32	变化	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+33				33	第一轮撕扯	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+34				34	小波的阻碍	map_004	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+35				35	目标阿琉斯	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+36				36	利剑的撕扯	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+37				37	惨叫与哀鸣	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+38				38	第三轮撕扯	map_004	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+39				39	不死生物	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+40				40	斩首	map_004	battle_bgm_boss	1	8	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+41				41	全面冲击	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+42				42	溃不成军	map_004	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+43				43	绝望？失望？	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+44				44	悲伤的大地	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+45				45	对与错	map_004	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+46				46	往事	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+47				47	杀出希望之门	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+48				48	集结希望之门	map_004	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+49				49	暗影来袭	map_004	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+50				50	目标血色	map_004	battle_bgm_boss	2	3	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+51				51	暴动的野兽1	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+52				52	不详之路	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+53				53	狗咬狗	map_003	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+54				54	残兵败将1	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+55				55	威胁？	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+56				56	不自量力	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+57				57	痛恨	map_003	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+58				58	强力部队？	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+59				59	悲凉的尸体	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+60				60	熊王蒙特西	map_003	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+61				61	野蛮之力	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+62				62	浓烈	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+63				63	线索	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+64				64	不祥之兆	map_003	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+65				65	无谓的反抗1	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+66				66	谜团	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+67				67	黑暗	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+68				68	一抹黑	map_003	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+69				69	邪教	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+70				70	前进	map_003	battle_bgm_boss	1	8	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+71				71	城墙下的黑影	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+72				72	失踪的士兵1	map_001	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+73				73	疑团	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+74				74	跟踪	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+75				75	真相？	map_001	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+76				76	不容忽视	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+77				77	寻找真相	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+78				78	新的线索	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+79				79	善与恶？	map_001	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+80				80	真正的杀气	map_001	battle_bgm_boss	1	8	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+81				81	暴露	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+82				82	叛变	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+83				83	早有准备	map_001	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+84				84	暴动的守卫2	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+85				85	混乱	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+86				86	自相残杀	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+87				87	纠结之战	map_001	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+88				88	混乱升级	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+89				89	决战前夕	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+90				90	愤怒的米拉德	map_001	battle_bgm_boss	1	8	ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+91				91	进击的守卫1	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+92				92	军械库	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+93				93	围墙之下	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+94				94	大将格雷	map_001	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+95				95	回音教堂	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+96				96	决战当前	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+97				97	皇家卫队	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+98				98	残存的意志	map_001	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+99				99	天使长庞特	map_001	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+100				100	黑暗的米拉德	map_001	battle_bgm_boss	2	2	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+101				101	能量	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+102				102	生命之水	map_003	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+103				103	波光暗影	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+104				104	玷污	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+105				105	泉水守卫2	map_003	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+106				106	生命之源	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+107				107	自然使者	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+108				108	娜丽丝的抉择	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+109				109	泉水守卫6	map_003	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+110				110	撤离	map_003	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+111				111	迷失平原	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+112				112	密林小径	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+113				113	残兵败将4	map_003	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+114				114	路途	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+115				115	亡灵气息1	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+116				116	窒息	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+117				117	加速行军	map_003	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+118				118	变异	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+119				119	突袭	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+120				120	血色之路	map_003	battle_bgm_boss	1	8	ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+121				121	红月	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+122				122	月色十分	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+123				123	游魂	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+124				124	紧闭的大门	map_002	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+125				125	野鬼	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+126				126	渺茫的机会	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+127				127	哀嚎	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+128				128	看门人阿鲁比	map_002	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+129				129	血迹	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+130				130	饲养员休斯	map_002	battle_bgm_boss	1	8	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+131				131	骨与肉	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+132				132	清除	map_002	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+133				133	失踪的勇士	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+134				134	地下室入口	map_008	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+135				135	神奇的召唤	map_008	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+136				136	继续搜寻	map_008	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+137				137	呼吸？	map_008	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+138				138	低沉之声	map_008	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+139				139	腐烂	map_008	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+140				140	黑暗的尽头	map_008	battle_bgm_boss	1	8	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+141				141	异味	map_008	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+142				142	邪教士1	map_008	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+143				143	死咒	map_008	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+144				144	邪恶的味道	map_008	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+145				145	亡灵之门	map_008	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+146				146	颤抖的空气	map_008	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+147				147	走廊	map_008	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+148				148	回音	map_008	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+149				149	没有尽头	map_008	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+150				150	阿尔萨斯之影	map_008	battle_bgm_boss	2	5	ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+151				151	冰与火	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+152				152	躁动的沙漠	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+153				153	控制	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+154				154	局面	map_005	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+155				155	预兆	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+156				156	沙漠之影1	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+157				157	幻觉	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+158				158	杀机	map_005	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+159				159	死亡之触	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+160				160	蛇王聂斯	map_005	battle_bgm_boss	1	8	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+161				161	不安的气息	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+162				162	迷失	map_005	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+163				163	没玩没了	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+164				164	沙漠中的野兽	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+165				165	金色的威胁	map_005	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+166				166	沙虎修特拉	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+167				167	喋喋不休	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+168				168	炎热	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+169				169	轻敌	map_005	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+170				170	残忍木木	map_005	battle_bgm_boss	1	8	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+171				171	轮回	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+172				172	金色迷宫	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+173				173	选择	map_005	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+174				174	无路可走	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+175				175	巨魔氏族	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+176				176	正面出击	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+177				177	包围	map_005	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+178				178	使者肯基	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+179				179	麻木之战	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+180				180	死士纳罗	map_005	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+181				181	蹊跷	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+182				182	奇怪的气息	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+183				183	升级	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+184				184	金色广场	map_005	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+185				185	永生门	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+186				186	遗迹	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+187				187	巨型石柱	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+188				188	占领	map_005	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+189				189	金色大殿	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+190				190	国王肯萨斯	map_005	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+191				191	谜团	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+192				192	圣甲虫广场	map_005	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+193				193	心灵的颤动	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+194				194	驯兽者露米	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+195				195	医师顿特	map_005	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+196				196	复活秘术	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+197				197	沙海巨兽1	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+198				198	巨兽乐园	map_005	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+199				199	沙漠之巢	map_005	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+200				200	大酋长薛尔	map_005	battle_bgm_boss	2	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+201				201	起雾	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+202				202	腐水	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+203				203	迷雾的背后	map_006	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+204				204	野兽的呼唤	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+205				205	残忍的尖牙	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+206				206	嗜血水元素	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+207				207	食物短缺	map_006	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+208				208	刀痕博西	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+209				209	嗜血杜杜尔	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+210				210	灰熊曼拉	map_006	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+211				211	另一个世界	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+212				212	雾色渐浓	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+213				213	被困	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+214				214	失控	map_006	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+215				215	陷落	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+216				216	措手不及	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+217				217	连续激战	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+218				218	盲区	map_006	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+219				219	机制的战术	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+220				220	迷失	map_006	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+221				221	雾色下的爪牙	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+222				222	暴动的野兽	map_006	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+223				223	饥渴	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+224				224	致盲	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+225				225	频繁的威胁	map_006	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+226				226	不同的气味	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+227				227	热浪	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+228				228	融化的味道	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+229				229	退却？	map_006	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+230				230	新的方向	map_007	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+231				231	元素侵袭5	map_007	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+232				232	火焰之拳	map_007	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+233				233	涌动的火焰	map_007	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+234				234	滚烫的汗水	map_007	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+235				235	坚持	map_007	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+236				236	灼热的心跳	map_007	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+237				237	火焰之心	map_007	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+238				238	聚集	map_007	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+239				239	吸引	map_007	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+240				240	火元素科特拉	map_007	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+241				241	豺狼人的威胁1	map_007	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+242				242	野兽的味道	map_007	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+243				243	洞穴入口	map_007	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+244				244	不起眼的喽啰	map_007	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+245				245	熏人的恶臭	map_007	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+246				246	洞穴深处	map_007	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+247				247	族长利齿	map_007	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+248				248	巨型机器	map_007	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+249				249	浓雾之谜	map_007	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+250				250	雪人博比	map_007	battle_bgm_boss	2	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+251				251	喘息	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+252				252	净土	map_003	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+253				253	意料之中	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+254				254	残忍的野兽	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+255				255	染红的绿地	map_003	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+256				256	丘克	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+257				257	马特	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+258				258	无法松懈	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+259				259	安全？	map_003	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+260				260	终结者罗西	map_003	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+261				261	屠戮	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+262				262	自然气息	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+263				263	执着	map_003	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+264				264	勇气	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+265				265	希望之光	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+266				266	沐浴希望	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+267				267	颤动的大地	map_003	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+268				268	愤怒	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+269				269	释放	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+270				270	巡视者	map_003	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+271				271	自然守护者	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+272				272	挽回	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+273				273	食人魔卫兵	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+274				274	正邪之间	map_003	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+275				275	笨重的身躯	map_003	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+276				276	捉迷藏	map_009	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+277				277	中计	map_009	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+278				278	围堵	map_009	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+279				279	捕获	map_009	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+280				280	嗜血魔狼	map_009	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+281				281	刺头	map_009	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+282				282	卫兵	map_009	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+283				283	观察者	map_009	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+284				284	车轮战	map_009	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+285				285	山寨战神	map_009	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+286				286	最愚蠢的智者	map_009	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+287				287	莫丽德少校	map_009	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+288				288	火拳克洛什	map_009	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+289				289	莫加尔大王	map_009	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+290				290	戈多克大王	map_009	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+291				291	人墙	map_009	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+292				292	颤动的气息	map_009	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+293				293	食人魔亲卫	map_009	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+294				294	战斗升级	map_009	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+295				295	难关	map_009	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+296				296	突破	map_009	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+297				297	等待	map_009	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+298				298	无法犹豫	map_009	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+299				299	大战将至	map_009	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+300				300	国王肯迈德	map_009	battle_bgm_boss	2	5	ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+301				301	胜利的步伐	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+302				302	疲惫的身影	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+303				303	邪恶之气	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+304				304	腐烂与撕裂	map_006	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+305				305	亡者之土	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+306				306	亡灵之语	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+307				307	凝结	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+308				308	揣测	map_006	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+309				309	步步惊心	map_006	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+310				310	初现哀嚎	map_010	battle_bgm_boss	1	8	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+311				311	深入墓地	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+312				312	更多墓碑	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+313				313	猜测	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+314				314	清晰的名字	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+315				315	昨日的记忆	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+316				316	触碰	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+317				317	肯萨斯的日记	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+318				318	流失的时间	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+319				319	觉悟	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+320				320	不祥之地	map_010	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+321				321	逆境	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+322				322	时之沙	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+323				323	王者之墓	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+324				324	悲鸣之嚎	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+325				325	有来有往	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+326				326	孵化室	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+327				327	危机	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+328				328	墓之海	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+329				329	无畏的身躯	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+330				330	创世者佛罗	map_010	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+331				331	火苗	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+332				332	引燃	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+333				333	灼烧	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+334				334	失控	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+335				335	撤离	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+336				336	破桥	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+337				337	新的命令	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+338				338	修复吊桥	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+339				339	抵抗	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+340				340	英雄的职责	map_010	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+341				341	最后关头	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+342				342	攻势	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+343				343	失去节奏	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+344				344	退缩	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+345				345	沉睡	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+346				346	复苏	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+347				347	魔爪	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+348				348	敌人	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+349				349	亢奋	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+350				350	恶魔	map_010	battle_bgm_boss	2	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+351				351	亡灵守卫	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+352				352	判断	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+353				353	黑暗生物	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+354				354	初入巢穴	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+355				355	入口	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+356				356	闲人莫入	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+357				357	巨型蘑菇	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+358				358	悲哀之地	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+359				359	瘴气	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+360				360	等候的威胁	map_010	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+361				361	虚张声势	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+362				362	所剩无几	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+363				363	无望的补给	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+364				364	泥泞之日	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+365				365	孤注一掷	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+366				366	近在眼前	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+367				367	远方的声音	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+368				368	扑鼻的恶臭	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+369				369	腐肉与骨头	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+370				370	恶心的声音	map_010	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+371				371	攻势升级	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+372				372	尸海	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+373				373	恶水之源	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+374				374	遮蔽	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+375				375	行踪	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+376				376	腐蚀之屋	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+377				377	旧事	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+378				378	繁荣	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+379				379	残缺	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+380				380	死亡之勾	map_010	battle_bgm_boss	1	9	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+381				381	岁月之刷	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+382				382	末日之影	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+383				383	巡视之眼	map_002	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+384				384	脓液祭坛	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+385				385	哭泣的怨灵	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+386				386	瘟疫与浩劫	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+387				387	绝望	map_002	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+388				388	孤魂之都	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+389				389	记忆之印	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+390				390	血债血偿	map_002	battle_bgm_boss	1	8	ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+391				391	无尽之战	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+392				392	憎恶亲卫队	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+393				393	国王广场	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+394				394	亡国谷	map_002	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+395				395	逝者之地	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+396				396	亡灵之池	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+397				397	冥语之风	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+398				398	真相	map_002	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+399				399	威胁	map_002	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+400				400	阿尔萨斯	map_002	battle_bgm_boss	2	8	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+401				401	决战之后	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+402				402	大敌当前	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+403				403	尘土	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+404				404	人海战术	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+405				405	吞噬	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+406				406	号角	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+407				407	支援	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+408				408	统领破刃	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+409				409	希望之力	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+410				410	先锋队	map_010	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+411				411	开战	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+412				412	团结	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+413				413	刀锋相对	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+414				414	兽人猎犬	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+415				415	破吼之战	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+416				416	杀戮时间	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+417				417	优势	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+418				418	百夫长库尔达	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+419				419	好兆头	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+420				420	奇怪的战局	map_010	battle_bgm_boss	1	4	ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+421				421	黑石山下	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+422				422	变换战术	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+423				423	转机	map_010	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+424				424	突变	map_010	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+425				425	燃烧的空气	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+426				426	龙人军团4	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+427				427	机关	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+428				428	分割	map_011	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+429				429	死亡长廊	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+430				430	红光	map_011	battle_bgm_boss	1	8	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+431				431	嗜血大厅	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+432				432	包围	map_011	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+433				433	吐息	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+434				434	龙之子	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+435				435	铁腕庞贝	map_011	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+436				436	滴血的戈尔	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	126,152
+437				437	沦落的氏族	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	192,252
+438				438	复仇	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	210,334
+439				439	旧账	map_011	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	268,436
+440				440	猎心者萨佛西	map_011	battle_bgm_boss	1	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi	370,496
+441				441	莫格斯的突袭	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	462,408
+442				442	无视	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	470,292
+443				443	气浪	map_011	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	410,170
+444				444	呼唤	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	530,120
+445				445	警卫张诺克利	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	658,150
+446				446	亲卫军3	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	762,238
+447				447	黑心马斯戴尔	map_011	battle_bgm			ui_activities_diamond_search_denglu4	effect_jingjichangtishi	718,370
+448				448	亲卫官德克斯	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	666,484
+449				449	侍卫肯奴迪	map_011	battle_bgm			ui_activities_diamond_search_denglu5	effect_jingjichangtishi	796,542
+450				450	最后一战	map_011	battle_bgm_boss	2	5	ui_activities_diamond_search_denglu4	effect_jingjichangtishi	870,432
+1001				1001	副本的测试	map_001	battle_bgm
+1002				1002	副本的测试	map_001	battle_bgm
+1003				1003	副本的测试	map_001	battle_bgm
+1004				1004	副本的测试	map_001	battle_bgm
+1101				1101	副本的测试	map_001	battle_bgm
+1102				1102	副本的测试	map_001	battle_bgm
+1103				1103	副本的测试	map_001	battle_bgm
+1201				1201	副本的测试	map_001	battle_bgm_boss	1
+1202				1202	副本的测试	map_001	battle_bgm_boss	1
+1301				1301	副本的测试	map_001	battle_bgm_boss	2	2
+2001				2001	副本的测试	map_002	battle_bgm
+2002				2002	副本的测试	map_002	battle_bgm
+2003				2003	副本的测试	map_002	battle_bgm
+2004				2004	副本的测试	map_002	battle_bgm
+2005				2005	副本的测试	map_002	battle_bgm
+2006				2006	副本的测试	map_002	battle_bgm
+2101				2101	副本的测试	map_002	battle_bgm
+2102				2102	副本的测试	map_002	battle_bgm
+2103				2103	副本的测试	map_002	battle_bgm
+2201				2201	副本的测试	map_002	battle_bgm_boss	1
+2202				2202	副本的测试	map_002	battle_bgm_boss	1
+2301				2301	副本的测试	map_002	battle_bgm_boss	2	5
+3001				3001	副本的测试	map_005	battle_bgm
+3002				3002	副本的测试	map_005	battle_bgm
+3003				3003	副本的测试	map_005	battle_bgm
+3004				3004	副本的测试	map_005	battle_bgm
+3005				3005	副本的测试	map_005	battle_bgm
+3101				3101	副本的测试	map_005	battle_bgm
+3102				3102	副本的测试	map_005	battle_bgm
+3103				3103	副本的测试	map_005	battle_bgm
+3201				3201	副本的测试	map_005	battle_bgm_boss	1
+3202				3202	副本的测试	map_005	battle_bgm_boss	1
+3301				3301	副本的测试	map_005	battle_bgm_boss	2	6
+4001				4001	副本的测试	map_009	battle_bgm
+4002				4002	副本的测试	map_009	battle_bgm
+4003				4003	副本的测试	map_009	battle_bgm
+4004				4004	副本的测试	map_009	battle_bgm
+4005				4005	副本的测试	map_009	battle_bgm
+4006				4006	副本的测试	map_009	battle_bgm
+4101				4101	副本的测试	map_009	battle_bgm
+4102				4102	副本的测试	map_009	battle_bgm
+4103				4103	副本的测试	map_009	battle_bgm
+4201				4201	副本的测试	map_009	battle_bgm_boss	1
+4202				4202	副本的测试	map_009	battle_bgm_boss	1
+4301				4301	副本的测试	map_009	battle_bgm_boss	2	2
+5001				5001	副本的测试	map_002	battle_bgm
+5002				5002	副本的测试	map_002	battle_bgm
+5003				5003	副本的测试	map_002	battle_bgm
+5004				5004	副本的测试	map_002	battle_bgm
+5005				5005	副本的测试	map_002	battle_bgm
+5006				5006	副本的测试	map_002	battle_bgm
+5007				5007	副本的测试	map_002	battle_bgm
+5008				5008	副本的测试	map_002	battle_bgm
+5009				5009	副本的测试	map_002	battle_bgm
+5101				5101	副本的测试	map_002	battle_bgm
+5102				5102	副本的测试	map_002	battle_bgm
+5103				5103	副本的测试	map_002	battle_bgm
+5104				5104	副本的测试	map_002	battle_bgm
+5201				5201	副本的测试	map_002	battle_bgm_boss	1
+5202				5202	副本的测试	map_002	battle_bgm_boss	1
+5301				5301	副本的测试	map_002	battle_bgm_boss	2	5
+6001				6001	副本的测试	map_011	battle_bgm
+6002				6002	副本的测试	map_011	battle_bgm
+6003				6003	副本的测试	map_011	battle_bgm
+6004				6004	副本的测试	map_011	battle_bgm
+6005				6005	副本的测试	map_011	battle_bgm
+6006				6006	副本的测试	map_011	battle_bgm
+6007				6007	副本的测试	map_011	battle_bgm
+6008				6008	副本的测试	map_011	battle_bgm
+6009				6009	副本的测试	map_011	battle_bgm
+6101				6101	副本的测试	map_011	battle_bgm
+6102				6102	副本的测试	map_011	battle_bgm
+6103				6103	副本的测试	map_011	battle_bgm
+6104				6104	副本的测试	map_011	battle_bgm
+6201				6201	副本的测试	map_011	battle_bgm_boss	1
+6202				6202	副本的测试	map_011	battle_bgm_boss	1
+6301				6301	副本的测试	map_011	battle_bgm_boss	2	5
+20001				20001	噩梦模式测试	map_001	battle_bgm_boss	3	5	ui_activities_diamond_search_denglu5	effect_jingjichangtishi

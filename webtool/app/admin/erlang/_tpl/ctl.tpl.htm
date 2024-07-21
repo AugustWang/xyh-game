@@ -1,0 +1,20 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>服务器控制终端<?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+<div class="tableWrapper">
+	<div style="margin: 10px;">
+		<form method="post">
+			<input type="submit" name="submit" value="热更新服务端"/>
+            <br />
+			<input type="submit" name="submit" value="TEST"/>
+		</form>
+	</div>
+	<div style="margin: 12px;">
+		<?php 
+			echo $info;
+		?>
+	</div>
+</div>
+<?php $this->endBlock('content');?>

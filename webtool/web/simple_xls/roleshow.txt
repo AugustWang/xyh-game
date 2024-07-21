@@ -1,0 +1,118 @@
+id	avatar	moveSpeed	attackTime	attackType	attackEffect	underAttackEffect	weaponID	photo	card
+100	role_100	78	422	3		skill_101
+101	role_101	78	396	3		skill_101
+102	role_102	104	573	3		skill_101
+103	role_103	104	682	2	skill_2011	skill_126
+104	role_104	78	755	2	skill_2011	skill_126
+105	role_105	104	669	3		skill_101
+106	role_106	104	333	3		skill_101
+107	role_107	78	818	3		skill_101
+108	role_108	104	455	3		skill_101
+109	role_109	104	1178	2	skill_2003	skill_102
+110	role_110	104	1083	2	skill_2003	skill_102
+111	role_111	104	186	3		skill_101
+112	role_112	104	1029	3		skill_101
+113	role_113	104	430	3		skill_101
+114	role_114	78	228	3		skill_101
+115	role_115	78	666	3		skill_101
+116	role_116	78	803	2	skill_2009	skill_102
+117	role_117	104	1078	2	skill_2010	skill_125
+118	role_118	104	651	2	skill_2010	skill_125
+119	role_119	104	1078	2	skill_2010	skill_125
+120	role_120	65	735	3		skill_101
+121	role_121	78	470	3		skill_101
+122	role_122	104	440	3		skill_101
+123	role_123	104	615	3		skill_101
+124	role_124	130	1020	3		skill_101
+125	role_125	78	266	3		skill_101
+126	role_126	104	760	3		skill_101
+127	role_127	78	1269	3		skill_101
+128	role_128	104	656	2	skill_2011	skill_126
+129	role_129	104	444	2	skill_2008	skill_124
+130	role_130	65	750	2	skill_2008	skill_124
+131	role_131	65	364	3		skill_101
+132	role_132	104	451	3		skill_101
+133	role_133	78	848	3		skill_101
+134	role_134	91	722	3		skill_101
+135	role_135	117	472	3		skill_101
+136	role_136	104	749	2	skill_2009	skill_102
+137	role_137	104	550	3		skill_101
+139	role_139	78	517	2	skill_2010	skill_101
+140	role_140	104	474	3		skill_101
+141	role_141	91	606	3		skill_101
+142	role_142	52	436	2	skill_2011	skill_126
+143	role_143	130	762	2	skill_2011	skill_126
+144	role_144	78	366	3		skill_101
+145	role_145	65	547	3		skill_101
+146	role_146	117	389	2	skill_2009	skill_102
+147	role_147	91	775	2	skill_2009	skill_102
+148	role_148	104	620	3		skill_101
+149	role_149	78	622	2	skill_2008	skill_124
+150	role_150	156	933	3		skill_101
+151	role_151	65	418	3		skill_101
+152	role_152	130	1029	2	skill_2009	skill_102
+153	role_153	117	397	3		skill_101
+154	role_154	91	664	2	skill_2010	skill_125
+155	role_155	78	579	3		skill_101
+156	role_156	130	500	2	skill_2011	skill_126
+157	role_157	104	500	2	skill_2010	skill_101
+158	role_158	90	500	3		skill_101
+159	role_159	120	500	2	skill_2011	skill_101
+160	role_160	40	760	2	skill_2009	skill_102
+161	role_161	80	738	3		skill_101
+162	role_162	80	276	3		skill_101
+163	role_163	40	460	2	skill_2010	skill_125
+501	role_501	60	737	3		skill_101		photo_501
+502	role_502	60	794	2	skill_2011	skill_126		photo_502
+503	role_503	30	280	2	skill_2012	skill_126		photo_503
+504	role_504	80	618	3		skill_101		photo_504
+505	role_505	70	491	3		skill_101		photo_505
+506	role_506	40	650	3		skill_101		photo_506
+507	role_507	40	715	2	skill_2009	skill_102		photo_507
+508	role_508	100	444	3		skill_101		photo_508
+509	role_509	40	708	2	skill_2010	skill_125		photo_509
+510	role_510	120	903	4		skill_106		photo_510
+511	role_511	120	820	4		skill_106		photo_511
+164	role_164	60	780	3		skill_101
+165	role_165	50	462	3		skill_101
+166	role_166	90	669	3		skill_101
+167	role_167	70	336	3		skill_101
+168	role_168	80	575	3		skill_101
+169	role_169	60	524	3		skill_101
+170	role_170	120	181	3		skill_101
+171	role_171	120	700	2	skill_2007	skill_101
+172	role_172	50	488	3		skill_101
+173	role_173	100	268	3		skill_101
+174	role_174	40	602	2	skill_2009	skill_102
+175	role_175	40	1081	2	skill_2009	skill_102
+176	role_176	40	500	2	skill_2009	skill_102
+515	role_515	90	1333	3		skill_101		photo_515
+512	role_512	70	440	3		skill_101		photo_512
+513	role_513	60	890	3		skill_101		photo_513
+514	role_514	40	1300	4		skill_106		photo_514
+516	role_516	40	1530	2	skill_2012	skill_126		photo_516
+517	role_517	100	890	3		skill_101		photo_517
+518	role_518	80	800	2		skill_101		photo_518
+519	role_519	40	1300	2	skill_2009	skill_102		photo_519
+520	role_520	80	591	3		skill_101		photo_520
+521	role_521	40	343	2	skill_2012	skill_126		photo_521
+522	role_522	120	868	2	skill_2013	skill_102		photo_522
+523	role_523	40	1470	2	skill_2014	skill_136		photo_523
+1001	role_1001	120
+1002	role_1002	120
+1003	role_1003	120
+1004	role_1004	120
+1005	role_1005	120
+1006	role_1006	120
+1007	role_1007	120
+1008	role_1008
+174	role_174
+175	role_175
+176	role_176
+177	role_177
+178	role_178
+179	role_179
+180	role_180
+181	role_181
+182	role_182
+183	role_183

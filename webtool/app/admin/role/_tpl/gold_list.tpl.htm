@@ -1,0 +1,134 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>玩家（ID：<?php echo $id;?>）金币流动明细<?php $this->endBlock('title');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post" action="?mod=role&act=gold_list&id=<?php echo $id;?>">
+	<div class="searchPanel">请选择类型：<?php echo $type; ?><input type="submit" value="查看" /> </div>
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td style="width:40px;text-align:center;">序号</td>
+					<td>数量</td>
+                    <td>剩余</td>
+                    <td>类型</td>
+                    <td>时间</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach($data['list'] as $v):
+                ?>
+                <tr>
+                    <td style="text-align:center;"><?php echo $v['index']?></td>
+                    <td><?php echo $v['num']?></td>
+                    <td><?php echo number_format($v['rest']); echo $v['status']; ?></td>
+					<td><?php echo $v['type']?></td>
+                    <td><?php echo date("Y-m-d H:i:s", $v['ctime'])?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="text-align:center;">↑</td>
+                    <td colspan="4">
+                        <?php $this->loadBlock('pager')?>
+                        <?php echo $op?>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+<script>
+<?php if($msg){echo 'alert("'.$msg.'");';} ?>
+function active(a)
+{
+	var time = prompt('注：封号后需要踢除生效，请输入封号的时间，单位：小时，0为无限期', '0');
+	if(time === null)return false;
+	a.href = a.href + '&val='+time;
+	return true;
+}
+function batch_stop_chat()
+{
+	if($('input:checkbox:checked').length < 1)
+	{
+		$('#js_op').val(0);
+		return alert('请选择一个角色！');
+	}
+	var time = prompt('注：请输入限制的时间，单位：小时，0为无限期', '0');
+	if(time === null)return ;
+	$('#js_timeout').val(time);
+	var f = document.getElementById('mainForm');
+	$('#js_do_act').val('stop_chat');
+	f.method='post'; f.submit();
+}
+function batch_open_chat()
+{
+	if($('input:checkbox:checked').length < 1)
+	{
+		$('#js_op').val(0);
+		return alert('请选择一个角色！');
+	}
+	if(confirm('确认要解除禁言吗？'))
+	{
+		var f = document.getElementById('mainForm');
+		$('#js_do_act').val('open_chat');
+		f.method='post'; f.submit();
+	}
+	
+}
+function btnTimeout(sw)
+{
+	if(!$('#js_rid').val() && !$("#js_accname").val() && !$('#js_rname').val())
+	{
+		alert('您要搞谁？嘿嘿');
+		return false;
+	}
+	var time = prompt('注：请输入限制的时间，单位：小时，0为无限期', '0');
+	if(time === null)return false;
+	$('#js_timeout').val(time);
+    
+    if(sw===1){
+      return require();
+    }
+    
+	return true;
+}
+
+function require_a(a)
+{
+  if(require())
+  {
+    a.href=a.href+'&memo='+$('#js_memo').val();
+    return true;
+  }
+  return false;
+}
+
+function require()
+{
+  var m = prompt("请输入原因：");
+  if(m === null || !m || m == undefined || !$.trim(m))
+      return false;
+  $('#js_memo').val(m);
+  
+  return true;
+}
+</script>
+<?php $this->endBlock('content');?>

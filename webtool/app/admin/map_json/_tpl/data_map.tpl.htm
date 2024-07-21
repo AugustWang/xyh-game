@@ -1,0 +1,16 @@
+-module(data_map).
+-export([get/1]).
+
+get(ids) -> [<?php echo $map_ids ?>];
+
+<?php foreach($data as $row):?>
+get(<?php echo $row['id']?>) -> 
+    [
+     {pos, {<?php echo $row['pos1']?>, <?php echo $row['pos2']?>}}, 
+     {objects, [<?php echo $row['objects']?>]}
+    ];
+
+<?php endforeach;?>
+get(_) -> undefined.
+
+%% vim: ft=erlang :

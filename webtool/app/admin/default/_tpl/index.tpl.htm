@@ -1,0 +1,31 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>首页<?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+<div class="tableWrapper">
+        <table id="gridview" class="grid">
+            <thead>
+                <tr>
+				    <td>摘要</td>
+                </tr>
+            </thead>
+            <tbody>
+              <tr onmouseover="this.style.background='#fff';"><td height="100" onmouseover="this.style.background='#fff';">
+                  <div style="width:40%; margin: 50px auto; font-size: 14px;">
+                      常用操用： [<a href="?mod=role&act=online">在线列表</a>]
+                      [<a href="?mod=sheet&act=from_excel">Excel数据导入</a>]
+                      [<a href="?mod=protocol&act=update">生成通信协议</a>]
+                  </div>
+                </td></tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                      <?php echo date('Y-m-d H:i:s'); ?>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+<?php $this->endBlock('content');?>

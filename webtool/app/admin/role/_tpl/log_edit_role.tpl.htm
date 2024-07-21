@@ -1,0 +1,76 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>
+修改玩家角色属性日志
+<?php $this->endBlock('title');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex"> <?php echo $data['page_index']?><?php echo $page ?>
+<select name="limit" onchange="document.getElementById('mainForm').submit();">
+  <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+  <option value="" disabled="disabled">---</option>
+  <option value="30">30行</option>
+  <option value="50">50行</option>
+  <option value="100">100行</option>
+  <option value="200">200行</option>
+</select>
+</span>
+<?php $this->endBlock('pager');?>
+<?php $this->block('content');?>
+<form id="mainForm" method="post">
+  <div class="tableWrapper">
+    <script type="text/javascript">
+            $(function(){
+                GridView.init('list');
+            });
+        </script>
+    <table width="100%" border="0" class="grid" id="list">
+      <thead>
+        <tr>
+          <td>&nbsp;</td>
+          <td>管理员名称</td>
+		  <td>修改时间</td>
+          <td>IP</td>
+		  <td>玩家ID</td>
+		  <td>角色名称</td>
+          <td style="width:120px">类型</td>
+          <td style="width:120px">属性</td>
+          <td>值</td>
+        </tr>
+      </thead>
+      <tbody>
+      <?php if(!$list):?>
+       <tr>
+          <td colspan="8" style="text-align:center;">暂无内容</td>
+        </tr>
+      <?php
+       else:
+       foreach($list as $col):
+        ?>
+        <tr>
+          <td style="text-align:center;width:15px;"><input name="id[]" type="checkbox" value="<?php echo $col['id']?>"></td>
+		  <td><?php echo $col['admin'] ?></td>
+		  <td><?php echo date('Y-m-d H:i:s', $col['ctime']); ?></td>
+          <td><?php echo $col['ip'] ? $col['ip'].'('.Utils::ip2addr($col['ip']).')' : '--'; ?></td>
+		  <td><?php echo $col['role_id'] ?></td>
+          <td><?php echo $col['role_name'] ?></td>
+          <td><?php echo $col['type'] == 2 ? '减少' : '增加'; ?></td>
+          <td><?php echo $col['field'] ?></td>
+		  <td><?php echo $col['val'] ?></td>
+        </tr>
+        <?php 
+        endforeach;
+        endif;
+         ?>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td style="text-align:center;">↑</td>
+          <td colspan="9"><?php $this->loadBlock('pager')?>
+            </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</form>
+<?php $this->endBlock('content');?>

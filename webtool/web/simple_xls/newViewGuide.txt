@@ -1,0 +1,13 @@
+id	tollgateId	scene	view	viewParam	viewData
+1	19		MsgDialog	a_1,a_2,a_3
+2	19	CityFace		a_4
+3	19	CityFace	TavernDlg	a_5
+4	40		MsgDialog	b_1,b_2,b_3
+5	40	CityFace		b_4
+6	40	CityFace	ArenaCreateNameDlg	b_5
+7	999999	CityFace	JTPvpComponent	b_6,b_7,b_8
+11	150		MsgDialog	d_1,d_2,d_3
+12	150	CityFace		d_4
+13	150	CityFace	BlacksmithDlg	d_5,d_6	3
+14	150		MsgDialog	d_7,d_8,d_9
+15	150	CityFace	MagicOrbDlg	d_10,d_11

@@ -1,0 +1,218 @@
+<?php $this->setLayout('main');?>
+<?php $this->block('title');?>
+<?php echo $title ?>
+<?php $this->endBlock('title');?>
+<?php $this->block('header');?>
+<style type="text/css">
+<!--
+.grid th {
+	text-align: right;
+	padding-right: 5px;
+	font-weight: normal;
+}
+#basefrom {
+	width: 20%;
+	float:left;
+}
+#hack {
+	height:1px;
+	clear:both;
+	overflow:hidden;
+	width:100%
+}
+#log {
+	float: left;
+	margin-left: 5px;
+	background: #FFF;
+	width: 75%;
+}
+#log h2 {
+	font-size: 12px;
+	display: block;
+	background: #D6D6D6;
+	padding: 1px;
+	margin: 1px;
+}
+-->
+</style>
+<?php $this->endBlock('header');?>
+<?php $this->block('content');?>
+<div class="tableWrapper">
+  <form id="basefrom" method="post" action="" >
+    <table width="100%" border="0" cellpadding="0" cellspacing="1" class="grid">
+      <tr>
+        <th>角色ID：</th>
+        <td><?php echo $data['id']; ?></td>
+      </tr>
+      <tr>
+        <th>账号ID：</th>
+        <td><?php echo $data['account_id']; ?></td>
+      </tr>
+      <tr>
+        <th>账号名称：</th>
+        <td><?php echo $data['account_name']; ?></td>
+      </tr>
+      <tr>
+        <th>角色名称：</th>
+        <td><?php echo $data['name']; ?>  <!--<a href="?mod=role&act=edit&do=rename&id=<?php echo $data['id']?>" onclick="return rename(this, '<?php echo $data['name']?>');">改名</a>--></td>
+      </tr>
+      <tr>
+        <th>性别：</th>
+        <td><?php echo $data['sex']; ?></td>
+      </tr>
+      <tr>
+        <th>等级：</th>
+        <td><?php echo $data['lev']; ?></td>
+      </tr>
+      <tr>
+        <th>注册时间：</th>
+        <td><?php echo $data['reg_time']; ?></td>
+      </tr>
+      <tr>
+        <th>注册IP：</th>
+        <td><?php echo $data['reg_ip']; ?></td>
+      </tr>
+      <tr>
+        <th>登录次数：</th>
+        <td><?php echo $data['login_times']; ?></td>
+      </tr>
+      <tr>
+        <th>金币：</th>
+        <td><?php echo $data['gold']; ?>  <!--<a href="?mod=role&act=edit&do=gold&id=<?php echo $data['id']?>" onclick="return edit_gold(this, '<?php echo $data['gold']?>', '增加多少元宝',1);">加</a>  <a href="?mod=role&act=edit&do=gold&id=<?php echo $data['id']?>" onclick="return edit_gold(this, '<?php echo $data['gold']?>', '减少多少元宝',2);">减</a>--></td>
+      </tr>
+      <tr>
+        <th>点券：</th>
+        <td><?php echo $data['card']; ?></td>
+      </tr>
+      <tr>
+        <th>经验：</th>
+        <td><?php echo $data['exp']; ?></td>
+      </tr>
+      <tr>
+        <th>获胜次数：</th>
+        <td><?php echo $data['win']; ?></td>
+      </tr>
+      <tr>
+        <th>失败次数：</th>
+        <td><?php echo $data['lost']; ?></td>
+      </tr>
+      <tr>
+        <th>平局次数：</th>
+        <td><?php echo $data['draw']; ?></td>
+      </tr>
+    </table>
+  </form>
+  <div id="log">
+    <h2>登录日志(最近30次) --<a href="#@" id="viewLoginLog">查看</a></h2>
+    <div id="login"></div>
+    <h2>人物升级日志--<a href="#@" id="viewLevelLog">查看</a></h2>
+    <div id="level"></div>
+    <h2>人物30天内每天在线时间曲线图--<a href="#@" id="viewOnlineTime">查看</a></h2>
+    <div id="online"></div>
+    <h2>玩家物品</h2>
+	<div><?php echo $data['myitems']; ?></div>
+    <h2>玩家任务</h2>
+	<div><?php echo $data['mytasks']; ?></div>
+    <h2>玩家好友</h2>
+	<div><?php echo $data['myfriends']; ?></div>
+    <div id="other"><input type="button" value="返回" onclick="location.href='?mod=role&act=list';" /></div>
+  </div>
+  <p id="hack">不能删除</p>
+</div>
+<script type="text/javascript">
+function edit_gold(a, n, msg, type)
+{
+	var t = prompt(msg, '0');
+	if(!t)return false;
+	a.href = a.href + '&val='+t+'&t='+type;
+	return true;
+}
+function edit_coin(a, n, msg, type)
+{
+	var t = prompt(msg, '0');
+	if(!t)return false;
+	a.href = a.href + '&val='+t+'&t='+type;
+	return true;
+}
+function rename(a, n)
+{
+	var t = prompt('请输入新名称', n);
+	if(t === null)return false;
+	a.href = a.href + '&val='+t;
+	return true;
+}
+
+var _viewLoginLog = _viewLevelLog = _viewUpgradeLog = viewGoldLog = false;
+$(document).ready(function(){
+	$('#viewLoginLog').click(function(){
+		if($('#viewLoginLog').html() == '查看'){			
+			if( !_viewLoginLog){
+				$('#login').load('?mod=role&act=log_login',{role_id:<?php echo $data['id']?>});
+				_viewLoginLog = true;
+			}else{
+				$('#login').css('display','');
+			}
+			$('#viewLoginLog').html('隐藏')
+		}else{			
+			$('#login').css('display','none');
+			//_viewLoginLog = true;
+			$('#viewLoginLog').html('查看');
+		}
+        return false;
+	});
+	$('#viewLevelLog').click(function(){
+		if($('#viewLevelLog').html() == '查看'){			
+			if ( !_viewLevelLog){
+                $.get('?mod=role&act=log_upgrade',{role_id:<?php echo $data['id']?>}, function(j){
+                  $('#level').html(j);
+                });
+				
+				_viewLevelLog = true;
+			}else{
+				$('#level').css('display','');
+			}
+			$('#viewLevelLog').html('隐藏')
+		}else{			
+			$('#level').css('display','none');
+			//_viewLevelLog = true;
+			$('#viewLevelLog').html('查看');
+		}
+        return false;
+	});
+	$('#viewOnlineTime').click(function(){
+		if($('#viewOnlineTime').html() == '查看'){			
+			if ( !_viewUpgradeLog){
+                $.get('?mod=statistic&act=online_role',{role_id:<?php echo $data['id']?>}, function(j){
+                  $('#online').html(j);
+                });
+				
+				_viewUpgradeLog = true;
+			}else{
+				$('#online').css('display','');
+			}
+			$('#viewOnlineTime').html('隐藏')
+		}else{			
+			$('#online').css('display','none');
+			//_viewUpgradeLog = true;
+			$('#viewOnlineTime').html('查看');
+		}
+        return false;
+	});
+//	$('#viewGoldLog').click(function(){
+//		if($('#viewGoldLog').html() == '查看'){			
+//			if ( !viewGoldLog){
+//				$('#gold').load('?mod=role&act=log_gold',{role_id:<?php echo $data['id']?>});
+//				viewGoldLog = true;
+//			}else{
+//				$('#gold').css('display','');
+//			}
+//			$('#viewGoldLog').html('隐藏')
+//		}else{			
+//			$('#gold').css('display','none');
+//			viewGoldLog = true;
+//			$('#viewGoldLog').html('查看');
+//		}
+//	});
+})
+</script>
+<?php $this->endBlock('content');?>

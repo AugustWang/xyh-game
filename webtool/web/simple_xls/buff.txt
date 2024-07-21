@@ -1,0 +1,19 @@
+id	name	desc	buffEffect	position	loop	type
+1	炫晕		skill_1005	6	2	1
+2	禁法	被禁止施法	skill_1004	6	2	1
+3	提升攻击力		skill_1006	6	2	1
+4	削弱攻击力		skill_1001	6	2	1
+5	恐惧晕迷		skill_1002	6	2	2
+6	爆头		skill_1003	6	1	1
+7	背刺		skill_1007	6	1	1
+8	诅咒	减少敌人命中	skill_1009	6	2	1
+9	护盾	增加自身防御	skill_10008	1	2	1
+10	灵巧	增加自身闪避	skill_10009	1	2	1
+11	复活		skill_103	1	1	1
+12	冰冻晕迷		skill_1008	1	2	1
+13	网昏迷		skill_124	2	2	1
+14	恶魔幻化		skill_1010	6	3	2
+15	无敌		skill_10011	1	2	1
+16	天神之力		skill_1011	6	3	2
+17	狂战士		skill_1012	1	3	2
+18	噬魂		skill_1013	6	3	1
