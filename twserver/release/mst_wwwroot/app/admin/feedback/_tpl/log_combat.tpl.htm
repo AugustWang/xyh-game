@@ -1,0 +1,75 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?><?php echo $_GET['kw']['title'] ? $_GET['kw']['title']:'' ?>战斗统计数据<?php $this->endBlock('title');?>
+
+<?php $this->block('buttons');?>
+<input type="button" class="btn" value="主线战斗" onclick="location.replace('?mod=feedback&act=log_combat1');"/>
+<input type="button" class="btn" value="副本战斗" onclick="location.replace('?mod=feedback&act=log_combat2');"/>
+<input type="button" class="btn" value="噩梦副本" onclick="location.replace('?mod=feedback&act=log_combat3');"/>
+<?php $this->endBlock('buttons');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" name="mainForm" method="post" action="?mod=feedback&act=log_combat">
+    <div class="searchPanel">
+          注册日期：<input type="text" class="js_starttime" name="kw[time_st]" value="<?php echo $_REQUEST['kw']['time_st'];?>" style="width:80px;" />-<input type="text" name="kw[time_et]" value="<?php echo $_REQUEST['kw']['time_et'];?>" class="js_endtime" style="width:80px;" />
+        <input type="submit" name="search" value="搜索" class="btn" />
+        <input type="hidden" id="submit_type" name="submit_type" value="search" />
+        <input type="button" value="导出数据" onclick="javascript:{$('#submit_type').val('export');this.disabled=true;document.mainForm.submit();}">
+    </div>
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td>角色ID</td>
+                    <td>付费用户</td>
+                    <td>付费次数</td>
+                    <td>总挑战次数</td>
+                    <td>角斗场挑战次数</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach($data as $v):
+                ?>
+                <tr>
+                    <td><?php echo $v['role_id']?></td>
+                    <td><?php echo $v['pay']?></td>
+                    <td><?php echo $v['pays']?></td>
+                    <td><?php echo $v['num']?></td>
+                    <td><?php echo $v['num0']?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="text-align:center;">↑</td>
+                    <td colspan="9">
+                        <?php $this->loadBlock('pager')?>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+<script>
+<?php
+if($alert){
+    echo "alert('{$alert}');";
+}
+?>
+</script>
+<?php $this->endBlock('content');?>

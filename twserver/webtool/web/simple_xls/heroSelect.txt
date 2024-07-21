@@ -1,0 +1,2 @@
+id	pos	photo	quality	job	name	caption
+30005	1	ui_denglu_kapai1	3	攻击	剑圣	哈哈哈哈

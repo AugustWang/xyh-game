@@ -1,0 +1,2 @@
+id	first	day	today
+1	300	30	100

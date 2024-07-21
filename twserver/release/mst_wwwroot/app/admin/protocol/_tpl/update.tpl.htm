@@ -1,0 +1,19 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>生成协议<?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+<div class="tableWrapper">
+    <div style="margin: 10px;">
+        <form name=form1 method="POST">
+            <input type="hidden" name="myaction" value="生成协议" />
+            <input type="button" value="生成协议" onclick="javascript:{this.disabled=true;document.form1.submit();}">
+        </form>
+    </div>
+    <div style="margin: 12px;">
+        <?php 
+        echo $info;
+        ?>
+    </div>
+</div>
+<?php $this->endBlock('content');?>

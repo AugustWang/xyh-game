@@ -1,0 +1,22 @@
+-module(pt_unpack_client).
+-export([p/2]).
+
+<?php foreach($data as $pt):?>
+<?php if($pt['type']) { ?>
+p(<?php echo $pt['id']?>, Bin) ->
+    protocol_fun:unpack(<?php echo $pt['id']?>, <?php echo $pt['rule']?>, Bin);
+<?php }else{ ?>
+p(<?php echo $pt['id']?>, << <?php echo $pt['fields']['arg']?> >>) ->
+<?php echo $pt['fields']['code']?>
+    {ok, [<?php echo $pt['fields']['rt']?>]};
+<?php } ?>
+
+p(_, <<>>) ->
+    {ok, []};
+
+<?php endforeach;?>
+p(Cmd, Data) -> 
+    io:format("undefined_pt_unpack_client_cmd:~w, data:~w", [Cmd, Data]),
+    {error, undefined_pt_unpack_client_cmd}.
+
+%% vim: ft=erlang :

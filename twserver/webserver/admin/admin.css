@@ -1,0 +1,137 @@
+body,form,div,ul,ol,li,p,span,dl,dt,dd{padding:0; margin:0; list-style:none;}
+body{background:url(images/menu_bg2.jpg); font:12px/18px arial,"宋体"; color:#000;}
+img{border:none;}
+a{color:#36d; text-decoration:none;}
+a:hover{color:#f60;}
+
+.btn{padding:0 5px; height:25px;}
+.bigBtn{padding:0 18px; height:28px;}
+.err{color:#f30; background:url(i/err.png) no-repeat 2px 0; padding:0 0 0 20px;} 
+.pageIndex{text-align:center;}
+.tips{color:#a88; display:block; margin:0 3px;}
+
+#wrapper{margin:0;}
+#header{color:#fff; height:22px; position:relative; padding:5px; background:#369;}
+#memu{width:170px; float:left;}
+#mContent{margin:0 0 0 180px;}
+#mContent .title{font:bold 14px/26px arial,'宋体'; padding:2px 2px 2px 10px; background:#eee; margin:4px 4px 0 4px; border:1px solid #ccc;}
+#mContent .buttons{float:right; padding: 0 10px 0 0;}
+.searchPanel{padding:5px 10px; border:1px solid #ccc; margin:4px; background:url(i/search_bar.gif) repeat-x;}
+.tableWrapper{margin:4px; background:#eee; border:1px solid #ccc; padding:1px;}
+.grid,.gridview{width:100%;background:#fff; border-spacing:1px;}
+/* IE6 问题*/
+.grid,.gridview{ _width:99.6%;}
+
+.grid td,.gridview td{padding:6px;}
+.grid thead td,.gridview thead td,.grid thead th,.gridview thead th{font:bold 12px/20px arial,'宋体'; background:#eef;}
+.grid tfoot td,.gridview tfoot td{background:#eef; padding:3px 0 2px 0;}
+.grid .label,.gridview .label{width:100px; padding:2px; text-align:right; background:#eee;}
+.tabsort th{
+    text-decoration: underline;
+	cursor: pointer;
+}
+.tabsort th.headerSortDown{color: saddlebrown;}
+.tabsort th.headerSortUp{color: #4297d7;}
+/*分页索引样式*/
+.pageIndex {float:right; color:#666; font:bold 12px georgia; text-align:center; padding:2px 10px 2px 2px;}
+.pageIndex span{margin:0 1px;}
+.pageIndex a{border: #bbb 1px solid; padding:1px 5px; margin: 0 1px; text-decoration: none; color:#99f; }
+.pageIndex a:hover {border-color: #c60; background: #ebecd2;}
+.pageIndex span.c{border: #f96 1px solid; padding:2px 5px; background:#fda; font-weight: bold; color:#f60;}
+.pageIndex span.d{ border:1px solid #ddd; padding: 2px 5px; color: #aaa;}
+
+/*主导航菜单样式*/
+.menu {margin:0 0 0 4px; width:180px;}
+.menu li{width:174px;}
+.menu a{color:#369; font:12px/20px arial,"宋体"; display:block; margin:1px; padding:0;}
+.menu .hlight{font-weight:bold;}
+
+.menu ul a{padding-left:25px; background: #dbeaf5 12px 50% url(i/cate.gif) no-repeat;}
+.menu ul ul a{padding-left:40px; background: #f0f8fe 27px 50% url(i/cate.gif) no-repeat;}
+.menu ul ul ul a{padding-left:55px; background: #f0f8fe 42px 50% url(i/cate.gif) no-repeat;}
+.menu ul ul ul ul a{padding-left:70px; background: #f9f9f9 67px 50% url(i/cate.gif) no-repeat;}
+.menu ul a:hover{background:#dfd;}
+
+.menu .main { background:url(i/nav_l.gif) no-repeat left top; padding:0 0 0 4px; text-decoration:none;}
+.menu .main span { font:bold 12px arial,"宋体"; display:block; background:url(i/nav_r.gif) no-repeat right top; padding:6px 12px 4px 6px; color:#fff;}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+.menu .main span {float:none;}
+/* End IE5-Mac hack */
+.menu .main:hover span { color:#fff; }
+.menu .main:hover { background-position:0% -42px;}
+.menu .main:hover span { background-position:100% -42px;}
+
+.tc{text-align: center;}
+#menu table, a.menuChild, a.menuParent{
+font-family:"Verdana","Arial","Helvetica","sans-serif";
+font-size:12px;
+line-height:150%;
+}
+a.menuChild:link {
+	COLOR: #036; TEXT-DECORATION: none
+}
+a.menuChild:visited {
+	COLOR: #036; TEXT-DECORATION: none
+}
+a.menuChild:hover {
+	COLOR: #f60; TEXT-DECORATION: underline
+}
+a.menuParent:link {
+	COLOR: #000; TEXT-DECORATION: none
+}
+a.menuParent:visited {
+	COLOR: #000; TEXT-DECORATION: none
+}
+a.menuParent:hover {
+	COLOR: #f60; TEXT-DECORATION: none
+}
+td .menuPtd{background:url(images/menu_bt.jpg) no-repeat;}
+
+
+.action-link {
+    margin:5px;
+    padding: .4em 1em .4em 20px;
+    text-decoration: none;
+    position: relative;
+    float:left;
+}
+.action-link span.ui-icon {
+    margin: 0 5px 0 0;
+    position: absolute;
+    left: .2em;
+    top: 50%;
+    margin-top: -8px;
+}
+
+.dialog-link {
+    padding: .4em 1em .4em 20px;
+    text-decoration: none;
+    position: relative;
+}
+.dialog-link span.ui-icon {
+    margin: 0 5px 0 0;
+    position: absolute;
+    left: .2em;
+    top: 50%;
+    margin-top: -8px;
+}
+
+#icons {
+    margin: 0;
+    padding: 0;
+}
+#icons li {
+    margin: 2px;
+    position: relative;
+    padding: 4px 0;
+    cursor: pointer;
+    float: left;
+    list-style: none;
+}
+#icons span.ui-icon {
+    float: left;
+    margin: 0 4px;
+}
+.fakewindowcontain .ui-widget-overlay {
+    position: absolute;
+}

@@ -1,0 +1,375 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset= UTF-8">
+<title>Module util</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" title="EDoc">
+</head>
+<body bgcolor="white">
+<div class="navbar"><a name="#navbar_top"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
+<hr>
+
+<h1>Module util</h1>
+<ul class="index"><li><a href="#description">Description</a></li><li><a href="#index">Function Index</a></li><li><a href="#functions">Function Details</a></li></ul>工具包.
+
+<p><b>Authors:</b> Rolong (<a href="mailto:rolong@vip.qq.com"><tt>rolong@vip.qq.com</tt></a>).</p>
+
+<h2><a name="description">Description</a></h2>工具包
+<h2><a name="index">Function Index</a></h2>
+<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#bitstring_to_term-1">bitstring_to_term/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#ceil-1">ceil/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#debug-1">debug/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#debug-2">debug/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#debug-4">debug/4</a></td><td></td></tr>
+<tr><td valign="top"><a href="#del_repeat_element-1">del_repeat_element/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#find_repeat_element-1">find_repeat_element/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#find_repeat_key_element-2">find_repeat_key_element/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#fix_max-2">fix_max/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#floor-1">floor/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#for-3">for/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#for-4">for/4</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_bool_sign-2">get_bool_sign/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_day_list-1">get_day_list/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_range_data-1">get_range_data/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_time_list-1">get_time_list/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_val-2">get_val/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_val-3">get_val/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_val1-2">get_val1/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_val1-3">get_val1/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#in_time-2">in_time/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#info-1">info/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#info-2">info/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#info-4">info/4</a></td><td></td></tr>
+<tr><td valign="top"><a href="#ip_to_binary-1">ip_to_binary/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#md5-1">md5/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#min0-1">min0/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#mktime-1">mktime/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#parse_qs-1">parse_qs/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#print-1">print/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#print_bit-1">print_bit/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#print_self-0">print_self/0</a></td><td></td></tr>
+<tr><td valign="top"><a href="#rand-1">rand/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#rand-2">rand/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#rand_element-1">rand_element/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#rand_element-2">rand_element/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#rand_element1-1">rand_element1/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#rand_element1-2">rand_element1/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#rand_float1-2">rand_float1/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#rand_float2-2">rand_float2/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#rate-1">rate/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#rate1000-1">rate1000/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#set_bool_sign-3">set_bool_sign/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#set_val-3">set_val/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#shuffle-1">shuffle/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#sleep-1">sleep/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#store_element-2">store_element/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#string_to_num-1">string_to_num/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#string_to_term-1">string_to_term/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#term_to_bitstring-1">term_to_bitstring/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#term_to_string-1">term_to_string/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#test-0">test/0</a></td><td></td></tr>
+<tr><td valign="top"><a href="#test-1">test/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#test1-0">test1/0</a></td><td></td></tr>
+<tr><td valign="top"><a href="#test2-1">test2/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#test_time_limit-2">test_time_limit/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#unixtime-0">unixtime/0</a></td><td></td></tr>
+<tr><td valign="top"><a href="#unixtime-1">unixtime/1</a></td><td></td></tr>
+</table>
+
+<h2><a name="functions">Function Details</a></h2>
+
+<h3 class="function"><a name="bitstring_to_term-1">bitstring_to_term/1</a></h3>
+<div class="spec">
+<p><tt>bitstring_to_term(BitString) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="ceil-1">ceil/1</a></h3>
+<div class="spec">
+<p><tt>ceil(X) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="debug-1">debug/1</a></h3>
+<div class="spec">
+<p><tt>debug(Msg) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="debug-2">debug/2</a></h3>
+<div class="spec">
+<p><tt>debug(Format, Args) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="debug-4">debug/4</a></h3>
+<div class="spec">
+<p><tt>debug(Format, Args, Mod, Line) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="del_repeat_element-1">del_repeat_element/1</a></h3>
+<div class="spec">
+<p><tt>del_repeat_element(L) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="find_repeat_element-1">find_repeat_element/1</a></h3>
+<div class="spec">
+<p><tt>find_repeat_element(L) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="find_repeat_key_element-2">find_repeat_key_element/2</a></h3>
+<div class="spec">
+<p><tt>find_repeat_key_element(Nth, L) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="fix_max-2">fix_max/2</a></h3>
+<div class="spec">
+<p><tt>fix_max(Num, Max) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="floor-1">floor/1</a></h3>
+<div class="spec">
+<p><tt>floor(X) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="for-3">for/3</a></h3>
+<div class="spec">
+<p><tt>for(Min, Max, F) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="for-4">for/4</a></h3>
+<div class="spec">
+<p><tt>for(Max, Min, F, State) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_bool_sign-2">get_bool_sign/2</a></h3>
+<div class="spec">
+<p><tt>get_bool_sign(Pos, Bin) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_day_list-1">get_day_list/1</a></h3>
+<div class="spec">
+<p><tt>get_day_list(X1) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_range_data-1">get_range_data/1</a></h3>
+<div class="spec">
+<p><tt>get_range_data(M) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_time_list-1">get_time_list/1</a></h3>
+<div class="spec">
+<p><tt>get_time_list(X1) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_val-2">get_val/2</a></h3>
+<div class="spec">
+<p><tt>get_val(Key, L) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_val-3">get_val/3</a></h3>
+<div class="spec">
+<p><tt>get_val(Key, L, Default) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_val1-2">get_val1/2</a></h3>
+<div class="spec">
+<p><tt>get_val1(Key, L) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_val1-3">get_val1/3</a></h3>
+<div class="spec">
+<p><tt>get_val1(Key, L, Default) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="in_time-2">in_time/2</a></h3>
+<div class="spec">
+<p><tt>in_time(X1, X2) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="info-1">info/1</a></h3>
+<div class="spec">
+<p><tt>info(Msg) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="info-2">info/2</a></h3>
+<div class="spec">
+<p><tt>info(Format, Args) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="info-4">info/4</a></h3>
+<div class="spec">
+<p><tt>info(Format, Args, Mod, Line) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="ip_to_binary-1">ip_to_binary/1</a></h3>
+<div class="spec">
+<p><tt>ip_to_binary(Ip) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="md5-1">md5/1</a></h3>
+<div class="spec">
+<p><tt>md5(S) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="min0-1">min0/1</a></h3>
+<div class="spec">
+<p><tt>min0(A) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="mktime-1">mktime/1</a></h3>
+<div class="spec">
+<p><tt>mktime(X1) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="parse_qs-1">parse_qs/1</a></h3>
+<div class="spec">
+<p><tt>parse_qs(Bin) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="print-1">print/1</a></h3>
+<div class="spec">
+<p><tt>print(Data) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="print_bit-1">print_bit/1</a></h3>
+<div class="spec">
+<p><tt>print_bit(X1) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="print_self-0">print_self/0</a></h3>
+<div class="spec">
+<p><tt>print_self() -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="rand-1">rand/1</a></h3>
+<div class="spec">
+<p><tt>rand(X1) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="rand-2">rand/2</a></h3>
+<div class="spec">
+<p><tt>rand(Same, Max) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="rand_element-1">rand_element/1</a></h3>
+<div class="spec">
+<p><tt>rand_element(List) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="rand_element-2">rand_element/2</a></h3>
+<div class="spec">
+<p><tt>rand_element(Num, List) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="rand_element1-1">rand_element1/1</a></h3>
+<div class="spec">
+<p><tt>rand_element1(List) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="rand_element1-2">rand_element1/2</a></h3>
+<div class="spec">
+<p><tt>rand_element1(Num, List) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="rand_float1-2">rand_float1/2</a></h3>
+<div class="spec">
+<p><tt>rand_float1(Min, Max) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="rand_float2-2">rand_float2/2</a></h3>
+<div class="spec">
+<p><tt>rand_float2(Min, Max) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="rate-1">rate/1</a></h3>
+<div class="spec">
+<p><tt>rate(Rate) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="rate1000-1">rate1000/1</a></h3>
+<div class="spec">
+<p><tt>rate1000(Rate) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="set_bool_sign-3">set_bool_sign/3</a></h3>
+<div class="spec">
+<p><tt>set_bool_sign(Pos, Val, Bin) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="set_val-3">set_val/3</a></h3>
+<div class="spec">
+<p><tt>set_val(Key, Val, L) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="shuffle-1">shuffle/1</a></h3>
+<div class="spec">
+<p><tt>shuffle(L) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="sleep-1">sleep/1</a></h3>
+<div class="spec">
+<p><tt>sleep(T) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="store_element-2">store_element/2</a></h3>
+<div class="spec">
+<p><tt>store_element(E, L) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="string_to_num-1">string_to_num/1</a></h3>
+<div class="spec">
+<p><tt>string_to_num(String) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="string_to_term-1">string_to_term/1</a></h3>
+<div class="spec">
+<p><tt>string_to_term(String) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="term_to_bitstring-1">term_to_bitstring/1</a></h3>
+<div class="spec">
+<p><tt>term_to_bitstring(Term) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="term_to_string-1">term_to_string/1</a></h3>
+<div class="spec">
+<p><tt>term_to_string(Term) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="test-0">test/0</a></h3>
+<div class="spec">
+<p><tt>test() -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="test-1">test/1</a></h3>
+<div class="spec">
+<p><tt>test(T) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="test1-0">test1/0</a></h3>
+<div class="spec">
+<p><tt>test1() -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="test2-1">test2/1</a></h3>
+<div class="spec">
+<p><tt>test2(Msg) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="test_time_limit-2">test_time_limit/2</a></h3>
+<div class="spec">
+<p><tt>test_time_limit(Key, MinTime) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="unixtime-0">unixtime/0</a></h3>
+<div class="spec">
+<p><tt>unixtime() -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="unixtime-1">unixtime/1</a></h3>
+<div class="spec">
+<p><tt>unixtime(X1) -&gt; any()</tt></p>
+</div>
+<hr>
+
+<div class="navbar"><a name="#navbar_bottom"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
+<p><i>Generated by EDoc, Dec 28 2013, 11:58:20.</i></p>
+</body>
+</html>

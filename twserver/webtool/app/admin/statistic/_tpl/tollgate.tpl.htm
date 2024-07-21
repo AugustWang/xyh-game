@@ -1,0 +1,77 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>统计图表<?php $this->endBlock('title');?>
+
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post">
+  <div class="tableWrapper">
+    <table class="grid nohover" id="gridview">
+      <thead>
+        <tr>
+          <td colspan="2">统计图表</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center">
+              <div id="chartdiv11" align="center">Chart will load here</div>
+              <script type="text/javascript">
+var dataString ='<chart caption="关卡流失率统计图" subCaption="(单位：%)" numdivlines="9" lineThickness="2" showValues="1" anchorRadius="3" anchorBgAlpha="100" numVDivLines="12" showAlternateVGridColor="1" alternateVGridAlpha="3" animation="0" rotateNames="1">	\n\
+	<categories>\n\
+<?php foreach($categories as $v):?>
+		<category label="第<?php echo $v?>关" />\n\
+<?php endforeach;?>
+        </categories>\n\
+\n\
+	<dataset seriesName="关卡流失率分布">\n\
+<?php foreach($dataset_tollgate_rate as $v):?>
+		<set value="<?php echo $v?>" />\n\
+<?php endforeach;?>
+	</dataset>\n\
+\n\
+</chart>';
+if (GALLERY_RENDERER && GALLERY_RENDERER.search(/javascript|flash/i)==0)  FusionCharts.setCurrentRenderer(GALLERY_RENDERER); 
+var chart = new FusionCharts("Charts/ScrollCombiDY2D.swf", "ChartId", "100%", "600", "0", "0");
+chart.setXMLData( dataString );		   
+chart.render("chartdiv11");
+              </script>
+
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center">
+              <div id="chartdiv1" align="center">Chart will load here</div>
+              <script type="text/javascript">
+var dataString ='<chart caption="关卡人数分布统计图" subCaption="(单位：人)" numdivlines="9" lineThickness="2" showValues="1" anchorRadius="3" anchorBgAlpha="100" numVDivLines="12" showAlternateVGridColor="1" alternateVGridAlpha="3" animation="0" rotateNames="1">	\n\
+	<categories>\n\
+<?php foreach($categories as $v):?>
+		<category label="第<?php echo $v?>关" />\n\
+<?php endforeach;?>
+        </categories>\n\
+\n\
+	<dataset seriesName="关卡人数分布">\n\
+<?php foreach($dataset_tollgate as $v):?>
+		<set value="<?php echo $v?>" />\n\
+<?php endforeach;?>
+	</dataset>\n\
+	<dataset seriesName="关卡流失人数分布（3天未登陆）">\n\
+<?php foreach($dataset_tollgate_lost as $v):?>
+		<set value="<?php echo $v?>" />\n\
+<?php endforeach;?>
+	</dataset>\n\
+\n\
+</chart>';
+if (GALLERY_RENDERER && GALLERY_RENDERER.search(/javascript|flash/i)==0)  FusionCharts.setCurrentRenderer(GALLERY_RENDERER); 
+var chart = new FusionCharts("Charts/ScrollCombiDY2D.swf", "ChartId", "100%", "600", "0", "0");
+chart.setXMLData( dataString );		   
+chart.render("chartdiv1");
+              </script>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>
+<?php $this->endBlock('content');?>

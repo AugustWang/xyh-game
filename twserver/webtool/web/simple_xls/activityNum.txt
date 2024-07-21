@@ -1,0 +1,7 @@
+id	name	tableName	showClass	caption
+62	微信分享		MicroChannel	分享微信，每天可領取50體力，記得邀請您的好友過來一起来玩哦！
+63	邀请好友		FriendCode	让好友绑定你的邀请码，好友多多，奖励不停哟！
+64	五星评分		Rating	五星评价有好礼，好游戏就说出来！
+65	好友登录		FriendLogin	领袖奖励，看看你的号召力！昨日有多少绑定你邀请码的用户登陆了？
+66	激活码绑定		BindingGoodFriend	独乐乐不如众乐乐，绑定你的关系圈，获得多重好礼
+68	Facebook點讚		FaceBookChannel	Facebook點讚，每天可領取50體力，記得邀請您的好友過來一起點讚哦！

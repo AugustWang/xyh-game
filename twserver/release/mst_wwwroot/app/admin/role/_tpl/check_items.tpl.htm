@@ -1,0 +1,80 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>物品列表<?php $this->endBlock('title');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post">
+    <!--
+    <div class="searchPanel">
+        请选择物品：<?php echo $type; ?><input type="submit" value="查看" />
+        请选择品质：<?php echo $hero_quality; ?><input type="submit" value="查看" />
+    </div>
+    -->
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Tid</td>
+                    <td>名字</td>
+                    <td>类型</td>
+                    <td>血</td>
+                    <td>攻</td>
+                    <td>防</td>
+                    <td>穿刺</td>
+                    <td>命中</td>
+                    <td>闪避</td>
+                    <td>暴击率</td>
+                    <td>暴击提成</td>
+                    <td>免暴</td>
+                    <td>韧性</td>
+                    <td>英雄</td>
+                    <td>数量</td>
+                    <td>品质</td>
+                    <td>等级</td>
+                    <td>经验</td>
+                </tr>
+            </thead>
+            <tbody>
+            <?php foreach($data as $k => $v):?>
+                <tr>
+                    <td><?php echo $v['id']?></td>
+                    <td><?php echo $v['tid']?></td>
+                    <td><?php echo $v['item_tid']?></td>
+                    <td><?php echo $v['tab_type']?></td>
+                    <td><?php echo $v['hp']?></td>
+                    <td><?php echo $v['atk']?></td>
+                    <td><?php echo $v['def']?></td>
+                    <td><?php echo $v['pun']?></td>
+                    <td><?php echo $v['hit']?></td>
+                    <td><?php echo $v['dod']?></td>
+                    <td><?php echo $v['crit']?></td>
+                    <td><?php echo $v['critnum']?></td>
+                    <td><?php echo $v['critanit']?></td>
+                    <td><?php echo $v['tou']?></td>
+                    <td><?php echo $v['hero_id']?></td>
+                    <td><?php echo $v['num']?></td>
+                    <td><?php echo $v['quality']?></td>
+                    <td><?php echo $v['lev']?></td>
+                    <td><?php echo $v['exp']?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+        </table>
+    </div>
+</form>
+<?php $this->endBlock('content');?>

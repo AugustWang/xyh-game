@@ -1,0 +1,60 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?><?php echo $_GET['kw']['title'] ? $_GET['kw']['title']:'' ?>定期活动日志数据<?php $this->endBlock('title');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post" action="?mod=feedback&act=log_activity">
+    <div class="searchPanel">
+        请选择日期：<?php echo $dates; ?><input type="submit" value="查看" />
+        <!--请选择类型：<?php echo $type; ?><input type="submit" value="查看" />-->
+    </div>
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td>日期</td>
+                    <td>邮件内容</td>
+                    <td>开始时间</td>
+                    <td>结束时间</td>
+                    <td>接收人数</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach($data['list'] as $v):
+                ?>
+                <tr>
+                    <td><?php echo date('Y-m-d', $v['ctime'])?></td>
+                    <td><?php echo $v['body']?></td>
+                    <td><?php echo date('Y-m-d H:i:s', $v['start_time'])?></td>
+                    <td><?php echo date('Y-m-d H:i:s', $v['end_time'])?></td>
+                    <td><?php echo $v['count']?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="text-align:center;">↑</td>
+                    <td colspan="9">
+                        <?php $this->loadBlock('pager')?>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+<?php $this->endBlock('content');?>

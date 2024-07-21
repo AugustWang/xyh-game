@@ -1,0 +1,53 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>
+额外活动
+<?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+
+<div class="tableWrapper">
+    <form method="post">
+        <table class="grid">
+            <tr>
+              <td align="right">邮件内容                 ：</td>
+              <td align="left"><textarea id="text" name="body" cols="30" rows="10" />输入内容...</textarea>
+                  (非空字符串,会用~w替换活动奖励中物品数量,有双引号要用中文双引号)</td>
+            </tr>
+            <tr>
+                <td class="label">类型：</td>
+                <td>
+                    <?php echo $type; ?>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">活动奖励：</td>
+                <td><input type="text" name="value" size="40" value="[{关卡Id,[{奖励类型Id,奖励数量}..]}..]" /><font color="#FF0000">([{Id,[{Tid,Num}..]}..])</font></td>
+            </tr>
+            <tr>
+                <td align="right">活动生效日期:</td>
+                    <td align="left">
+                    <input type="text" class="js_starttime" name="kw[start_time]" value="<?php echo $_REQUEST['kw']['start_time'];?>" style="width:80px;" />-<input type="text" name="kw[end_time]" value="<?php echo $_REQUEST['kw']['end_time'];?>" class="js_endtime" style="width:80px;" />
+                    不填日期你想干那样</td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td align="left"><input type="submit" name="submit" value="发送" />后悔还来得急</td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</div>
+
+<script language="javascript">
+
+<?php
+if($alert){
+    echo "alert('{$alert}');";
+}
+?>
+
+</script>
+
+<?php $this->endBlock('content');?>

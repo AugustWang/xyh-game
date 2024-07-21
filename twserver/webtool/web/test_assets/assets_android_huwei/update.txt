@@ -1,0 +1,4 @@
+61
+http://42.121.111.191/test_assets/
+android_huwei
+config.xml

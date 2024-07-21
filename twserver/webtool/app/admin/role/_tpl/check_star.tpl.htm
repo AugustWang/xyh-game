@@ -1,0 +1,54 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>英雄升星<?php $this->endBlock('title');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post">
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td>英雄ID</td>
+                    <td>英雄名字</td>
+                    <td>数量</td>
+                    <td>时间</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($data['list'] as $v):?>
+                <tr>
+                    <td><?php echo $v['tid']?></td>
+                    <td><?php echo $v['tid_name']?></td>
+                    <td><?php echo $v['num']?></td>
+                    <td><?php echo date('Y-m-d H:i:s',$v['ctime'])?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+        </table>
+    </div>
+</form>
+
+<script type="text/javascript">
+
+<?php
+if($alert){
+    echo "alert('{$alert}');";
+}
+?>
+</script>
+
+<?php $this->endBlock('content');?>

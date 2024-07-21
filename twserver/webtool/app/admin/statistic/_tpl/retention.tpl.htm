@@ -1,0 +1,52 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>留存统计图表<?php $this->endBlock('title');?>
+
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post">
+	<div class="searchPanel">按注册日期查看：<?php echo $dates; ?><input type="submit" value="查看" />
+	</div>
+  <div class="tableWrapper">
+    <table class="grid nohover" id="gridview">
+      <thead>
+        <tr>
+          <td colspan="2">曲线图</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center">
+              <div id="chartdiv" align="center">Chart will load here</div>
+              <script type="text/javascript">
+var dataString ='<chart caption="留存统计图表" subCaption="Retention Statistics" yAxisMaxValue="100" bgColor="406181, 6DA5DB"  bgAlpha="100" baseFontColor="FFFFFF" baseFontSize="12" canvasBgAlpha="0" canvasBorderColor="FFFFFF" divLineColor="FFFFFF" divLineAlpha="100" numVDivlines="10" vDivLineisDashed="1" showAlternateVGridColor="1" lineColor="BBDA00" anchorRadius="4" anchorBgColor="BBDA00" anchorBorderColor="FFFFFF" anchorBorderThickness="2" showValues="1" numberSuffix="%" toolTipBgColor="406181" toolTipBorderColor="406181" alternateHGridAlpha="5">\n\
+                \n\
+<?php foreach($chart as $v):?>
+                <set label="第<?php echo $v['label']?>天" value="<?php echo $v['value']?>" hoverText="<?php echo $v['hover']?>"/>\n\
+<?php endforeach;?>
+                \n\
+                <styles>\n\
+                <definition>\n\
+                <style name="LineShadow" type="shadow" color="333333" distance="6"/>\n\
+                </definition>\n\
+                \n\
+                <application>\n\
+                <apply toObject="DATAPLOT" styles="LineShadow" />\n\
+                </application>	\n\
+                </styles>\n\
+                </chart>';
+if (GALLERY_RENDERER && GALLERY_RENDERER.search(/javascript|flash/i)==0)  FusionCharts.setCurrentRenderer(GALLERY_RENDERER); 
+var chart = new FusionCharts("Charts/Line.swf", "ChartId", "100%", "400", "0", "0");
+chart.setXMLData( dataString );		   
+chart.render("chartdiv");
+              </script>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>
+<script>
+$('#js_ttime').datepick({dateFormat:'yyyy-mm-dd'});
+</script>
+<?php $this->endBlock('content');?>

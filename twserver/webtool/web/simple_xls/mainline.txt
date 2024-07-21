@@ -1,0 +1,392 @@
+id	chapterID	chapterName	chapterScope	pointID	pointName	scene	bgm	boss_level	boss_seat	boss_type	points_ico	pco_effect	guide_level	guide_equip	guide_strengthen	guide_quality	guide_gem	guide_gem_level
+1	1	1	1,24	1	1 潜入	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	1	0	24	1	0	0
+2	2	2	25,45	2	2 追杀	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	1	0	24	1	0	0
+3	3	3	46,66	3	3 萨满柯兰萨	map_022	battle_bgm_volcano	1	5	3	ui_zhuxian_boss_shouren	effect_jingjichangtishi	2	0	24	1	0	0
+4	4	4	67,87	4	4 清剿	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	2	0	24	1	0	0
+5	5	5	88,108	5	5 突袭	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	3	0	24	1	0	0
+6	6	6	109,129	6	6 焰喉	map_022	battle_bgm_volcano	1	5	3	ui_zhuxian_boss_yeshou	effect_jingjichangtishi	4	0	24	2	0	0
+7	7	7	130,153	7	7 斥候撒克隆	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	5	0	28	2	0	0
+8	8	8	154,174	8	8 阻挠	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	4	8	28	2	0	0
+9	9	9	175,198	9	9 熔岩戈多斯	map_022	battle_bgm_volcano	2	5	3	ui_zhuxian_bigboss_shourenjiangjun	effect_jingjichangtishi	7	16	28	2	0	0
+10	10	10	199,222	10	10 精神压制	map_007	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	10	28	28	2	0	0
+11	11	11	223,246	11	11 轻敌	map_007	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	13	36	28	2	0	0
+12	12	12	247,264	12	12 考布莱恩	map_007	battle_bgm_ghostdom	1	8	3	ui_zhuxian_boss_anye	effect_jingjichangtishi	16	44	28	2	0	0
+13				13	13 祈祷之台	map_007	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	19	52	28	2	0	0
+14				14	14 誓死守卫	map_007	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	22	60	28	3	0	0
+15				15	15 克雷什	map_007	battle_bgm_ghostdom	1	2	3	ui_zhuxian_boss_yeshou	effect_jingjichangtishi	25	68	32	3	0	0
+16				16	16 第一波冲击	map_007	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	28	76	32	4	0	0
+17				17	17 第二波冲击	map_007	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	31	84	32	4	0	0
+18				18	18 穆坦努斯	map_007	battle_bgm_ghostdom	2	5	3	ui_zhuxian_bigboss_yuren	effect_jingjichangtishi	34	92	32	4	0	0
+19				19	19 整装待发	map_011	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	37	100	32	4	0	0
+20				20	20 拯救	map_011	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	40	112	32	4	0	0
+21				21	21 范克里夫	map_011	battle_bgm_dugout	1	8	3	ui_zhuxian_boss_renlei	effect_jingjichangtishi	43	120	32	4	0	0
+22				22	22 战略转移	map_011	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	46	128	32	4	0	0
+23				23	23 暗巷	map_011	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	49	136	36	4	0	0
+24				24	24 “船长”曲奇	map_011	battle_bgm_dugout	2	8	3	ui_zhuxian_bigboss_yuren	effect_jingjichangtishi	52	144	36	4	0	0
+25				25	25 硝烟四起	map_012	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	55	152	36	4	0	0
+26				26	26 迫在眉睫	map_012	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	58	160	36	4	0	0
+27				27	27 萨利维丝	map_012	battle_bgm_ghostdom	1	5	3	ui_zhuxian_boss_najia	effect_jingjichangtishi	61	168	36	5	0	0
+28				28	28 杀戮之地	map_012	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	64	176	36	5	0	0
+29				29	29 退却	map_012	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	67	184	36	5	0	0
+30				30	30 阿库麦尔	map_012	battle_bgm_ghostdom	1	8	3	ui_zhuxian_boss_yeshou	effect_jingjichangtishi	70	196	40	5	0	0
+31				31	31 真正的希望	map_012	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	73	204	40	5	0	0
+32				32	32 曙光	map_012	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	76	212	40	5	0	0
+33				33	33 克尔里斯	map_012	battle_bgm_ghostdom	2	5	3	ui_zhuxian_bigboss_yuanzhang	effect_jingjichangtishi	79	220	40	5	0	0
+34				34	34 变化	map_003	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	82	228	40	5	0	0
+35				35	35 不败意志	map_003	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	85	236	40	5	0	0
+36				36	36 霍格	map_003	battle_bgm_dugout	1	2	3	ui_zhuxian_boss_shouren	effect_jingjichangtishi	88	244	40	5	0	0
+37				37	37 小波的阻碍	map_003	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	91	252	40	5	0	0
+38				38	38 全面冲击	map_003	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	94	260	40	6	0	0
+39				39	39 灼热勋爵	map_003	battle_bgm_dugout	1	8	3	ui_zhuxian_boss_yuansu	effect_jingjichangtishi	97	268	40	6	15	15
+40				40	40 利剑的撕扯	map_003	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	100	280	40	6	15	15
+41				41	41 斩首	map_003	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	102	284	44	6	15	15
+42				42	42 巴基尔	map_003	battle_bgm_dugout	1	8	3	ui_zhuxian_boss_renlei	effect_jingjichangtishi	104	288	44	6	15	15
+43				43	43 对与错	map_003	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	106	296	44	6	15	15
+44				44	44 往事	map_003	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	108	300	44	6	15	15
+45				45	45 哈姆霍克	map_003	battle_bgm_dugout	2	5	3	ui_zhuxian_bigboss_shirenmoguowang	effect_jingjichangtishi	110	308	44	6	15	15
+46				46	46 悲伤的大地	map_001	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	112	312	44	6	15	15
+47				47	47 绝望？失望？	map_001	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	114	316	44	6	15	15
+48				48	48 法师阿鲁高	map_001	battle_bgm_town	1	8	3	ui_zhuxian_boss_renlei	effect_jingjichangtishi	116	324	44	6	25	15
+49				49	49 惨叫与哀鸣	map_001	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	118	328	44	7	25	15
+50				50	50 不死生物	map_001	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	120	336	44	7	25	15
+51				51	51 死亡之誓	map_001	battle_bgm_town	1	2	3	ui_zhuxian_boss_wangling	effect_jingjichangtishi	122	340	44	7	25	15
+52				52	52 不详之路	map_001	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	124	344	48	7	25	15
+53				53	53 威胁？	map_001	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	126	352	48	7	25	15
+54				54	54 拉佐克劳	map_001	battle_bgm_town	1	8	3	ui_zhuxian_boss_langren	effect_jingjichangtishi	128	356	48	7	25	15
+55				55	55 暗影来袭	map_001	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	130	364	48	8	25	15
+56				56	56 不自量力	map_001	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	132	368	48	8	25	15
+57				57	57 席瓦莱恩	map_001	battle_bgm_town	2	2	3	ui_zhuxian_bigboss_yuanzhang	effect_jingjichangtishi	134	372	48	8	25	15
+58				58	58 痛恨	map_006	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	136	380	48	8	25	15
+59				59	59 悲凉的尸体	map_006	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	138	384	48	8	25	15
+60				60	60 格鲁比斯	map_006	battle_bgm_dugout	1	5	3	ui_zhuxian_boss_airen	effect_jingjichangtishi	139	388	52	9	25	15
+61				61	61 线索	map_006	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	140	392	52	9	25	15
+62				62	62 强力部队？	map_006	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	141	392	52	9	25	15
+63				63	63 瑟玛普拉格	map_006	battle_bgm_dugout	1	2	3	ui_zhuxian_boss_jixie	effect_jingjichangtishi	142	396	52	9	25	15
+64				64	64 浓烈	map_006	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	143	400	52	9	25	15
+65				65	65 反叛	map_006	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	144	400	56	9	25	15
+66				66	66 群体打击者	map_006	battle_bgm_dugout	2	8	3	ui_zhuxian_bigboss_jiqiren	effect_jingjichangtishi	145	404	56	9	25	15
+67				67	67 前进	map_015	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	146	408	56	10	25	15
+68				68	68 野蛮之力	map_015	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	147	408	56	10	25	15
+69				69	69 布兰恩	map_015	battle_bgm_dugout	1	2	3	ui_zhuxian_boss_renlei	effect_jingjichangtishi	148	412	60	10	35	15
+70				70	70 邪教	map_015	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	150	420	60	10	35	15
+71				71	71 不祥之兆	map_015	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	151	420	60	10	35	15
+72				72	72 孔格勒	map_015	battle_bgm_dugout	1	5	3	ui_zhuxian_boss_renlei	effect_jingjichangtishi	152	424	60	10	35	15
+73				73	73 疑团	map_015	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	153	428	60	11	35	15
+74				74	74 跟踪	map_015	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	154	428	60	11	35	15
+75				75	75 赫洛德	map_015	battle_bgm_dugout	2	8	3	ui_zhuxian_bigboss_kuangzhanshi	effect_jingjichangtishi	155	432	60	11	35	15
+76				76	76 不容忽视	map_008	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	156	436	60	11	35	15
+77				77	77 寻找真相	map_008	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	157	436	64	12	35	15
+78				78	78 萨尔诺斯	map_008	battle_bgm_ghostdom	1	8	3	ui_zhuxian_boss_wangling	effect_jingjichangtishi	158	440	64	12	35	15
+79				79	79 新的线索	map_008	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	159	444	64	12	50	20
+80				80	80 善与恶？	map_008	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	160	448	64	12	50	20
+81				81	81 死灵勇士	map_008	battle_bgm_ghostdom	1	2	3	ui_zhuxian_boss_wangling	effect_jingjichangtishi	161	448	64	12	50	20
+82				82	82 真正的杀气	map_008	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	162	452	4	12	50	20
+83				83	83 暴露	map_008	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	163	456	68	13	50	20
+84				84	84 奥法师杜安	map_008	battle_bgm_ghostdom	1	8	3	ui_zhuxian_boss_renlei	effect_jingjichangtishi	164	456	68	13	50	20
+85				85	85 血色之路	map_008	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	165	460	68	13	50	20
+86				86	86 回音教堂	map_008	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	166	464	68	13	50	20
+87				87	87 狗男女	map_008	battle_bgm_ghostdom	2	7	3	ui_zhuxian_bigboss_gounannv	effect_jingjichangtishi	167	464	68	13	50	20
+88				88	88 游魂	map_014	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	168	468	68	13	50	20
+89				89	89 野鬼	map_014	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	169	472	68	14	50	20
+90				90	90 贾格巴	map_014	battle_bgm_forest	1	8	3	ui_zhuxian_boss_haozhuren	effect_jingjichangtishi	170	476	72	14	50	20
+91				91	91 围墙之下	map_014	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	171	476	72	14	50	20
+92				92	92 残存的意志	map_014	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	172	480	72	14	50	20
+93				93	93 阿格姆	map_014	battle_bgm_forest	1	2	3	ui_zhuxian_boss_haozhuren	effect_jingjichangtishi	173	484	72	14	50	20
+94				94	94 决战当前	map_014	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	174	484	72	14	50	20
+95				95	95 纠结之战	map_014	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	175	488	76	14	50	20
+96				96	96 拉姆塔斯	map_014	battle_bgm_forest	1	8	3	ui_zhuxian_boss_haozhuren	effect_jingjichangtishi	176	492	76	15	50	20
+97				97	97 能量	map_014	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	177	492	76	15	50	20
+98				98	98 玷污	map_014	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	178	496	76	15	50	20
+99				99	99 卡尔加刺肋	map_014	battle_bgm_forest	2	5	3	ui_zhuxian_bigboss_haozhuren	effect_jingjichangtishi	179	500	76	15	50	20
+100				100	100 生命之水	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	185	516	76	15	50	20
+101				101	101 波光暗影	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	186	520	80	15	50	20
+102				102	102 诺克塞恩	map_020	battle_bgm_forest	1	8	3	ui_zhuxian_boss_yuansu	effect_jingjichangtishi	187	520	80	15	65	20
+103				103	103 生命之源	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	188	524	80	16	65	20
+104				104	104 自然使者	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	189	528	80	16	65	20
+105				105	105 兰斯利德	map_020	battle_bgm_forest	1	5	3	ui_zhuxian_boss_yuansu	effect_jingjichangtishi	190	532	80	16	65	20
+106				106	106 变异	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	191	532	80	16	65	20
+107				107	107 突袭	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	192	536	80	16	65	20
+108				108	108 公主	map_020	battle_bgm_forest	2	5	3	ui_zhuxian_bigboss_gongzhu	effect_jingjichangtishi	193	540	80	16	65	20
+109				109	109 失踪的勇士	map_018	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	194	540	84	16	65	20
+110				110	110 路途	map_018	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	195	544	84	16	65	20
+111				111	111 失踪的矮人	map_018	battle_bgm_dugout	1	8	3	ui_zhuxian_boss_airen	effect_jingjichangtishi	196	548	84	16	65	20
+112				112	112 加速行军	map_018	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	197	548	84	16	65	20
+113				113	113 突袭	map_018	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	198	552	84	16	65	20
+114				114	114 远古卫士	map_018	battle_bgm_dugout	1	8	3	ui_zhuxian_boss_yuansu	effect_jingjichangtishi	199	556	88	17	65	20
+115				115	115 皇家卫队	map_018	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	200	560	88	17	75	20
+116				116	116 残兵败将	map_018	battle_bgm_dugout			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	201	560	88	17	75	20
+117				117	117 加加恩.火锤	map_018	battle_bgm_dugout	2	5	3	ui_zhuxian_bigboss_airenguowang	effect_jingjichangtishi	202	564	88	17	75	20
+118				118	118 混乱升级	map_010	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	203	568	88	17	75	20
+119				119	119 决战前夕	map_010	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	204	568	92	17	75	20
+120				120	120 图特卡什	map_010	battle_bgm_ghostdom	1	8	3	ui_zhuxian_boss_wangling	effect_jingjichangtishi	205	572	92	17	75	20
+121				121	121 渺茫的机会	map_010	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	206	576	92	18	75	20
+122				122	122 血迹	map_010	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	210	588	92	18	75	20
+123				123	123 莫德雷斯	map_010	battle_bgm_ghostdom	1	8	3	ui_zhuxian_boss_wangling	effect_jingjichangtishi	211	588	92	18	75	20
+124				124	124 骨与肉	map_010	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	212	592	96	18	75	20
+125				125	125 清除	map_010	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	213	596	96	18	75	20
+126				126	126 暴食者	map_010	battle_bgm_ghostdom	1	5	3	ui_zhuxian_boss_wangling	effect_jingjichangtishi	214	596	96	18	75	20
+127				127	127 哀嚎	map_010	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	215	600	96	18	75	20
+128				128	128 波光暗影	map_010	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	216	604	96	19	75	20
+129				129	129 寒冰亚门纳尔	map_010	battle_bgm_ghostdom	2	2	3	ui_zhuxian_bigboss_wuyao	effect_jingjichangtishi	217	604	96	19	75	20
+130				130	130 神奇的召唤	map_005	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	218	608	96	19	75	20
+131				131	131 继续搜寻	map_005	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	219	612	100	19	75	20
+132				132	132 维蕾萨	map_005	battle_bgm_town	1	8	3	ui_zhuxian_boss_jumo	effect_jingjichangtishi	220	616	100	19	75	20
+133				133	133 冰与火	map_005	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	221	616	100	19	75	20
+134				134	134 控制	map_005	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	222	620	100	19	90	20
+135				135	135 加兹瑞拉	map_005	battle_bgm_town	1	8	3	ui_zhuxian_boss_yeshou	effect_jingjichangtishi	223	624	104	19	90	30
+136				136	136 黑暗的尽头	map_005	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	224	624	104	19	90	30
+137				137	137 死咒	map_005	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	225	628	104	20	90	30
+138				138	138 祖穆拉恩	map_005	battle_bgm_town	1	8	3	ui_zhuxian_boss_jumo	effect_jingjichangtishi	226	632	104	20	90	30
+139				139	139 邪教	map_005	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	227	632	108	20	90	30
+140				140	140 邪恶的味道	map_005	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	228	636	108	20	90	30
+141				141	141 耐克鲁姆和赛瑟斯	map_005	battle_bgm_town	2	8	3	ui_zhuxian_bigboss_najia	effect_jingjichangtishi	229	640	108	20	90	30
+142				142	142 走廊	map_009	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	230	644	108	20	90	30
+143				143	143 回音	map_009	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	231	644	112	20	90	30
+144				144	144 特迪斯.扭木	map_009	battle_bgm_forest	1	5	3	ui_zhuxian_boss_yuansu	effect_jingjichangtishi	232	648	112	20	90	30
+145				145	145 没有尽头	map_009	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	233	652	112	20	90	30
+146				146	146 颤抖的空气	map_009	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	234	652	112	20	90	30
+147				147	147 海多斯博恩	map_009	battle_bgm_forest	1	5	3	ui_zhuxian_boss_yuansu	effect_jingjichangtishi	235	656	112	21	90	30
+148				148	148 控制	map_009	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	236	660	116	21	90	30
+149				149	149 局面	map_009	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	237	660	116	21	90	30
+150				150	150 托赛德林王子	map_009	battle_bgm_forest	1	2	3	ui_zhuxian_boss_anye	effect_jingjichangtishi	240	672	116	21	100	30
+151				151	151 幻觉	map_009	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	241	672	116	21	100	30
+152				152	152 杀机	map_009	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	242	676	116	21	100	30
+153				153	153 戈多克大王	map_009	battle_bgm_forest	2	8	3	ui_zhuxian_bigboss_shirenmoguowang	effect_jingjichangtishi	243	680	120	21	100	30
+154				154	154 低沉之声	map_019	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	244	680	120	21	100	30
+155				155	155 没玩没了	map_019	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	245	684	120	22	100	30
+156				156	156 哈扎斯	map_019	battle_bgm_ghostdom	1	8	3	ui_zhuxian_boss_long	effect_jingjichangtishi	246	688	120	22	100	30
+157				157	157 预兆	map_019	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	247	688	120	22	100	30
+158				158	158 迷失	map_019	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	248	692	124	22	100	30
+159				159	159 预言迦玛兰	map_019	battle_bgm_ghostdom	1	8	3	ui_zhuxian_boss_jumo	effect_jingjichangtishi	249	696	124	22	100	30
+160				160	160 死亡之触	map_019	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	250	700	124	22	100	30
+161				161	161 不安的气息	map_019	battle_bgm_ghostdom			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	251	700	124	22	100	30
+162				162	162 哈卡的化身	map_019	battle_bgm_ghostdom	2	2	3	ui_zhuxian_bigboss_haka	effect_jingjichangtishi	252	704	124	23	100	30
+163				163	163 异味	map_002	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	253	708	128	23	100	30
+164				164	164 包围	map_002	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	254	708	128	23	100	30
+165				165	165 血骨傀儡	map_002	battle_bgm_town	1	8	3	ui_zhuxian_boss_wangling	effect_jingjichangtishi	255	712	128	23	100	30
+166				166	166 轻敌	map_002	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	256	716	128	23	100	30
+167				167	167 轮回	map_002	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	257	716	128	23	100	30
+168				168	168 詹迪斯	map_002	battle_bgm_town	1	5	3	ui_zhuxian_boss_anye	effect_jingjichangtishi	258	720	128	23	100	30
+169				169	169 威胁	map_002	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	259	724	132	23	100	30
+170				170	170 正面出击	map_002	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	260	728	132	24	100	30
+171				171	171 莉莉安	map_002	battle_bgm_town	1	5	3	ui_zhuxian_boss_wangling	effect_jingjichangtishi	261	728	132	24	115	30
+172				172	172 喋喋不休	map_002	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	262	732	132	24	115	30
+173				173	173 无路可走	map_002	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	263	736	132	24	115	30
+174				174	174 院长加丁	map_002	battle_bgm_town	2	8	3	ui_zhuxian_bigboss_yuanzhang	effect_jingjichangtishi	264	736	136	24	115	30
+175				175	175 包围	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	265	740	136	24	115	30
+176				176	176 选择	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	266	744	136	24	115	30
+177				177	177 贝尔加	map_022	battle_bgm_volcano	1	8	3	ui_zhuxian_boss_yuansu	effect_jingjichangtishi	267	744	136	24	115	30
+178				178	178 奇怪的气息	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	268	748	136	24	115	30
+179				179	179 升级	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	269	752	140	25	115	30
+180				180	180 伊森迪奥丝	map_022	battle_bgm_volcano	1	2	3	ui_zhuxian_boss_yuansu	effect_jingjichangtishi	270	756	140	25	115	30
+181				181	181 麻木之战	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	271	756	140	25	115	30
+182				182	182 巨型石柱	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	272	760	140	25	115	30
+183				183	183 霍尔雷.黑须	map_022	battle_bgm_volcano	2	5	3	ui_zhuxian_bigboss_airenguowang	effect_jingjichangtishi	273	764	140	25	115	30
+184				184	184 永生门	map_016	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	274	764	140	25	115	30
+185				185	185 占领	map_016	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	275	768	144	25	115	30
+186				186	186 悲惨的提米	map_016	battle_bgm_town	1	5	3	ui_zhuxian_boss_wangling	effect_jingjichangtishi	276	772	144	25	115	30
+187				187	187 遗迹	map_016	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	277	772	144	26	125	30
+188				188	188 金色大殿	map_016	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	277	772	144	26	125	30
+189				189	189 不可宽恕者	map_016	battle_bgm_town	1	2	3	ui_zhuxian_boss_wangling	effect_jingjichangtishi	277	772	144	26	125	30
+190				190	190 谜团	map_016	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	277	772	144	26	125	30
+191				191	191 复活秘术	map_016	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	277	772	144	26	125	30
+192				192	192 安娜丝塔丽	map_016	battle_bgm_town	1	8	3	ui_zhuxian_boss_wangling	effect_jingjichangtishi	277	772	144	26	125	30
+193				193	193 心灵的颤动	map_016	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	277	772	144	27	125	30
+194				194	194 起雾	map_016	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	277	772	148	27	125	30
+195				195	195 拉姆斯登	map_016	battle_bgm_town	1	8	3	ui_zhuxian_boss_wangling	effect_jingjichangtishi	277	772	148	27	125	30
+196				196	196 诅咒	map_016	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	277	772	148	27	125	30
+197				197	197 面对面	map_016	battle_bgm_town			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	277	772	148	27	125	30
+198				198	198 瑞文戴尔	map_016	battle_bgm_town	2	8	3	ui_zhuxian_bigboss_aersasi	effect_jingjichangtishi	278	776	148	28	125	30
+199				199	199 嗜血	map_021	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	279	780	148	28	125	30
+200				200	200 腐水	map_021	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	280	784	148	28	125	30
+201				201	201 欧莫克大王	map_021	battle_bgm_volcano	1	2	3	ui_zhuxian_boss_shirenmo	effect_jingjichangtishi	281	784	148	28	125	30
+202				202	202 野兽的呼唤	map_021	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	282	788	152	28	125	30
+203				203	203 残忍的尖牙	map_021	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	283	792	152	28	125	30
+204				204	204 水晶之牙	map_021	battle_bgm_volcano	1	8	3	ui_zhuxian_boss_yeshou	effect_jingjichangtishi	284	792	152	28	125	30
+205				205	205 食物短缺	map_021	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	285	796	152	28	125	30
+206				206	206 嗜血水元素	map_021	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	285	796	152	28	125	30
+207				207	207 尖石法师	map_021	battle_bgm_volcano	1	5	3	ui_zhuxian_boss_shirenmo	effect_jingjichangtishi	285	796	152	29	125	30
+208				208	208 饥渴	map_021	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	286	800	152	29	125	30
+209				209	209 致盲	map_021	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	287	800	152	29	125	40
+210				210	210 尖石统帅	map_021	battle_bgm_volcano	2	5	3	ui_zhuxian_bigboss_shourenjiangjun	effect_jingjichangtishi	288	804	156	29	125	40
+211				211	211 措手不及	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	289	808	156	29	125	40
+212				212	212 连续激战	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	290	812	156	29	125	40
+213				213	213 大酋长雷德.黑手	map_022	battle_bgm_volcano	1	3	3	ui_zhuxian_boss_shouren	effect_jingjichangtishi	291	812	156	29	125	40
+214				214	214 被困	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	292	816	156	29	125	40
+215				215	215 陷落	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	293	820	156	29	125	40
+216				216	216 盖斯	map_022	battle_bgm_volcano	1	7	3	ui_zhuxian_boss_long	effect_jingjichangtishi	294	820	156	29	125	40
+217				217	217 失控	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	295	824	156	29	125	40
+218				218	218 机制的战术	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	296	828	156	30	125	40
+219				219	219 比斯巨兽	map_022	battle_bgm_volcano	1	5	3	ui_zhuxian_boss_yeshou	effect_jingjichangtishi	297	828	156	30	125	40
+220				220	220 频繁的威胁	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	298	832	160	30	125	40
+221				221	221 不同的气味	map_022	battle_bgm_volcano			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	299	836	160	30	125	40
+222				222	222 达基萨斯	map_022	battle_bgm_volcano	2	8	3	ui_zhuxian_bigboss_longrenjiangjun	effect_jingjichangtishi	300	840	160	30	125	40
+223				223	223 退却？	map_017	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	300	840	160	30	125	40
+224				224	224 新的方向	map_017	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	300	840	160	30	125	40
+225				225	225 蝙蝠耶克里克 	map_017	battle_bgm_forest	1	8	3	ui_zhuxian_boss_jumo	effect_jingjichangtishi	300	840	160	30	125	40
+226				226	226 中毒	map_017	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	300	840	160	30	125	40
+227				227	227 解困	map_017	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	300	840	160	30	125	40
+228				228	228 毒蛇温诺西斯 	map_017	battle_bgm_forest	1	8	3	ui_zhuxian_boss_jumo	effect_jingjichangtishi	301	840	164	30	125	40
+229				229	229 野兽的味道	map_017	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	302	844	164	31	125	40
+230				230	230 熏人的恶臭	map_017	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	303	848	164	31	125	40
+231				231	231 蜘蛛玛尔里 	map_017	battle_bgm_forest	1	5	3	ui_zhuxian_boss_jumo	effect_jingjichangtishi	304	848	164	31	125	40
+232				232	232 疯狂的杀戮	map_017	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	305	852	164	31	125	40
+233				233	233 暴怒	map_017	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	306	856	164	31	125	40
+234				234	234 曼多基尔 	map_017	battle_bgm_forest	1	5	3	ui_zhuxian_boss_jumo	effect_jingjichangtishi	307	856	168	31	125	40
+235				235	235 暴动的野兽	map_017	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	308	860	168	31	125	40
+236				236	236 群虎突袭	map_017	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	309	864	168	31	125	40
+237				237	237 猛虎塞卡尔 	map_017	battle_bgm_forest	1	8	3	ui_zhuxian_boss_yeshou	effect_jingjichangtishi	310	868	168	31	125	40
+238				238	238 聚集	map_017	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	310	868	168	31	125	40
+239				239	239 吸引	map_017	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	310	868	168	31	125	40
+240				240	240 加兹兰卡 	map_017	battle_bgm_forest	1	5	3	ui_zhuxian_boss_jumo	effect_jingjichangtishi	310	868	172	32	125	40
+241				241	241 复活术	map_017	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	311	868	172	32	125	40
+242				242	242 族长利齿	map_017	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	312	872	172	32	125	40
+243				243	243 妖术师金度	map_017	battle_bgm_forest	2	8	3	ui_zhuxian_bigboss_dujing	effect_jingjichangtishi	313	876	172	32	125	40
+244				244	244 恐惧	map_017	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	314	876	172	32	125	40
+245				245	245 生命虹吸	map_017	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	315	880	172	32	125	40
+246				246	246 哈卡	map_017	battle_bgm_forest	2	2	3	ui_zhuxian_bigboss_haka	effect_jingjichangtishi	316	884	172	32	125	40
+247				247	247 喘息	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	317	884	176	32	125	40
+248				248	248 僵持	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	318	888	176	32	125	40
+249				249	249 雄鹰化身	map_020	battle_bgm_forest	2	8	3	ui_zhuxian_bigboss_jumoying	effect_jingjichangtishi	319	892	176	32	125	40
+250				250	250 残忍的野兽	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	320	896	176	32	125	40
+251				251	251 巧胜	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	320	896	176	32	125	40
+252				252	252 熊化身	map_020	battle_bgm_forest	2	5	3	ui_zhuxian_bigboss_jumoxiong	effect_jingjichangtishi	320	896	176	32	115	40
+253				253	253 不起眼的喽啰	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	320	896	180	32	125	50
+254				254	254 意料之中	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	320	896	180	32	125	50
+255				255	255 龙鹰化身	map_020	battle_bgm_forest	2	5	3	ui_zhuxian_bigboss_jumolong	effect_jingjichangtishi	320	896	180	32	125	50
+256				256	256 安全？	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	320	896	180	33	125	50
+257				257	257 无法松懈	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	320	896	180	33	125	50
+258				258	258 山猫化身	map_020	battle_bgm_forest	2	5	3	ui_zhuxian_bigboss_jumohu	effect_jingjichangtishi	320	896	180	33	125	50
+259				259	259 自然气息	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	320	896	184	33	125	50
+260				260	260 屠戮	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	321	900	184	33	125	50
+261				261	261 拉克雷斯	map_020	battle_bgm_forest	2	8	3	ui_zhuxian_bigboss_jumolong	effect_jingjichangtishi	322	904	184	33	125	50
+262				262	262 勇气	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	323	908	184	33	125	50
+263				263	263 执着	map_020	battle_bgm_forest			1	ui_zhuxian_xiaoguanka	effect_jingjichangtishi	324	912	188	33	125	50
+264				264	264 达卡拉	map_020	battle_bgm_forest	2	5	3	ui_zhuxian_bigboss_dujing	effect_jingjichangtishi	324	924	188	33	125	50
+1001				20	死亡矿井	map_001	battle_bgm_town	1	8	1	ui_fuben_siwangkuangjing	effect_jingjichangtishi	30	50	10	3	1	4
+1002				55	银牙城堡	map_001	battle_bgm_town	1	8	1	ui_fuben_yinya	effect_jingjichangtishi	140	390	55	8	20	8
+1003				80	监狱	map_003	battle_bgm_dugout	1	8	1	ui_fuben_jianyu	effect_jingjichangtishi	180	490	67	12	30	12
+1004				110	血色教堂	map_015	battle_bgm_dugout	1	7	1	ui_fuben_xuese	effect_jingjichangtishi	200	560	88	17	75	17
+1005				130	玛拉顿	map_020	battle_bgm_forest	1	8	1	ui_fuben_maladun	effect_jingjichangtishi	227	632	108	20	90	21
+1006				155	剃刀高地	map_010	battle_bgm_ghostdom	1	8	1	ui_fuben_tidaogaodi	effect_jingjichangtishi	250	700	124	22	100	26
+1007				175	祖尔法拉克	map_005	battle_bgm_town	1	8	1	ui_fuben_zuerfalake	effect_jingjichangtishi	270	756	140	25	115	30
+1008				195	厄运之槌	map_009	battle_bgm_forest	1	8	1	ui_fuben_eyun	effect_jingjichangtishi	278	776	148	28	125	35
+1009				220	通灵学院	map_002	battle_bgm_town	1	8	1	ui_fuben_tongling	effect_jingjichangtishi	300	840	160	30	125	39
+1010				235	斯坦索姆	map_016	battle_bgm_town	1	8	1	ui_fuben_sitansuomu	effect_jingjichangtishi	308	860	168	31	125	41
+1011				245	黑石塔	map_022	battle_bgm_volcano	1	8	1	ui_fuben_heishita	effect_jingjichangtishi	309	880	172	32	125	49
+1012				264	祖格	map_017	battle_bgm_forest	1	5	1	ui_fuben_zuge	effect_jingjichangtishi	324	924	188	33	125	52
+1013				264	祖阿曼	map_020	battle_bgm_forest	1	5	1	ui_fuben_zuaman	effect_jingjichangtishi	357	1017	207	37	138	60
+1014				30	死亡矿井(困难)	map_001	battle_bgm_town	2	8	3	ui_fuben_siwangkuangjing	effect_jingjichangtishi	36	60	12	4	2	5
+1015				60	银牙城堡(困难)	map_001	battle_bgm_town	2	8	3	ui_fuben_yinya	effect_jingjichangtishi	168	468	66	10	24	10
+1016				90	监狱(困难)	map_003	battle_bgm_dugout	2	8	3	ui_fuben_jianyu	effect_jingjichangtishi	216	588	81	15	36	15
+1017				120	血色教堂(困难)	map_015	battle_bgm_dugout	2	7	3	ui_fuben_xuese	effect_jingjichangtishi	240	672	106	21	90	20
+1018				140	玛拉顿(困难)	map_020	battle_bgm_forest	2	8	3	ui_fuben_maladun	effect_jingjichangtishi	273	759	130	24	108	25
+1019				165	剃刀高地(困难)	map_010	battle_bgm_ghostdom	2	8	3	ui_fuben_tidaogaodi	effect_jingjichangtishi	300	840	149	27	120	30
+1020				185	祖尔法拉克(困难)	map_005	battle_bgm_town	2	8	3	ui_fuben_zuerfalake	effect_jingjichangtishi	324	908	168	30	138	35
+1021				205	厄运之槌(困难)	map_009	battle_bgm_forest	2	8	3	ui_fuben_eyun	effect_jingjichangtishi	334	932	178	34	150	40
+1022				225	通灵学院(困难)	map_002	battle_bgm_town	2	8	3	ui_fuben_tongling	effect_jingjichangtishi	360	1008	192	36	150	45
+1023				240	斯坦索姆(困难)	map_016	battle_bgm_town	2	8	3	ui_fuben_sitansuomu	effect_jingjichangtishi	370	1032	202	38	150	50
+1024				250	黑石塔(困难)	map_022	battle_bgm_volcano	2	8	3	ui_fuben_heishita	effect_jingjichangtishi	371	1056	207	39	150	55
+1025				264	祖格(困难)	map_017	battle_bgm_forest	2	5	3	ui_fuben_zuge	effect_jingjichangtishi	389	1109	226	40	150	60
+1026				264	祖阿曼(困难)	map_020	battle_bgm_forest	2	5	3	ui_fuben_zuaman	effect_jingjichangtishi	429	1221	249	45	166	65
+20001				20001	3 萨满柯兰萨{噩梦}	map_022	battle_bgm_volcano	2	5	3	ui_zhuxian_boss_shouren		1	1	1	1	1	1
+20002				20002	6 焰喉{噩梦}	map_022	battle_bgm_volcano	2	5	3	ui_zhuxian_boss_yeshou		1	1	1	1	1	1
+20003				20003	9 熔岩戈多斯{噩梦}	map_022	battle_bgm_volcano	2	8	3	ui_zhuxian_bigboss_shourenjiangjun		1	1	1	1	1	1
+20004				20004	12 考布莱恩{噩梦}	map_007	battle_bgm_ghostdom	2	8	3	ui_zhuxian_boss_anye		1	1	1	1	1	1
+20005				20005	15 克雷什{噩梦}	map_007	battle_bgm_ghostdom	2	2	3	ui_zhuxian_boss_yeshou		1	1	1	1	1	1
+20006				20006	18 穆坦努斯{噩梦}	map_007	battle_bgm_ghostdom	2	5	3	ui_zhuxian_bigboss_yuren		1	1	1	1	1	1
+20007				20007	21 范克里夫{噩梦}	map_011	battle_bgm_dugout	2	8	3	ui_zhuxian_boss_renlei		1	1	1	1	1	1
+20008				20008	24 “船长”曲奇{噩梦}	map_011	battle_bgm_dugout	2	8	3	ui_zhuxian_bigboss_yuren		1	1	1	1	1	1
+20009				20009	27 萨利维丝{噩梦}	map_010	battle_bgm_ghostdom	2	5	3	ui_zhuxian_boss_najia		1	1	1	1	1	1
+20010				20010	30 阿库麦尔{噩梦}	map_010	battle_bgm_ghostdom	2	8	3	ui_zhuxian_boss_yeshou		1	1	1	1	1	1
+20011				20011	33 领主克尔里斯{噩梦}	map_010	battle_bgm_ghostdom	2	5	3	ui_zhuxian_bigboss_yuanzhang		1	1	1	1	1	1
+20012				20012	36 霍格{噩梦}	map_003	battle_bgm_dugout	2	8	3	ui_zhuxian_boss_shouren		1	1	1	1	1	1
+20013				20013	39 灼热勋爵{噩梦}	map_003	battle_bgm_dugout	2	8	3	ui_zhuxian_boss_yuansu		1	1	1	1	1	1
+20014				20014	42 巴基尔{噩梦}	map_003	battle_bgm_dugout	2	2	3	ui_zhuxian_boss_renlei		1	1	1	1	1	1
+20015				20015	45 哈姆霍克{噩梦}	map_003	battle_bgm_dugout	2	8	3	ui_zhuxian_bigboss_shirenmoguowang		1	1	1	1	1	1
+20016				20016	48 法师阿鲁高{噩梦}	map_001	battle_bgm_town	2	5	3	ui_zhuxian_boss_renlei		1	1	1	1	1	1
+20017				20017	51 死亡之誓{噩梦}	map_001	battle_bgm_town	2	8	3	ui_zhuxian_boss_wangling		1	1	1	1	1	1
+20018				20018	54 拉佐克劳{噩梦}	map_001	battle_bgm_town	2	2	3	ui_zhuxian_boss_langren		1	1	1	1	1	1
+20019				20019	57 席瓦莱恩{噩梦}	map_001	battle_bgm_town	2	5	3	ui_zhuxian_bigboss_yuanzhang		1	1	1	1	1	1
+20020				20020	60 格鲁比斯{噩梦}	map_006	battle_bgm_dugout	2	5	3	ui_zhuxian_boss_airen		1	1	1	1	1	1
+20021				20021	63 群体打击者{噩梦}	map_006	battle_bgm_dugout	2	8	3	ui_zhuxian_boss_jixie		1	1	1	1	1	1
+20022				20022	66 瑟玛普拉格{噩梦}	map_006	battle_bgm_dugout	2	5	3	ui_zhuxian_bigboss_jiqiren		1	1	1	1	1	1
+20023				20023	69 布兰恩{噩梦}	map_015	battle_bgm_dugout	2	8	3	ui_zhuxian_boss_renlei		1	1	1	1	1	1
+20024				20024	72 孔格勒{噩梦}	map_015	battle_bgm_dugout	2	8	3	ui_zhuxian_boss_renlei		1	1	1	1	1	1
+20025				20025	75 赫洛德{噩梦}	map_015	battle_bgm_dugout	2	2	3	ui_zhuxian_bigboss_kuangzhanshi		1	1	1	1	1	1
+20026				20026	78 萨尔诺斯{噩梦}	map_008	battle_bgm_ghostdom	2	5	3	ui_zhuxian_boss_wangling		1	1	1	1	1	1
+20027				20027	81 死灵勇士{噩梦}	map_008	battle_bgm_ghostdom	2	5	3	ui_zhuxian_boss_wangling		1	1	1	1	1	1
+20028				20028	84 奥法师杜安{噩梦}	map_008	battle_bgm_ghostdom	2	5	3	ui_zhuxian_boss_renlei		1	1	1	1	1	1
+20029				20029	87 狗男女{噩梦}	map_008	battle_bgm_ghostdom	2	2	3	ui_zhuxian_bigboss_gounannv		1	1	1	1	1	1
+20030				20030	90 贾格巴{噩梦}	map_014	battle_bgm_forest	2	8	3	ui_zhuxian_boss_haozhuren		1	1	1	1	1	1
+20031				20031	93 阿格姆{噩梦}	map_014	battle_bgm_forest	2	8	3	ui_zhuxian_boss_haozhuren		1	1	1	1	1	1
+20032				20032	96 拉姆塔斯{噩梦}	map_014	battle_bgm_forest	2	5	3	ui_zhuxian_boss_haozhuren		1	1	1	1	1	1
+20033				20033	99 卡尔加刺肋{噩梦}	map_014	battle_bgm_forest	2	2	3	ui_zhuxian_bigboss_haozhuren		1	1	1	1	1	1
+20034				20034	102 诺克塞恩{噩梦}	map_020	battle_bgm_forest	2	5	3	ui_zhuxian_boss_yuansu		1	1	1	1	1	1
+20035				20035	105 公主{噩梦}	map_020	battle_bgm_forest	2	5	3	ui_zhuxian_boss_yuansu		1	1	1	1	1	1
+20036				20036	108 兰斯利德{噩梦}	map_020	battle_bgm_forest	2	5	3	ui_zhuxian_bigboss_gongzhu		1	1	1	1	1	1
+20037				20037	111 失踪的矮人{噩梦}	map_018	battle_bgm_dugout	2	8	3	ui_zhuxian_boss_airen		1	1	1	1	1	1
+20038				20038	114 远古卫士{噩梦}	map_018	battle_bgm_dugout	2	8	3	ui_zhuxian_boss_yuansu		1	1	1	1	1	1
+20039				20039	117 加加恩.火锤{噩梦}	map_018	battle_bgm_dugout	2	8	3	ui_zhuxian_bigboss_airenguowang		1	1	1	1	1	1
+20040				20040	120 图特卡什{噩梦}	map_010	battle_bgm_ghostdom	2	2	3	ui_zhuxian_boss_wangling		1	1	1	1	1	1
+20041				20041	123 莫德雷斯{噩梦}	map_010	battle_bgm_ghostdom	2	5	3	ui_zhuxian_boss_wangling		1	1	1	1	1	1
+20042				20042	126 暴食者{噩梦}	map_010	battle_bgm_ghostdom	2	5	3	ui_zhuxian_boss_wangling		1	1	1	1	1	1
+20043				20043	129 寒冰亚门纳尔{噩梦}	map_010	battle_bgm_ghostdom	2	5	3	ui_zhuxian_bigboss_wuyao		1	1	1	1	1	1
+20044				20044	132 维蕾萨{噩梦}	map_005	battle_bgm_town	2	2	3	ui_zhuxian_boss_jumo		1	1	1	1	1	1
+20045				20045	135 加兹瑞拉{噩梦}	map_005	battle_bgm_town	2	8	3	ui_zhuxian_boss_yeshou		1	1	1	1	1	1
+20046				20046	138 祖穆拉恩{噩梦}	map_005	battle_bgm_town	2	5	3	ui_zhuxian_boss_jumo		1	1	1	1	1	1
+20047				20047	141 耐克鲁姆和赛瑟斯{噩梦}	map_005	battle_bgm_town	2	8	3	ui_zhuxian_bigboss_najia		1	1	1	1	1	1
+20048				20048	144 特迪斯.扭木{噩梦}	map_009	battle_bgm_forest	2	5	3	ui_zhuxian_boss_yuansu		1	1	1	1	1	1
+20049				20049	147 海多斯博恩{噩梦}	map_009	battle_bgm_forest	2	5	3	ui_zhuxian_boss_yuansu		1	1	1	1	1	1
+20050				20050	150 王子{噩梦}	map_009	battle_bgm_forest	2	5	3	ui_zhuxian_boss_anye		1	1	1	1	1	1
+20051				20051	153 戈多克大王{噩梦}	map_009	battle_bgm_forest	2	8	3	ui_zhuxian_bigboss_shirenmoguowang		1	1	1	1	1	1
+20052				20052	156 哈扎斯{噩梦}	map_019	battle_bgm_ghostdom	2	5	3	ui_zhuxian_boss_long		1	1	1	1	1	1
+20053				20053	159 预言迦玛兰{噩梦}	map_019	battle_bgm_ghostdom	2	8	3	ui_zhuxian_boss_jumo		1	1	1	1	1	1
+20054				20054	162 哈卡的化身{噩梦}	map_019	battle_bgm_ghostdom	2	2	3	ui_zhuxian_bigboss_haka		1	1	1	1	1	1
+20055				20055	165 血骨傀儡{噩梦}	map_002	battle_bgm_town	2	8	3	ui_zhuxian_boss_wangling		1	1	1	1	1	1
+20056				20056	168 詹迪斯{噩梦}	map_002	battle_bgm_town	2	8	3	ui_zhuxian_boss_anye		1	1	1	1	1	1
+20057				20057	171 莉莉安{噩梦}	map_002	battle_bgm_town	2	8	3	ui_zhuxian_boss_wangling		1	1	1	1	1	1
+20058				20058	174 黑暗院长{噩梦}	map_002	battle_bgm_town	2	5	3	ui_zhuxian_bigboss_yuanzhang		1	1	1	1	1	1
+20059				20059	177 贝尔加{噩梦}	map_022	battle_bgm_volcano	2	2	3	ui_zhuxian_boss_yuansu		1	1	1	1	1	1
+20060				20060	180 伊森迪奥丝{噩梦}	map_022	battle_bgm_volcano	2	8	3	ui_zhuxian_boss_yuansu		1	1	1	1	1	1
+20061				20061	183 霍尔雷.黑须{噩梦}	map_022	battle_bgm_volcano	2	5	3	ui_zhuxian_bigboss_airenguowang		1	1	1	1	1	1
+20062				20062	186 悲惨的提米{噩梦}	map_016	battle_bgm_town	2	5	3	ui_zhuxian_boss_wangling		1	1	1	1	1	1
+20063				20063	189 不可宽恕者{噩梦}	map_016	battle_bgm_town	2	2	3	ui_zhuxian_boss_wangling		1	1	1	1	1	1
+20064				20064	192 男爵夫人{噩梦}	map_016	battle_bgm_town	2	5	3	ui_zhuxian_boss_wangling		1	1	1	1	1	1
+20065				20065	195 拉姆斯登{噩梦}	map_016	battle_bgm_town	2	8	3	ui_zhuxian_boss_wangling		1	1	1	1	1	1
+20066				20066	198 瑞文戴尔男爵{噩梦}	map_016	battle_bgm_town	2	5	3	ui_zhuxian_bigboss_aersasi		1	1	1	1	1	1
+20067				20067	201 欧莫克大王{噩梦}	map_021	battle_bgm_volcano	2	8	3	ui_zhuxian_boss_shirenmo		1	1	1	1	1	1
+20068				20068	204 水晶之牙{噩梦}	map_021	battle_bgm_volcano	2	8	3	ui_zhuxian_boss_yeshou		1	1	1	1	1	1
+20069				20069	207 尖石法师{噩梦}	map_021	battle_bgm_volcano	2	5	3	ui_zhuxian_boss_shirenmo		1	1	1	1	1	1
+20070				20070	210 尖石统帅{噩梦}	map_021	battle_bgm_volcano	2	5	3	ui_zhuxian_bigboss_shourenjiangjun		1	1	1	1	1	1
+20071				20071	213 雷德.黑手{噩梦}	map_022	battle_bgm_volcano	2	5	3	ui_zhuxian_boss_shouren		1	1	1	1	1	1
+20072				20072	216 盖斯{噩梦}	map_022	battle_bgm_volcano	2	8	3	ui_zhuxian_boss_long		1	1	1	1	1	1
+20073				20073	219 比斯巨兽{噩梦}	map_022	battle_bgm_volcano	2	2	3	ui_zhuxian_boss_yeshou		1	1	1	1	1	1
+20074				20074	222 达基萨斯{噩梦}	map_022	battle_bgm_volcano	2	8	3	ui_zhuxian_bigboss_longrenjiangjun		1	1	1	1	1	1
+20075				20075	225 蝙蝠耶克里克{噩梦}	map_017	battle_bgm_forest	2	5	3	ui_zhuxian_boss_jumo		1	1	1	1	1	1
+20076				20076	228 毒蛇温诺西斯{噩梦}	map_017	battle_bgm_forest	2	5	3	ui_zhuxian_boss_jumo		1	1	1	1	1	1
+20077				20077	231 蜘蛛玛尔里{噩梦}	map_017	battle_bgm_forest	2	8	3	ui_zhuxian_boss_jumo		1	1	1	1	1	1
+20078				20078	234 猛虎塞卡尔{噩梦}	map_017	battle_bgm_forest	2	5	3	ui_zhuxian_boss_jumo		1	1	1	1	1	1
+20079				20079	237 加兹兰卡{噩梦}	map_017	battle_bgm_forest	2	5	3	ui_zhuxian_boss_yeshou		1	1	1	1	1	1
+20080				20080	240 曼多基尔 {噩梦}	map_017	battle_bgm_forest	2	8	3	ui_zhuxian_boss_jumo		1	1	1	1	1	1
+20081				20081	243 妖术师金度{噩梦}	map_017	battle_bgm_forest	2	2	3	ui_zhuxian_bigboss_dujing		1	1	1	1	1	1
+20082				20082	246 哈卡{噩梦}	map_017	battle_bgm_forest	2	8	3	ui_zhuxian_bigboss_haka		1	1	1	1	1	1
+20083				20083	249 雄鹰化身{噩梦}	map_020	battle_bgm_forest	2	5	3	ui_zhuxian_bigboss_jumoying		1	1	1	1	1	1
+20084				20084	252 熊化身{噩梦}	map_020	battle_bgm_forest	2	5	3	ui_zhuxian_bigboss_jumoxiong		1	1	1	1	1	1
+20085				20085	255 龙鹰化身{噩梦}	map_020	battle_bgm_forest	2	8	3	ui_zhuxian_bigboss_jumolong		1	1	1	1	1	1
+20086				20086	258 山猫化身{噩梦}	map_020	battle_bgm_forest	2	8	3	ui_zhuxian_bigboss_jumohu		1	1	1	1	1	1
+20087				20087	261 玛拉克雷斯{噩梦}	map_020	battle_bgm_forest	2	8	3	ui_zhuxian_bigboss_jumolong		1	1	1	1	1	1
+20088				20088	264 达卡拉{噩梦}	map_020	battle_bgm_forest	2	5	3	ui_zhuxian_bigboss_dujing		1	1	1	1	1	1
+30001				30001	年轻的圣骑士	map_017	battle_bgm_forest			3	ui_shishi_kuloubing		1	1	1	1	1	1
+30002				30002	瘟疫蔓延	map_002	battle_bgm_town			3	ui_shishi_wuyao		1	1	1	1	1	1
+30003				30003	净化斯坦索姆	map_003	battle_bgm_dugout			3	ui_shishi_wanglingtouling		1	1	1	1	1	1
+30004				30004	霜之哀伤	map_012	battle_bgm_ghostdom			3	ui_shishi_youling		1	1	1	1	1	1
+30005				30005	复仇恐惧魔王	map_010	battle_bgm_ghostdom			3	ui_shishi_kongjumowang		1	1	1	1	1	1
+30006				30006	死亡骑士	map_009	battle_bgm_forest			3	ui_shishi_siwangqishi		1	1	1	1	1	1
+30007				30007	恶魔伊利丹 	map_022	battle_bgm_volcano			3	ui_shishi_yilidan		1	1	1	1	1	1
+30008				30008	洛丹伦遭遇 	map_016	battle_bgm_town			3	ui_shishi_yilidan		1	1	1	1	1	1
+30009				30009	伊利丹的救赎	map_021	battle_bgm_volcano			3	ui_shishi_wanglingshouling		1	1	1	1	1	1
+30010				30010	黑暗之门 	map_018	battle_bgm_dugout			3	ui_shishi_yilidan		1	1	1	1	1	1
+30011				30011	伊利丹的盟军 	map_002	battle_bgm_town			3	ui_shishi_shouwangzhe		1	1	1	1	1	1
+30012				30012	黑暗神殿 	map_008	battle_bgm_ghostdom			3	ui_zhuxian_boss_longren		1	1	1	1	1	1
+30013				30013	巅峰之战 	map_007	battle_bgm_ghostdom			3	ui_shishi_siwangqishi		1	1	1	1	1	1

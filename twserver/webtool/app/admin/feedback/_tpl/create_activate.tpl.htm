@@ -1,0 +1,38 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>
+生成兑换码
+<?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+
+<div class="tableWrapper">
+    <form method="post">
+        <table class="grid">
+            <tr>
+              <td align="right">数量                  ：</td>
+              <td align="left"><input type="text" name="num" />生成数量不要过大</td>
+            </tr>
+            <tr>
+              <td align="right">类型                  ：</td>
+              <td align="left"><input type="TEXT" name="type" /></td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td align="left"><input type="submit" name="submit" value="发送" /></td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</div>
+
+<script>
+<?php
+if($alert){
+    echo "alert('{$alert}');";
+}
+?>
+</script>
+
+<?php $this->endBlock('content');?>

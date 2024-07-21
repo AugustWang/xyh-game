@@ -1,0 +1,75 @@
+<div class="tableWrapper">
+    <table class="grid">
+        <?php
+        $input_params = '';
+        foreach($fields as $k =>$v){
+        $input_params .= $k.': $(":input[name=\'param_'.$k.'\']").val(),';
+        if(isset($v['options']) && count($v['options']) > 0){
+            echo '<tr><td align="right">'.$v['name'].'：</td><td align="left">';
+            echo '<select name="param_'.$k.'" '.$v['attr'].'>';
+                foreach($v['options'] as $opt_k => $opt_v){
+                    echo '<option value="'.$opt_k.'">'.$opt_v.'</option>';
+                }
+            echo '</select>'.$v['tips'].'</td></tr>';
+        }else{
+            echo '<tr><td align="right">'.$v['name'].'：</td><td align="left"><input type="text" name="param_'.$k.'" '.$v['attr'].'/>'.$v['tips'].'</td></tr>';
+        }
+        }
+        ?>
+        <tfoot>
+            <tr>
+                <td>&nbsp;</td>
+                <td align="left"><button onclick="javascript:gm_action();" id="gm_action_button" type="button">确定</button></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<script>
+    function gm_action(){
+        var params = {
+            <?php
+            echo $input_params;
+            foreach($params as $k => $v){
+                echo $k.': '.$v.',';
+            }
+            ?>
+            mod: "<?php echo $this->input['mod'];?>",
+            act: "<?php echo $this->input['act'];?>",
+            id: "<?php echo $this->input['id'];?>",
+            op: 1,
+            rand: Math.random()
+        };
+        gm_action_do("./", params, 300)
+    }
+</script>
+<script type="text/javascript" src="js/data_prop.js"></script>
+<script type="text/javascript" src="js/data_equ.js"></script>
+<script type="text/javascript" src="js/data_hero.js"></script>
+
+<script>
+
+var items = data_prop.concat(data_equ);
+$( "#itemid" ).autocomplete({
+    source: items,
+    close: function( event, ui ) {
+        var o = $("#itemid").val();
+        var i = o.indexOf(" ")
+        if(i > 0){
+            var v = o.substr(0, i);
+            $("#itemid").val(v);
+        }
+    }
+});
+$( "#heroid" ).autocomplete({
+    source: data_hero,
+    close: function( event, ui ) {
+        var o = $("#heroid").val();
+        var i = o.indexOf(" ")
+        if(i > 0){
+            var v = o.substr(0, i);
+            $("#heroid").val(v);
+        }
+    }
+});
+</script>

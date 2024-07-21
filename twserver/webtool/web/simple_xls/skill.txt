@@ -1,0 +1,316 @@
+id	name	desc	trigger	cmd	type	ringEffect	attackType	magicType	attackEffect	attackPosition	skillEffect	skillEffectPosition	callbackFrame	underAttackEffect	skillIcon	skillTypeName
+1	神圣治疗	释放出神圣的光辉照耀着场上的同伴，并以200%的治疗量为单个队友回复生命	{active,ok}	[{add_hp,{cure,2}}]	1		2	1		1	skill_104	1	833		icon_skill_1	单体治疗
+2	荣耀	圣光照耀着周围的同伴并为他们增加10%防御值	{init,ok}	[{set_def,{'*',1.1}}]	4		2	1		3		3			icon_skill_2	光环
+3	救赎	将所有神光能量照耀着逝去的所有同伴，并以对方31%的血量复活对方	{wake,{hp_ratio_less,30}}	[{add_hp,{'*',0.31}}]	3		2	1		3	skill_103	1	980		icon_skill_3	群体复活
+4	重型炮击	用双倍的火药发射出强大的炮弹，对当前列的第一个敌人发动200%的伤害	{active,ok}		1		2	2	skill_2012	1	skill_108	1	320		icon_skill_4	单体攻击
+5	爆头	精准的猎人总能有意外的收获。攻击目标时，有40%几率无视目标防御60%	{atk,{rate,40}}	[{set_buff,{set_pun,{'*',0.4},1,6,atk}}]	5		2	1		1		1			icon_skill_5	被动
+6	火箭穿射	同时发射出多个火箭并且对竖排全部目标造成410%伤害	{wake,{hp_ratio_less,50}}		3		2	2	skill_2002	4	skill_50007	5	1300		icon_skill_6	竖排攻击
+7	凿击	迅速的用匕首凿击敌人，对目标造成50%伤害，并且眩晕1回合	{active,ok}	[{set_buff,{dizzy,ok,1,1,ok}}]	1		1	1		1	skill_113	1	495	skill_101	icon_skill_7	单体控制
+8	背刺	趁着地方眩晕之际绕道对方身后造成150%的伤害	{atk,dizzy}	[{set_buff,{add_atk,{'*',0.5},1,7,atk}}]	4		1	1		1		1			icon_skill_8	被动
+9	暗影步	用灵巧而快速的步伐晃至地方后排并对敌人造成450%伤害	{wake,{hp_ratio_less,40}}		3		1	1		1	skill_112	1	680	skill_101	icon_skill_9	单体攻击
+10	急速火球	利用法术创造一个火球迅速飞向对当前列的第一个敌人，并且造成210%的伤害	{active,ok}		1		2	2	skill_2011	1	skill_109	1	420		icon_skill_10	单体攻击
+11	法术反制	受到知识的庇护，在受到技能攻击时有35%几率让施法者4回合内无法施法	{skill_atked,{rate,35}}	[{set_buff,{disable_skill,ok,4,2,ok}}]	5		2	1		1		1			icon_skill_11	被动
+12	风暴	强大的范围法术，制造出一团雷云并对全部目标造成150%伤害	{wake,{hp_ratio_less,32}}		3		2	1		1	skill_50001	3	660		icon_skill_12	群体攻击
+13	重劈	全力将斧头劈向敌人，并且对当前敌人造成150%伤害	{active,ok}		1		1	1		1	skill_114	1	100	skill_101	icon_skill_13	单体攻击
+14	厚皮	天生厚实的皮肤与健壮的体格让他总能在战斗时多出7%的血量	{init,ok}	[{add_hp,{'*',0.07}}]	4		2	1		1		1			icon_skill_14	被动
+15	战争践踏	用强有力的重蹄践踏地面并使敌方所有目标昏迷1回合切造成50%的伤害	{wake,{hp_ratio_less,30}}	[{set_buff,{dizzy,ok,1,1,ok}}]	3		1	1		3	skill_50006	4	980	skill_101	icon_skill_15	群体控制
+16	旋风斩	以自身为中心快速旋转着受众的刀锋，并且对前排单位造成95%伤害	{active,ok}		1		1	1		3	skill_50005	4	610	skill_101	icon_skill_16	范围攻击
+17	狂怒	身为战士，就有战士的意志！所以每减少1%生命增加自身1%的攻击	{init,ok}	[{set_buff,{atked2atk,0.5,999,0,atk}}]	4		2	1		1	skill_10002	1			icon_skill_17	被动
+18	无敌斩	迅速传向地方阵营，用极快的刀法对随机4个目标造成220%伤害	{wake,{hp_ratio_less,30}}		3		1	1		2	skill_50004	4	1200	skill_101	icon_skill_18	范围攻击
+19	闪电链	由于信仰着自然的力量，从而用雷电的奥义攻击随机3个敌人,造成80%伤害	{active,ok}		1		2	1		2	skill_50002	4	980	skill_102	icon_skill_19	范围攻击
+20	麻痹	利用雷电的副作用从而在技能攻击时有25%的概率使敌人眩晕2回合	{skill_atk,{rate,33}}	[{set_buff,{dizzy,{rate,25},1,1,ok}}]	5		2	2		1	skill_10002	1			icon_skill_20	被动
+21	死亡意志	信仰的力量赋予了他重生的权利！死亡时有一次机会以70%的血量复活	{die,wake}	[{add_hp,{'*',0.7}}]	6		2	1		1	skill_103	1	980		icon_skill_21	复活
+22	软弱	憎恨与愤怒寄生在诅咒中并将对方攻击力削弱为原有的60%，持续2回合	{active,ok}	[{set_buff,{sub_atk,{'*',0.6},2,4,atk}}]	1		2	1		1	skill_10002	1		skill_102	icon_skill_22	减益状态
+23	疲惫	恐惧的气息遍布四周，让所有的敌人闻风丧胆并削弱全部敌方20%防御力	{init,ok}	[{set_def,{'*',0.8}}]	4		2	1		2		6			icon_skill_23	光环
+24	死亡恐惧	这么多怨念的幽魂即使死了也不会放过你！将杀死自己的敌人恐惧3回合	{die,ok}	[{set_buff,{horror,ok,3,5,ok}}]	6		2	1		1	skill_10002	1		skill_102	icon_skill_24	单体控制
+25	兽性激发	长期的丛林生活让他掌握了野兽的奥秘，增强随机2个队友60%攻击力，持续2回合	{active,ok}	[{set_buff,{add_atk,{'*',1.6},2,3,atk}}]	1		2	1		2	skill_10002	1	450		icon_skill_25	增益状态
+26	巨蟒之毒	利用对毒素的运用将武器附带毒液的加成，每次攻击造成额外32%伤害	{atk,ok}		4		1	1		1		1			icon_skill_26	被动
+27	野性一击	用野兽的力量将手中的斧头飞出并对竖排全部目标造成220%伤害并使其眩晕1回合	{wake,{hp_ratio_less,40}}	[{set_buff,{dizzy,ok,2,1,ok}}]	3		1	1		4	skill_50003	5	400	skill_101	icon_skill_27	竖排攻击
+28	精灵之力	利用自然之母的回复之力对某个目标以自身24%血量进行滋养	{active,ok}	[{add_hp,{'*',0.24}}]	1		2	1		1	skill_105	1	660		icon_skill_28	单体治疗
+29	自然守护	在自然的字典里，痛苦就是成长的钥匙，每承受一次伤害，增加50点防御力	{atked,{rate,100}}	[{set_def,{'+',50}}]	5		2	1		1		1			icon_skill_29	被动
+30	自然祈福	瞬间释放大量的自然之力，并对使3个目标回复自身50%的血量	{wake,{hp_ratio_less,50}}	[{add_hp,{'*',0.5}}]	3		2	1		1	skill_106	1	670		icon_skill_30	范围治疗
+31	治愈术	善良的内心释放出神圣的光芒并以自身攻击的80%回复随机3个队友	{active,ok}	[{add_hp,{cure,0.8}}]	1		2	1		1	skill_111	1	883		icon_skill_31	范围治疗
+32	坚韧	坚定的意志能增加自身15%免暴从而减少敌方对自身造成的威胁	{init,ok}	[{set_crit_anti,{'*',1.15}}]	4		2	1		1		1			icon_skill_32	被动
+33	复活术	用爱和希望召唤出强大的能量并以80%的生命值复活一个队友	{wake,{hp_ratio_less,99}}	[{add_hp,{'*',0.8}}]	3		2	1		1	skill_103	1	980		icon_skill_33	单体复活
+34	免疫	一定几率免疫BUFF（被动，只对自己有效）	{set_buff,{rate,70}}	[{anti_buff,[1,2,5]}]	4
+35	重生	死亡后自动复活的光环，友军复活后回复一定比例的生命（对除了自己的友军生效）	{init, ok}	[{set_cmd,{{die, ok},self,{add_hp,{'*',0.5}}}}]	5						skill_103
+36	撕咬	对目标造成200%伤害	{active,ok}		1		1	1		1	skill_118	1	240
+37	爪击	对目标造成200%伤害	{active,ok}		1		1	1		1	skill_115	1	280
+38	撞击	对目标造成200%伤害	{active,ok}		1		1	1		1	skill_116	1	160
+39	砸击	对目标造成200%伤害	{active,ok}		1		1	1		1	skill_117	1	120
+40	奉献	对前排敌人造成85%伤害	{active,ok}		1		1	1		3	skill_10010	2	167	skill_101
+54	寒冰箭	对目标造成200%伤害	{active,ok}		1		2	2	skill_2006	1	skill_125	1	164
+46	暗影箭	对目标造成200%伤害	{active,ok}		1		2	2	skill_2007	1	skill_102	1	240
+52	腐蚀蜂群	对全部敌人造成75%伤害	{active,ok}		1		2	1			skill_50009	3	1034	skill_102
+50	诅咒	诅咒目标，使其命中降低500	{active,ok}	[{set_buff,{set_hit,{'-',500},2,8,atk}}]	1		2	1		1	skill_10002	1
+42	护盾	增加自身1000防御	{active,ok}	[{set_buff,{set_def,{'+',1000},2,9,atk}}]	1		2	1		1	skill_10002	1
+43	灵巧	增加自身1000闪避	{active,ok}	[{set_buff,{set_dod,{'+',1000},2,10,atk}}]	1		2	1		1	skill_10002	1
+47	治疗链	治疗随机3个友军（70%攻击）	{active,ok}	[{add_hp,{cure,0.7}}]	1		2	1		2	skill_128	1	586
+48	死亡缠绕	对随机一个目标造成200%伤害，并使其恐惧2回合	{active,ok}	[{set_buff,{dizzy,ok,2,5,ok}}]	1		2	2	skill_2008	1	skill_122	1	561
+44	雷霆一击	随机对目标造成200%伤害	{active,ok}		1		2	1		1	skill_120	1	280
+51	冰咆哮	对全部敌人造成65%伤害，并几率冰冻敌人	{active,ok}	[{set_buff,{ice,{rate, 20},1,12,ok}}]	1		2	1			skill_50008	3	1717	skill_125
+53	捕获	对目标造成200%伤害，并使其被困2回合	{active,ok}	[{set_buff,{dizzy,ok,2,13,ok}}]	1		2	2	skill_2008	1	skill_124	1	251
+45	风暴之锤	对目标造成75%伤害，并且眩晕1回合	{active,ok}	[{set_buff,{dizzy,ok,1,1,ok}}]	1		1	1		1	skill_119	1	383
+41	审判	对目标造成50%伤害，并且眩晕1回合	{active,ok}	[{set_buff,{dizzy,ok,1,1,ok}}]	1		1	1		1	skill_121	1	645
+49	怒焰爆轰	对目标造成150%伤害，并使其眩晕2回合	{active,ok}	[{set_buff,{dizzy,ok,1,1,ok}}]	1		2	1		1	skill_123	1	463
+55	强击之力	增加友方全部攻击35%	{init,ok}	[{set_atk,{'*',1.35}}]	4
+56	冰雪霜爆	对全部敌人造成110%伤害，并几率冰冻敌人	{wake,{hp_ratio_less,30}}	[{set_buff,{ice,{rate, 70},1,12,ok}}]	3		2	1		2	skill_50012	3	1717	skill_125
+57	德玛西亚之击	跳跃起身并给与对方奋力一击造成150%伤害，强大的震慑力沉默目标2回合	{active,ok}	[{set_buff,{disable_skill,ok,5,2,ok}}]	1		1	1		1	skill_131	1	230	skill_101	icon_skill_57	单体控制
+58	雨刃	从披风中瞬间释放出大量羽刃飞刀，并对全部目标造成65%伤害	{active,ok}		1		1	1		2	skill_50017	4	573	skill_101	icon_skill_58	群体攻击
+59	治疗链	神秘的治疗波注入队友体内，并将500%的治疗量均匀分配给剩余的队友，最多5人	{active,ok}	[{add_hp,{cure_sum,5}}]	1		2	1		1	skill_128	1	630		icon_skill_59	群体治疗
+60	陨星坠落	召唤强大的地狱火陨石砸向地面，并对前排每个单位造成40%乘以单位人数的伤害	{active,ok}		1		1	1		3	skill_50016	4	515	skill_101	icon_skill_60	范围攻击
+61	猎杀	快速的瞄准，急速的判断，迅速射击对随机目标造成150%伤害	{active,ok}		1		2	2		1	skill_133	1	610	skill_101	icon_skill_61	单体攻击
+62	天使之焰	将天使的愤怒转化成剑上的火焰，并对前排每个单位造成100%伤害	{active,ok}		1		2	2	skill_2011	1	skill_109	1	420		icon_skill_62	范围攻击
+63	寒霜之击	他的法术充满着对寒冷的渴望，造成150%伤害并附加给冰冻敌人额外的150%伤害	{active,ok}	[{set_damaged,{ice,'*',3}}]	1		2	2	skill_2010	1	skill_132	1	525	skill_101	icon_skill_63	单体攻击
+64	德玛西亚之刺	召唤出巨剑之魂，以150%的攻击力压制敌方，并附加敌方损失血量比4倍的额外伤害	{wake,{hp_ratio_less,50}}	[{set_damaged,{lost,'*',4}}]	3		1	1		1	skill_129	1	520	skill_101	icon_skill_64	单体攻击
+65	天神之力	将内心中的天神之魂具象化并恢复50%血量。防御增加30%，直至战斗结束	{wake,{hp_ratio_less,30}}	[{add_hp,{'*',0.8}},{set_buff,{set_def,{'*',1.3},99,16,pre_atked}}]	3		2	1		2	skill_10002	1	450		icon_skill_65	增益状态
+66	火舌群舞	召唤出多个火舌图腾齐射敌方，将1000%的伤害均匀分配给前排的敌人	{wake,{hp_ratio_less,50}}		3		2	1		3	skill_50014	4	1300	skill_101	icon_skill_66	范围攻击
+67	恶魔幻化	让心内的恶魔附体并将血量恢复20%，攻击大幅度提升50%，直至战斗结束	{wake,{hp_ratio_less,50}}	[{add_hp,{'*',0.5}},{set_buff,{set_atk,{'*',1.5},99,14,pre_atked}}]	3		2	1		2	skill_10002	1	450		icon_skill_67	增益状态
+68	狙杀	聚焦瞄准当前攻击列的最后一个目标，并射出一枚强力弹药造成350%伤害	{wake,{hp_ratio_less,50}}		3		2	2		1	skill_130	1	1720	skill_101	icon_skill_68	单体攻击
+69	审判之护	在自身危机时释放出天神的庇护，免疫所有伤害或血量移除效果，持续2回合	{wake,{hp_ratio_less,30}}	[{set_buff,{super,ok,2,15,atk}}]	3		2	1		1	skill_10002	1	450		icon_skill_69	无敌
+70	死亡凋零	将死亡的气息笼罩整片敌方区域，并在不知不觉中移除所有敌方单位生命上限的30%	{wake,{hp_ratio_less,25}}	[{add_hp,{'*',-0.3}}]	3		2	1		2	skill_50015	3	1380	skill_122	icon_skill_70	群体攻击
+71	瞬刺	瞬间闪现到敌人身前，造成150%伤害并有75%的概率造成额外550%伤害	{wake,{hp_ratio_less,30}}		3		1	1		1	skill_134	1	1234	skill_101	icon_skill_71	单体攻击
+72	坚韧意志	坚定的意志不知不觉中压制着敌方的杀气，减少全部敌方单位20%的暴击值	{init,ok}	[{set_crit,{'*',0.8}}]	4										icon_skill_72	光环
+73	重铠	厚重的钢制铠甲是他最好的伙伴，使他在战斗时增加自身20%点护甲	{init,ok}	[{set_def,{'*',1.2}}]	4										icon_skill_73	被动
+74	灵巧之力	肥硕的身躯却有着一颗灵巧的心,战斗时增加自身20%闪避	{init,ok}	[{set_dod,{'*',1.2}}]	4										icon_skill_74	被动
+75	蓄意爆发	残忍的性格让他充满着战意与杀气战斗时增加自身20%点暴击	{init,ok}	[{set_crit,{'*',1.2}}]	4										icon_skill_75	被动
+76	精准之击	精准的眼光总能让他察觉到敌人的弱点，战斗时增加自身200点穿透	{init,ok}	[{set_pun,{'*',1.2}}]	4										icon_skill_76	被动
+77	风暴之锤	将风暴之力注入锤子中，对目标造成50%伤害，并且眩晕目标1回合	{active,ok}	[{set_buff,{dizzy,ok,1,1,ok}}]	1		1	1		1	skill_119	1	383		icon_skill_77	单体控制
+78	饮血	对战斗的饥渴让他享受着每一次砍杀，每攻击一回合，增加12%攻击力	{after_atk,ok}	[{set_atk,{original, 0.12,9999}}]	4										icon_skill_78	被动
+79	冷却	高度的激情总会退却，每攻击一回合减少8%攻击力，最多减少至40%	{after_atk,ok}	[{set_atk,{original, -0.08,0.4}}]	4										icon_skill_79	被动
+80	噬魂	皇家战士面前荣耀就是一切，使得每击杀一个角色，增加25%攻击力	{after_kill,ok}	[{set_buff,{set_atk,{original, 0.25,99999},1,18,atk}}]	4										icon_skill_80	被动
+81	狂战士	释放所有的怒气环绕四周，并且无视对方一切护甲，直到死亡	{wake,{hp_ratio_less,20}}	[{set_buff,{set_def,{'=',0},99,17,anti_pre_atked}}]	3		2	1		2	skill_10002	1	450		icon_skill_81	增益状态
+82	冲锋枪	对敌方单位进行扫射，大面积的覆盖射击是的攻击必然以110%攻击力暴击目标	{wake,{hp_ratio_less,30}}	[{set_crited_must,{'=',1}}]	3		2	1		1	skill_135	1	540	skill_101	icon_skill_82	单体攻击
+83	寒冰之气	同时释放三支寒冰之箭并对横排角色造成105%伤害，并有10%概率冰冻敌人	{active,ok}	[{set_buff,{ice,{rate, 10},1,12,ok}}]	5		2	2	skill_2013	1	skill_10002	1	450	skill_125	icon_skill_83	范围攻击
+84	寒气增益	每一次受到冰箭的伤害都会越发觉得寒冷并增加5%的冰冻概率，最高至40%	{atk,ok}	[{add_ice_rate,{5, 40}}]	5										icon_skill_84	被动
+85	冰寒巨箭	聚合所有的寒冰之气于冰箭中，对全部目标造成130%伤害并有20%的概率冰冻2回合	{wake,{hp_ratio_less,35}}	[{set_buff,{ice,{rate, 20},2,12,ok}}]	3		2	2			skill_50018	3	861	skill_125	icon_skill_85	群体攻击
+86	黑暗穿透	强有力的射出一支黑暗之箭穿透整列敌人并造成110%伤害	{active,ok}		1		2	2	skill_2014	4	skill_50020	5	673		icon_skill_86	竖排攻击
+87	暗影缠绕	对死亡力量的掌控，让他的所有的攻击有8%概率缠绕敌人两回合	{atk,ok}	[{set_buff,{dizzy,{rate, 8},2,13,ok}}]	5										icon_skill_87	被动
+88	黑箭之潮	释放出多个暗黑之箭射向敌方阵营，并对所有列的最前排角色造成250%伤害	{wake,{hp_ratio_less,30}}		3		2	2			skill_50021	3	1700	skill_125	icon_skill_88	范围攻击
+89	神躯	天神的体魄让所有触碰到他的人都颤抖不已，受到攻击时7%几率使攻击者眩晕1回合	{atked,{rate,7}}	[{set_buff,{dizzy,ok,1,1,ok}}]	5		2	1		1		1			icon_skill_89	被动
+91	集中射击	将全部火力集中攻击前列的第一个敌人并造成295%的伤害	{active,ok}		1		2	1		1	skill_135	1	540	skill_101	icon_skill_91	单体攻击
+92	精准之击	精准的眼光总能让他察觉到敌人的弱点，战斗时增加自身30%穿透	{init,ok}	[{set_pun,{'*',1.3}}]	4										icon_skill_92	被动
+93	地域轰炸	投放出多枚炸弹对敌方区域地毯式轰炸，并对全部目标造成270%伤害	{wake,{hp_ratio_less,60}}		3		2	1		1	skill_50023	3	1000		icon_skill_93	群体攻击
+94	虎形拳	用猛虎般的士气出拳击向敌人并造成220%伤害	{active,ok}		1		1	1		1	skill_138	1	900	skill_101	icon_skill_94	单体攻击
+95	灵巧之力	肥硕的身躯却有着一颗灵巧的心,战斗时增加自身30%闪避	{init,ok}	[{set_dod,{'*',1.3}}]	4										icon_skill_95	被动
+96	盘龙踢	高速的腿法让脚犹如盘龙一般踢向敌人并造成420%伤害	{wake,{hp_ratio_less,50}}		3		1	1		1	skill_139	1	1187	skill_101	icon_skill_96	单体攻击
+97	烈焰风暴	召唤火焰熔岩砸向地面，并用风将火焰四散给全部敌人造成60%伤害	{active,ok}		1		2	1		1	skill_50022	3	1300	skill_102	icon_skill_97	群体攻击
+98	蓄意爆发	残忍的性格让他充满着战意与杀气战斗时增加自身30%暴击	{init,ok}	[{set_crit,{'*',1.3}}]	4										icon_skill_98	被动
+99	炎爆术	在目标身前创造出一个不稳定的熔岩元素后迅速引爆并对当前敌人造成400%伤害	{wake,{hp_ratio_less,30}}		3		2	1		1	skill_137	1	1300	skill_101	icon_skill_99	单体攻击
+1000	神圣治疗	给一个单位回复80%生命	{active,ok}	[{add_hp,{cure,0.8}}]	1		2	1		1	skill_104	1	833
+1001	荣耀	增加全部敌方30防御力	{init,ok}	[{set_def,{'+',30}}]	4	skill_3001	2	1		3		3
+1002	救赎	复活全部已死去的队友，血量至15%HP	{wake,{hp_ratio_less,30}}	[{add_hp,{'*',0.15}}]	3		2	1		3	skill_103	1	980
+1003	重型炮击	对目标造成160%伤害	{active,ok}		1		2	2	skill_2012	1	skill_108	1	320
+1004	爆头	攻击目标时，有40%几率无视目标防御250点	{atk,{rate,40}}	[{set_buff,{set_pun,{'+',250},1,6,atk}}]	5		2	1		1		1
+1005	火箭穿射	对竖排目标造成160%伤害	{wake,{hp_ratio_less,50}}		3		2	2	skill_2002	4	skill_50007	5	1300
+1006	凿击	对目标造成50%伤害，并且眩晕目标1回合	{active,ok}	[{set_buff,{dizzy,ok,1,1,ok}}]	1		1	1		1	skill_113	1	495	skill_101
+1007	背刺	对眩晕的角色攻击力增加50%	{atk,dizzy}	[{set_buff,{add_atk,{'*',0.5},1,7,atk}}]	4	skill_3006	1	1		1		1
+1008	暗影步	对后方敌人造成180%伤害	{wake,{hp_ratio_less,40}}		3		1	1		1	skill_112	1	680	skill_101
+1009	急速火球	对目标造成140%伤害	{active,ok}		1		2	2	skill_2011	1	skill_109	1	420
+1010	法术反制	受到技能攻击时，将有20%几率让施法者2回合内无法施法	{skill_atked,{rate,20}}	[{set_buff,{disable_skill,ok,2,2,ok}}]	5		2	1		1		1
+1011	风暴	对全部目标造成140%伤害	{wake,{hp_ratio_less,40}}		3		2	1		1	skill_50001	3	660
+1012	重劈	造成120%伤害	{active,ok}		1		1	1		1	skill_114	1	172	skill_101
+1013	厚皮	增加自身4%生命上限	{init,ok}	[{add_hp,{'*',0.04}}]	4	skill_3008	2	1		1		1
+1014	踩踏	使敌方前排单位昏迷1回合	{wake,{hp_ratio_less,30}}	[{set_buff,{dizzy,ok,1,1,ok}}]	3		1	1		3	skill_50006	4	980	skill_101
+1015	旋风斩	对前排单位造成65%伤害	{active,ok}		1		1	1		3	skill_50005	4	610	skill_101
+1016	狂怒	每减少1%生命，增加1%攻击	{init,ok}	[{set_buff,{atked2atk,0.5,999,0,atk}}]	4	skill_3007	2	1		1	skill_10002	1
+1017	无敌斩	对随机3个目标造成120%伤害	{wake,{hp_ratio_less,30}}		3		1	1		2	skill_50004	3	1200	skill_101
+1018	闪电链	攻击随机3个敌人,造成50%伤害	{active,ok}		1		2	1		2	skill_50002	4	980	skill_102
+1019	麻痹	释放技能时，受攻击的单位有几率10%使敌人眩晕2回合	{skill_atk,{rate,10}}	[{set_buff,{dizzy,ok,2,1,ok}}]	5		2	2		1	skill_10002	1
+1020	死亡意志	死亡时复活，回复20%血量	{die,wake}	[{add_hp,{'*',0.2}}]	6		2	1		1	skill_103	1	980
+1021	软弱	削弱对方攻击力30%，持续2回合	{active,ok}	[{set_buff,{sub_atk,{'*',0.3},2,4,atk}}]	1		2	1		1	skill_10002	1		skill_102
+1022	疲惫	削弱全部敌方40防御力	{init,ok}	[{set_def,{'-',40}}]	4	skill_3002	2	1		2		6
+1023	死亡恐惧	自己死亡后，杀死自己的人将被恐惧2回合	{atked,{self_hp_less,1}}	[{set_buff,{dizzy,ok,2,5,ok}}]	6		2	1		1	skill_10002	1		skill_102
+1024	兽性激发	增强队友20%攻击力，持续2回合	{active,ok}	[{set_buff,{add_atk,{'*',0.2},2,3,atk}}]	1		2	1		2	skill_10002	1	450
+1025	巨蟒之毒	攻击对方，造成额外造成5%伤害	{atk,ok}		4	skill_3005	1	1		1		1
+1026	野性怒吼	竖排敌人造成120%伤害，并眩晕1回合	{wake,{hp_ratio_less,30}}	[{set_buff,{dizzy,ok,1,1,ok}}]	3		1	1		4	skill_50003	5	400	skill_101
+1027	精灵之力	回复某个目标13%血量	{active,ok}	[{add_hp,{'*',0.13}}]	1		2	1		1	skill_105	1	660
+1028	自然守护	每次受到伤害时，增加30防御	{atked,{rate,100}}	[{set_def,{'+',30}}]	5	skill_3003	2	1		1		1
+1029	自然祈福	回复某个目标每回合25%血量	{wake,{hp_ratio_less,50}}	[{add_hp,{'*',0.25}}]	3		2	1		1	skill_106	1	670
+1030	治愈术	增加一定血量（120%攻击）	{active,ok}	[{add_hp,{cure,1.2}}]	1		2	1		1	skill_111	1	883
+1031	坚韧	增加抗暴150点	{init,ok}	[{set_crit_anti,{'+',150}}]	4	skill_3004	2	1		1		1
+1032	复活术	复活一个队友50%生命	{wake,{hp_ratio_less,100}}	[{add_hp,{'*',0.5}}]	3		2	1		1	skill_103	1	980
+1033	免疫	一定几率免疫BUFF（被动，只对自己有效）	{set_buff,{rate,100}}	[{anti_buff,[1,2,5]}]	4
+1034	重生	死亡后自动复活的光环，友军复活后回复一定比例的生命（对除了自己的友军生效）	{init, ok}	[{set_cmd,{{die, ok},self,{add_hp,{'*',0.2}}}}]	5	skill_3010					skill_103
+1035	撕咬	对目标造成140%伤害	{active,ok}		1		1	1		1	skill_118	1	240
+1036	爪击	对目标造成140%伤害	{active,ok}		1		1	1		1	skill_115	1	280
+1037	撞击	对目标造成140%伤害	{active,ok}		1		1	1		1	skill_116	1	160
+1038	砸击	对目标造成140%伤害	{active,ok}		1		1	1		1	skill_117	1	120
+1039	奉献	对前排敌人造成65%伤害	{active,ok}		1		1	1	skill_10010	3	skill_10010	2	167	skill_101
+1053	寒冰箭	对目标造成140%伤害	{active,ok}		1		2	2	skill_2006	1	skill_125	1	164
+1045	暗影箭	对目标造成140%伤害	{active,ok}		1		2	2	skill_2007	1	skill_102	1	240
+1051	腐蚀蜂群	对全部敌人造成60%伤害	{active,ok}		1		2	1			skill_50009	3	1034	skill_102
+1049	诅咒	减少命中200点	{active,ok}	[{set_buff,{set_hit,{'-',300},2,8,atk}}]	1		2	1		1	skill_10002	1
+1041	护盾	增加自身200防御	{active,ok}	[{set_buff,{set_def,{'+',300},2,9,atk}}]	1		2	1		1	skill_10002	1
+1042	灵巧	增加自身200闪避	{active,ok}	[{set_buff,{set_dod,{'+',300},2,10,atk}}]	1		2	1		1	skill_10002	1
+1046	治疗链	治疗随机3个友军（50%攻击）	{active,ok}	[{add_hp,{cure,0.5}}]	1		2	1		2	skill_128	1	586
+1047	死亡缠绕	对随机一个目标造成140%伤害，并使其恐惧2回合	{active,ok}	[{set_buff,{dizzy,ok,2,5,ok}}]	1		2	2	skill_2008	1	skill_122	1	561
+1043	雷霆一击	随机对目标造成140%伤害	{active,ok}		1		2	1		1	skill_120	1	280
+1050	冰咆哮	对全部敌人造成50%伤害，并几率冰冻敌人	{active,ok}	[{set_buff,{ice,{rate, 7},1,12,ok}}]	1		2	1			skill_50008	3	1717	skill_125
+1052	捕获	对目标造成140%伤害，并使其被困2回合	{active,ok}	[{set_buff,{dizzy,ok,1,13,ok}}]	1		2	2	skill_2008	1	skill_124	1	251
+1044	风暴之锤	对目标造成50%伤害，并且眩晕目标1回合	{active,ok}	[{set_buff,{dizzy,ok,1,1,ok}}]	1		1	1		1	skill_119	1	383
+1040	审判	对目标造成20%伤害，并且眩晕目标1回合	{active,ok}	[{set_buff,{dizzy,ok,1,1,ok}}]	1		1	1		1	skill_121	1	645
+1048	怒焰爆轰	对目标造成80%伤害，并使其眩晕1回合	{active,ok}	[{set_buff,{dizzy,ok,1,1,ok}}]	1		2	1		1	skill_123	1	463
+1054	强击光环	增加我方所有人20%攻击	{init,ok}	[{set_atk,{'*',1.2}}]	4	skill_3009
+1055	野性怒吼	竖排敌人造成180%伤害，并眩晕1回合	{wake,{hp_ratio_less,40}}	[{set_buff,{dizzy,ok,1,1,ok}}]	3		1	1		4	skill_50003	5	400	skill_101
+1056	顺劈斩	对随机3个目标造成180%伤害	{wake,{hp_ratio_less,30}}		3		1	1		2	skill_50019	4	1200	skill_101
+2000	神圣治疗	给一个单位回复140%生命	{active,ok}	[{add_hp,{cure,1.40}}]	1		2	1		1	skill_104	1	833
+2001	荣耀	增加全部敌方50防御力	{init,ok}	[{set_def,{'+',50}}]	4	skill_3001	2	1		3		3
+2002	救赎	复活全部已死去的队友，血量至25%HP	{wake,{hp_ratio_less,30}}	[{add_hp,{'*',0.25}}]	3		2	1		3	skill_103	1	980
+2003	重型炮击	对目标造成170%伤害	{active,ok}		1		2	2	skill_2012	1	skill_108	1	320
+2004	爆头	攻击目标时，有40%几率无视目标防御350点	{atk,{rate,40}}	[{set_buff,{set_pun,{'+',350},1,6,atk}}]	5		2	1		1		1
+2005	火箭穿射	对竖排目标造成180%伤害	{wake,{hp_ratio_less,50}}		3		2	2	skill_2002	4	skill_50007	5	1300
+2006	凿击	对目标造成50%伤害，并且眩晕目标1回合	{active,ok}	[{set_buff,{dizzy,ok,1,1,ok}}]	1		1	1		1	skill_113	1	495	skill_101
+2007	背刺	对眩晕的角色攻击力增加50%	{atk,dizzy}	[{set_buff,{add_atk,{'*',0.5},1,7,atk}}]	4	skill_3006	1	1		1		1
+2008	暗影步	对后方敌人造成220%伤害	{wake,{hp_ratio_less,40}}		3		1	1		1	skill_112	1	680	skill_101
+2009	急速火球	对目标造成170%伤害	{active,ok}		1		2	2	skill_2011	1	skill_109	1	420
+2010	法术反制	受到技能攻击时，将有25%几率让施法者2回合内无法施法	{skill_atked,{rate,25}}	[{set_buff,{disable_skill,ok,2,2,ok}}]	5		2	1		1		1
+2011	风暴	对全部目标造成160%伤害	{wake,{hp_ratio_less,40}}		3		2	1		1	skill_50001	3	660
+2012	重劈	造成150%伤害	{active,ok}		1		1	1		1	skill_114	1	172	skill_101
+2013	厚皮	增加自身7%生命上限	{init,ok}	[{add_hp,{'*',0.07}}]	4	skill_3008	2	1		1		1
+2014	踩踏	使敌方前排单位昏迷2回合	{wake,{hp_ratio_less,30}}	[{set_buff,{dizzy,ok,1,1,ok}}]	3		1	1		3	skill_50006	4	980	skill_101
+2015	旋风斩	对前排单位造成75%伤害	{active,ok}		1		1	1		3	skill_50005	4	610	skill_101
+2016	狂怒	每减少1%生命，增加1%攻击	{init,ok}	[{set_buff,{atked2atk,0.5,999,0,atk}}]	4	skill_3007	2	1		1	skill_10002	1
+2017	无敌斩	对随机3个目标造成150%伤害	{wake,{hp_ratio_less,30}}		3		1	1		2	skill_50004	3	1200	skill_101
+2018	闪电链	攻击随机3个敌人,造成70%伤害	{active,ok}		1		2	1		2	skill_50002	4	980	skill_102
+2019	麻痹	释放技能时，受攻击的单位有几率10%使敌人眩晕2回合	{skill_atk,{rate,10}}	[{set_buff,{dizzy,ok,2,1,ok}}]	5		2	2		1	skill_10002	1
+2020	死亡意志	死亡时复活，回复60%血量	{die,wake}	[{add_hp,{'*',0.6}}]	6		2	1		1	skill_103	1	980
+2021	软弱	削弱对方攻击力45%，持续2回合	{active,ok}	[{set_buff,{sub_atk,{'*',0.45},2,4,atk}}]	1		2	1		1	skill_10002	1		skill_102
+2022	疲惫	削弱全部敌方150防御力	{init,ok}	[{set_def,{'-',150}}]	4	skill_3002	2	1		2		6
+2023	死亡恐惧	自己死亡后，杀死自己的人将被恐惧3回合	{atked,{self_hp_less,1}}	[{set_buff,{dizzy,ok,3,5,ok}}]	6		2	1		1	skill_10002	1		skill_102
+2024	兽性激发	增强队友30%攻击力，持续2回合	{active,ok}	[{set_buff,{add_atk,{'*',0.3},2,3,atk}}]	1		2	1		2	skill_10002	1	450
+2025	巨蟒之毒	攻击对方，造成额外造成5%伤害	{atk,ok}		4	skill_3005	1	1		1		1
+2026	野性怒吼	竖排敌人造成120%伤害，并眩晕1回合	{wake,{hp_ratio_less,30}}	[{set_buff,{dizzy,ok,1,1,ok}}]	3		1	1		4	skill_50003	5	400	skill_101
+2027	精灵之力	回复某个目标20%血量	{active,ok}	[{add_hp,{'*',0.2}}]	1		2	1		1	skill_105	1	660
+2028	自然守护	每次受到伤害时，增加30防御	{atked,{rate,100}}	[{set_def,{'+',30}}]	5	skill_3003	2	1		1		1
+2029	自然祈福	回复某3个目标每回合30%血量	{wake,{hp_ratio_less,50}}	[{add_hp,{'*',0.3}}]	3		2	1		1	skill_106	1	670
+2030	治愈术	增加一定血量（140%攻击）	{active,ok}	[{add_hp,{cure,1.4}}]	1		2	1		1	skill_111	1	883
+2031	坚韧	增加抗暴370点	{init,ok}	[{set_crit_anti,{'+',370}}]	4	skill_3004	2	1		1		1
+2032	复活术	复活一个队友70%生命	{wake,{hp_ratio_less,100}}	[{add_hp,{'*',0.7}}]	3		2	1		1	skill_103	1	980
+2033	免疫	一定几率免疫BUFF（被动，只对自己有效）	{set_buff,{rate,50}}	[{anti_buff,[1,2,5]}]	4
+2034	重生	死亡后自动复活的光环，友军复活后回复一定比例的生命（对除了自己的友军生效）	{init, ok}	[{set_cmd,{{die, ok},self,{add_hp,{'*',0.7}}}}]	5	skill_3010					skill_103
+2035	撕咬	对目标造成170%伤害	{active,ok}		1		1	1		1	skill_118	1	240
+2036	爪击	对目标造成170%伤害	{active,ok}		1		1	1		1	skill_115	1	280
+2037	撞击	对目标造成170%伤害	{active,ok}		1		1	1		1	skill_116	1	160
+2038	砸击	对目标造成170%伤害	{active,ok}		1		1	1		1	skill_117	1	120
+2039	奉献	对前排敌人造成85%伤害	{active,ok}		1		1	1	skill_10010	3	skill_10010	2	167	skill_101
+2053	寒冰箭	对目标造成170%伤害	{active,ok}		1		2	2	skill_2006	1	skill_125	1	164
+2045	暗影箭	对目标造成170%伤害	{active,ok}		1		2	2	skill_2007	1	skill_102	1	240
+2051	腐蚀蜂群	对全部敌人造成70%伤害	{active,ok}		1		2	1			skill_50009	3	1034	skill_102
+2049	诅咒	诅咒目标，使其很难命中目标	{active,ok}	[{set_buff,{set_hit,{'-',300},2,8,atk}}]	1		2	1		1	skill_10002	1
+2041	护盾	增加自身240防御	{active,ok}	[{set_buff,{set_def,{'+',300},2,9,atk}}]	1		2	1		1	skill_10002	1
+2042	灵巧	增加自身240闪避	{active,ok}	[{set_buff,{set_dod,{'+',300},2,10,atk}}]	1		2	1		1	skill_10002	1
+2046	治疗链	治疗随机3个友军（60%攻击）	{active,ok}	[{add_hp,{cure,0.7}}]	1		2	1		2	skill_128	1	586
+2047	死亡缠绕	对随机一个目标造成170%伤害，并使其恐惧2回合	{active,ok}	[{set_buff,{dizzy,ok,2,5,ok}}]	1		2	2	skill_2008	1	skill_122	1	561
+2043	雷霆一击	随机对目标造成170%伤害	{active,ok}		1		2	1		1	skill_120	1	280
+2050	冰咆哮	对全部敌人造成60%伤害，并几率冰冻敌人	{active,ok}	[{set_buff,{ice,{rate, 12},1,12,ok}}]	1		2	1			skill_50008	3	1717	skill_125
+2052	捕获	对目标造成170%伤害，并使其被困2回合	{active,ok}	[{set_buff,{dizzy,ok,2,13,ok}}]	1		2	2	skill_2008	1	skill_124	1	251
+2044	风暴之锤	对目标造成50%伤害，并且眩晕目标1回合	{active,ok}	[{set_buff,{dizzy,ok,1,1,ok}}]	1		1	1		1	skill_119	1	383
+2040	审判	对目标造成50%伤害，并且眩晕目标1回合	{active,ok}	[{set_buff,{dizzy,ok,1,1,ok}}]	1		1	1		1	skill_121	1	645
+2048	怒焰爆轰	对目标造成120%伤害，并使其眩晕1回合	{active,ok}	[{set_buff,{dizzy,ok,1,1,ok}}]	1		2	1		1	skill_123	1	463
+2054	强击光环	增加我方所有人28%攻击	{init,ok}	[{set_atk,{'*',1.35}}]	4	skill_3009
+3000	神圣治疗	给一个单位回复220%生命	{active,ok}	[{add_hp,{cure,2.2}}]	1		2	1		1	skill_104	1	833
+3001	荣耀	增加全部敌方90防御力	{init,ok}	[{set_def,{'+',90}}]	4	skill_3001	2	1		3		3
+3002	救赎	复活全部已死去的队友，血量至45%HP	{wake,{hp_ratio_less,30}}	[{add_hp,{'*',0.45}}]	3		2	1		3	skill_103	1	980
+3003	重型炮击	对目标造成300%伤害	{active,ok}		1		2	2	skill_2012	1	skill_108	1	320
+3004	爆头	攻击目标时，有40%几率无视目标防御600点	{atk,{rate,40}}	[{set_buff,{set_pun,{'+',600},1,6,atk}}]	5		2	1		1		1
+3005	火箭穿射	对竖排目标造成310%伤害	{wake,{hp_ratio_less,50}}		3		2	2	skill_2002	4	skill_50007	5	1300
+3006	凿击	对目标造成70%伤害，并且眩晕目标2回合	{active,ok}	[{set_buff,{dizzy,ok,2,1,ok}}]	1		1	1		1	skill_113	1	495	skill_101
+3007	背刺	对眩晕的角色攻击力增加100%	{atk,dizzy}	[{set_buff,{add_atk,{'*',0.5},1,7,atk}}]	4	skill_3006	1	1		1		1
+3008	暗影步	对后方敌人造成420%伤害	{wake,{hp_ratio_less,40}}		3		1	1		1	skill_112	1	680	skill_101
+3009	急速火球	对目标造成310%伤害	{active,ok}		1		2	2	skill_2011	1	skill_109	1	420
+3010	法术反制	受到技能攻击时，将有80%几率让施法者2回合内无法施法	{skill_atked,{rate,80}}	[{set_buff,{disable_skill,ok,2,2,ok}}]	5		2	1		1		1
+3011	风暴	对全部目标造成250%伤害	{wake,{hp_ratio_less,40}}		3		2	1		1	skill_50001	3	660
+3012	重劈	造成210%伤害	{active,ok}		1		1	1		1	skill_114	1	172	skill_101
+3013	厚皮	增加自身7%生命上限	{init,ok}	[{add_hp,{'*',0.07}}]	4	skill_3008	2	1		1		1
+3014	踩踏	使敌方前排单位昏迷3回合	{wake,{hp_ratio_less,30}}	[{set_buff,{dizzy,ok,2,1,ok}}]	3		1	1		3	skill_50006	4	980	skill_101
+3015	旋风斩	对前排单位造成105%伤害	{active,ok}		1		1	1		3	skill_50005	4	610	skill_101
+3016	狂怒	每减少0.5%生命，增加1%攻击	{init,ok}	[{set_buff,{atked2atk,0.5,999,0,atk}}]	4	skill_3007	2	1		1	skill_10002	1
+3017	无敌斩	对随机3个目标造成270%伤害	{wake,{hp_ratio_less,30}}		3		1	1		2	skill_50004	3	1200	skill_101
+3018	闪电链	攻击随机3个敌人,造成120%伤害	{active,ok}		1		2	1		2	skill_50002	4	980	skill_102
+3019	麻痹	释放技能时，受攻击的单位有几率10%使敌人眩晕2回合	{skill_atk,{rate,10}}	[{set_buff,{dizzy,ok,2,1,ok}}]	5		2	2		1	skill_10002	1
+3020	死亡意志	死亡时复活，回复80%血量	{die,wake}	[{add_hp,{'*',0.8}}]	6		2	1		1	skill_103	1	980
+3021	软弱	削弱对方攻击力80%，持续2回合	{active,ok}	[{set_buff,{sub_atk,{'*',0.8},2,4,atk}}]	1		2	1		1	skill_10002	1		skill_102
+3022	疲惫	削弱全部敌方200防御力	{init,ok}	[{set_def,{'-',200}}]	4	skill_3002	2	1		2		6
+3023	死亡恐惧	自己死亡后，杀死自己的人将被恐惧4回合	{atked,{self_hp_less,1}}	[{set_buff,{dizzy,ok,4,5,ok}}]	6		2	1		1	skill_10002	1		skill_102
+3024	兽性激发	增强队友45%攻击力，持续2回合	{active,ok}	[{set_buff,{add_atk,{'*',0.45},2,3,atk}}]	1		2	1		2	skill_10002	1	450
+3025	巨蟒之毒	攻击对方，造成额外造成5%伤害	{atk,ok}		4	skill_3005	1	1		1		1
+3026	野性怒吼	竖排敌人造成180%伤害，并眩晕1回合	{wake,{hp_ratio_less,30}}	[{set_buff,{dizzy,ok,1,1,ok}}]	3		1	1		4	skill_50003	5	400	skill_101
+3027	精灵之力	回复某个目标30%血量	{active,ok}	[{add_hp,{'*',0.3}}]	1		2	1		1	skill_105	1	660
+3028	自然守护	每次受到伤害时，增加45防御	{atked,{rate,100}}	[{set_def,{'+',45}}]	5	skill_3003	2	1		1		1
+3029	自然祈福	回复3个目标每回合50%血量	{wake,{hp_ratio_less,50}}	[{add_hp,{'*',0.5}}]	3		2	1		1	skill_106	1	670
+3030	治愈术	增加一定血量（230%攻击）	{active,ok}	[{add_hp,{cure,2.3}}]	1		2	1		1	skill_111	1	883
+3031	坚韧	增加抗暴600点	{init,ok}	[{set_crit_anti,{'+',600}}]	4	skill_3004	2	1		1		1
+3032	复活术	复活一个队友100%生命	{wake,{hp_ratio_less,100}}	[{add_hp,{'*',1}}]	3		2	1		1	skill_103	1	980
+3033	免疫	一定几率免疫BUFF（被动，只对自己有效）	{set_buff,{rate,100}}	[{anti_buff,[1,2,5]}]	4
+3034	重生	死亡后自动复活的光环，友军复活后回复一定比例的生命（对除了自己的友军生效）	{init, ok}	[{set_cmd,{{die, ok},self,{add_hp,{'*',1}}}}]	5	skill_3010					skill_103
+3035	撕咬	对目标造成300%伤害	{active,ok}		1		1	1		1	skill_118	1	240
+3036	爪击	对目标造成300%伤害	{active,ok}		1		1	1		1	skill_115	1	280
+3037	撞击	对目标造成300%伤害	{active,ok}		1		1	1		1	skill_116	1	160
+3038	砸击	对目标造成300%伤害	{active,ok}		1		1	1		1	skill_117	1	120
+3039	奉献	对前排敌人造成100%伤害	{active,ok}		1		1	1	skill_10010	3	skill_10010	2	167	skill_101
+3053	寒冰箭	对目标造成300%伤害	{active,ok}		1		2	2	skill_2006	1	skill_125	1	164
+3045	暗影箭	对目标造成300%伤害	{active,ok}		1		2	2	skill_2007	1	skill_102	1	240
+3051	腐蚀蜂群	对全部敌人造成100%伤害	{active,ok}		1		2	1			skill_50009	3	1034	skill_102
+3049	诅咒	减少命中450命中	{active,ok}	[{set_buff,{set_hit,{'-',300},2,8,atk}}]	1		2	1		1	skill_10002	1
+3041	护盾	增加自身450防御	{active,ok}	[{set_buff,{set_def,{'+',300},2,9,atk}}]	1		2	1		1	skill_10002	1
+3042	灵巧	增加自身450闪避	{active,ok}	[{set_buff,{set_dod,{'+',300},2,10,atk}}]	1		2	1		1	skill_10002	1
+3046	治疗链	治疗随机3个友军（100%攻击）	{active,ok}	[{add_hp,{cure,1}}]	1		2	1		2	skill_128	1	586
+3047	死亡缠绕	对随机一个目标造成300%伤害，并使其恐惧2回合	{active,ok}	[{set_buff,{dizzy,ok,2,5,ok}}]	1		2	2	skill_2008	1	skill_122	1	561
+3043	雷霆一击	随机对目标造成250%伤害	{active,ok}		1		2	1		1	skill_120	1	280
+3050	冰咆哮	对全部敌人造成90%伤害，并几率冰冻敌人	{active,ok}	[{set_buff,{ice,{rate, 30},2,12,ok}}]	1		2	1			skill_50008	3	1717	skill_125
+3052	捕获	对目标造成300%伤害，并使其被困2回合	{active,ok}	[{set_buff,{dizzy,ok,2,13,ok}}]	1		2	2	skill_2008	1	skill_124	1	251
+3044	风暴之锤	对目标造成80%伤害，并且眩晕目标1回合	{active,ok}	[{set_buff,{dizzy,ok,1,1,ok}}]	1		1	1		1	skill_119	1	383
+3040	审判	对目标造成80%伤害，并且眩晕目标1回合	{active,ok}	[{set_buff,{dizzy,ok,1,1,ok}}]	1		1	1		1	skill_121	1	645
+3048	怒焰爆轰	对目标造成180%伤害，并使其眩晕2回合	{active,ok}	[{set_buff,{dizzy,ok,2,1,ok}}]	1		2	1		1	skill_123	1	463
+3054	强击光环	增加我方所有人50%攻击	{init,ok}	[{set_atk,{'*',1.35}}]	4	skill_3009
+3059	陨星坠落	对横排单位造成100%伤害，每多存在一个单位则对每个人造成的伤害多100%。	{active,ok}		1		2	2		3	skill_50016	4	515	skill_101
+3060	冰雪霜爆	对全部敌人造成400%伤害，并几率冰冻敌人	{wake,{hp_ratio_less,10}}	[{set_buff,{ice,{rate, 100},1,12,ok}}]	3		2	1		2	skill_50012	3	1717	skill_125
+3061	冰雪霜爆	对全部敌人造成400%伤害，并几率冰冻敌人	{wake,{hp_ratio_less,15}}	[{set_buff,{ice,{rate, 100},1,12,ok}}]	3		2	1		2	skill_50012	3	1717	skill_125
+4030	治愈术	随机增加三个友军量（800%攻击）	{active,ok}	[{add_hp,{cure,8}}]	1		2	1		1	skill_111	1	883
+3062	寒霜之击	造成150%伤害并附加给冰冻敌人额外的400%伤害	{active,ok}	[{set_damaged,{ice,'*',3}}]	1		2	2	skill_2010	1	skill_132	1	525	skill_101
+3083	寒气增益	每次攻击对目标增加5%的冰冻概率，最高至40%	{atk,ok}	[{add_ice_rate,{5, 40}}]	5
+3084	死亡战意	死后削弱对方攻击力	{die,wake}	[{set_buff,{sub_atk,{'*',0.5},2,4,atk}}]
+3085	神躯	受到攻击时5%几率使攻击者眩晕1回合	{atked,{rate,7}}	[{set_buff,{dizzy,ok,1,1,ok}}]	5		2	1		1		1
+3086	恐惧（捕获)	对目标造成140%伤害，并使其被困1回合	{active,ok}	[{set_buff,{horror,ok,1,5,ok}}]	1		2	2	skill_2008	1	skill_124	1	251
+3087	旋风斩（顺劈）	对前排单位造成95%伤害	{active,ok}		1		1	1		3	skill_50005	4	610	skill_101
+3088	狂怒	每减少1%生命增加自身3%的攻击	{init,ok}	[{set_buff,{atked2atk,0.3,999,0,atk}}]	4		2	1		1	skill_10002	1
+3089	风暴之锤	对目标造成200%伤害，并且眩晕3回合	{wake,{hp_ratio_less,30}}	[{set_buff,{dizzy,ok,3,1,ok}}]	1		1	1		1	skill_119	1	383
+3090	冰冻	对目标造成100%伤害，并20%概率使其冰冻1回合	{active,ok}	[{set_buff,{ice,{rate, 20},1,12,ok}}]	1		2	2	skill_2008	1	skill_124	1	251
+3091	野性怒吼	对竖排全部目标造成180%伤害并使其眩晕2回合	{wake,{hp_ratio_less,20}}	[{set_buff,{dizzy,ok,2,1,ok}}]	3		1	1		4	skill_50003	5	400	skill_101
+3092	风暴之锤	对目标造成100%伤害，并且眩晕目标1回合	{active,ok}	[{set_buff,{dizzy,ok,1,1,ok}}]	1		1	1		1	skill_119	1	383
+3093	自然守护	每承受一次伤害，增加30点防御力	{atked,{rate,100}}	[{set_def,{'+',30}}]	5		2	1		1		1
+3094	复活术	以100%的生命值复活一个队友	{wake,{hp_ratio_less,100}}	[{add_hp,{'*',1}}]	3		2	1		1	skill_103	1	980
+3095	精灵之力（治疗）	回复某个目标8%血量	{active,ok}	[{add_hp,{'*',0.08}}]	1		2	1		1	skill_105	1	660
+3096	烈焰风暴	对全部敌人造成180%伤害	{wake,{hp_ratio_less,50}}		3		2	1		1	skill_50022	3	1300	skill_102
+3097	精灵之力（治疗）	回复某个目标30%血量	{active,ok}	[{add_hp,{'*',0.3}}]	1		2	1		1	skill_105	1	660
+3098	无敌斩	对竖排造成300%伤害	{active,ok}		1		1	1		4	skill_50004	5	1200	skill_101
+3099	捕获	对竖排目标造成160%伤害，并使其被困1回合	{wake,{hp_ratio_less,40}}	[{set_buff,{dizzy,ok,1,13,ok}}]	1		2	2	skill_2008	1	skill_124	1	251
+3100	地域轰炸	对全部目标造成80%伤害	{wake,{hp_ratio_less,40}}		3		2	1		1	skill_50023	3	1000
+3101	扫射	对全体目标造成80%伤害	{wake,{hp_ratio_less,40}}		3		2	1		1	skill_135	1	540	skill_101
+3102	地域轰炸	对全部目标造成130%伤害	{wake,{hp_ratio_less,60}}		3		2	1		1	skill_50023	3	1000
+3103	死亡凋零	移除所有敌方单位生命上限的35%	{wake,{hp_ratio_less,25}}	[{add_hp,{'*',-0.35}}]	3		2	1		2	skill_50015	3	1380	skill_122
+30001	审判之护	在自身危机时释放出天神的庇护，免疫所有伤害或血量移除效果，持续2回合	{wake,{hp_ratio_less,50}}	[{set_buff,{super,ok,99,15,atk}}]	3		2	1		1	skill_10002	1	450		icon_skill_69	无敌
+30002	死亡凋零	将死亡的气息笼罩整片敌方区域，并在不知不觉中移除所有敌方单位生命上限的35%	{active,ok}	[{add_hp,{'*',-0.35}}]	1		2	1		2	skill_50015	3	1380	skill_122	icon_skill_70	群体攻击
+30003	急速火球	利用法术创造一个火球迅速飞向对当前列的第一个敌人，并且造成210%的伤害	{active,ok}		1		2	2	skill_2011	1	skill_109	1	420		icon_skill_10	单体攻击
+30004	噬魂	皇家战士面前荣耀就是一切，使得每击杀一个角色，增加25%攻击力	{after_kill,ok}	[{set_buff,{set_atk,{original, 30,99999},1,18,atk}}]	4										icon_skill_80	被动
+30005	神圣治疗	释放出神圣的光辉照耀着场上的同伴，并以200%的治疗量为单个队友回复生命	{active,ok}	[{add_hp,{cure,30}}]	1		2	1		1	skill_104	1	833		icon_skill_1	单体治疗
+30006	陨星坠落	召唤强大的地狱火陨石砸向地面，并对前排每个单位造成40%乘以单位人数的伤害	{active,ok}		1		2	2		3	skill_50016	4	515	skill_101	icon_skill_60	范围攻击
+30007	冰雪霜爆	对全部敌人造成110%伤害，并几率冰冻敌人	{wake,{hp_ratio_less,80}}	[{set_buff,{ice,{rate, 100},1,12,ok}}]	3		2	1		2	skill_50012	3	1717	skill_125
+30008	陨星坠落	召唤强大的地狱火陨石砸向地面，并对前排每个单位造成40%乘以单位人数的伤害	{active,ok}		1		2	2		3	skill_50016	4	515	skill_101	icon_skill_60	范围攻击
+30009	精灵之力	利用自然之母的回复之力对某个目标以自身100%血量进行滋养	{active,ok}	[{add_hp,{'*',1}}]	1		2	1		1	skill_105	1	660		icon_skill_28	单体治疗
+30010	精灵之力	利用自然之母的回复之力对某个目标以自身100%血量进行滋养	{active,ok}	[{add_hp,{'*',0.5}}]	1		2	1		1	skill_105	1	660		icon_skill_28	单体治疗
+30011	恶魔幻化	让心内的恶魔附体并将血量恢复r0%，攻击大幅度提升50%，直至战斗结束	{wake,{hp_ratio_less,60}}	[{add_hp,{'*',0.4}},{set_buff,{set_atk,{'*',20},99,14,pre_atked}}]	3		2	1		2	skill_10002	1	450		icon_skill_67	增益状态
+30012	攻击光环	加攻击的	{init,ok}	[{set_atk,{'*',5}}]	4										icon_skill_74	被动
+30013	雨刃	从披风中瞬间释放出大量羽刃飞刀，并对全部目标造成65%伤害	{active,ok}		1		1	1		2	skill_50017	4	573	skill_101	icon_skill_58	群体攻击
+30014	烈焰风暴	召唤火焰熔岩砸向地面，并用风将火焰四散给全部敌人造成300%伤害	{active,ok}		1		2	1		1	skill_50022	3	1300	skill_102	icon_skill_97	群体攻击
+30015	顺劈	召唤出多个火舌图腾齐射敌方，将900%的伤害均匀分配给前排的敌人	{active,ok}		1		1	1		3	skill_50005	4	610	skill_101	icon_skill_16	范围攻击
+30016	恶魔幻化	让心内的恶魔附体并将血量恢复20%，攻击大幅度提升50%，直至战斗结束	{wake,{hp_ratio_less,60}}	[{add_hp,{'*',1}},{set_buff,{set_atk,{'*',6},99,14,pre_atked}}]	3		2	1		2	skill_10002	1	450		icon_skill_67	增益状态
+30017	冰雪霜爆	对全部敌人造成110%伤害，并几率冰冻敌人	{wake,{hp_ratio_less,40}}	[{set_buff,{ice,{rate, 100},1,12,ok}}]	3		2	1		2	skill_50012	3	1717	skill_125
+30018	盗贼大招	用灵巧而快速的步伐晃至地方后排并对敌人造成450%伤害	{wake,{hp_ratio_less,80}}		3		1	1		1	skill_112	1	680	skill_101	icon_skill_9	单体攻击
+30019	剑圣	高速的腿法让脚犹如盘龙一般踢向敌人并造成420%伤害	{wake,{hp_ratio_less,80}}		3		1	1		2	skill_50004	4	1200	skill_101	icon_skill_18	范围攻击
+30020	山丘大招	将内心中的天神之魂具象化并恢复50%血量。防御增加30%，直至战斗结束	{wake,{hp_ratio_less,80}}	[{add_hp,{'*',0.5}},{set_buff,{set_def,{'*',1.3},99,16,pre_atked}}]	3		2	1		2	skill_10002	1	450		icon_skill_65	增益状态
+30021	守望者大招	瞬间闪现到敌人身前，造成150%伤害并有75%的概率造成额外550%伤害	{wake,{hp_ratio_less,80}}		3		1	1		1	skill_134	1	1234	skill_101	icon_skill_71	单体攻击
+30022	树人大招	瞬间释放大量的自然之力，并对使3个目标回复自身50%的血量	{wake,{hp_ratio_less,80}}	[{add_hp,{'*',0.5}}]	3		2	1		1	skill_106	1	670		icon_skill_30	范围治疗
+30023	火枪手大招	同时发射出多个火箭并且对竖排全部目标造成210%伤害	{wake,{hp_ratio_less,80}}		3		2	2	skill_2002	4	skill_50007	5	1300		icon_skill_6	竖排攻击
+30024	旋风斩	以自身为中心快速旋转着受众的刀锋，并且对前排单位造成95%伤害	{active,ok}		1		1	1		2	skill_50005	3	610	skill_101	icon_skill_16	范围攻击

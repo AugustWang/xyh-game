@@ -1,0 +1,75 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>游戏公告<?php $this->endBlock('title');?>
+<?php $this->block('buttons');?>
+<input type="button" class="btn" value="添加公告" onclick="location.replace('?mod=feedback&act=notice_edit&id=0');"/>
+<input type="button" class="btn" value="更新公告" onclick="location.replace('?mod=feedback&act=notice&do=hot');"/>
+<input type="button" class="btn" value="更新广播" onclick="location.replace('?mod=feedback&act=notice&do=now');"/>
+<input type="button" class="btn" value="系统广播" onclick="location.replace('?mod=feedback&act=notice_sys');"/>
+<?php $this->endBlock('buttons');?>
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $page ?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+<?php $this->block('content');?>
+<form id="mainForm" method="post">
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td style="width:30px;">ID</td>
+                    <td style="width:30px;">类型</td>
+                    <td style="width:30px;">广播间隔时间</td>
+                    <td style="width:120px;">内容</td>
+                    <td style="width:120px;">开始时间</td>
+                    <td style="width:120px;">结束时间</td>
+                    <td style="width:120px;">操作</td>
+                </tr>
+            </thead>
+            <tbody>
+            <?php if($data): ?>
+            <?php foreach($data as $k=>$v):?>
+            <tr>
+                <td><?php echo $v['id']; ?></td>
+                <!--<td><?php echo $v['type']; ?></td>-->
+                <td><?php echo $v['notice_type']; ?></td>
+                <td><?php echo $v['time']; ?></td>
+                <td><?php echo $v['msg']; ?></td>
+                <td><?php echo $v['start_time'];?></td>
+                <td><?php echo $v['end_time']; ?></td>
+                    <td><a href="?mod=feedback&act=notice_edit&do=edit&id=<?php echo $v['id']?>">编辑</a> <a onclick="return confirm('确认要删除吗？');" href="?mod=feedback&act=notice_del&do=del&id=<?php echo $v['id']?>">删除</a></td>
+                </tr>
+                <?php endforeach;?>
+                <?php else: ?>
+                <tr><td colspan="5">无公告..</td></tr>
+                <?php endif; ?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">
+                        <?php $this->loadBlock('pager')?>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+
+<script>
+<?php
+if($alert){
+	echo "alert('{$alert}');";
+}
+?>
+</script>
+
+<?php $this->endBlock('content');?>

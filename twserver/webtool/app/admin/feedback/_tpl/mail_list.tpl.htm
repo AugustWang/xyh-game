@@ -1,0 +1,118 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?><?php echo $_GET['kw']['title'] ? $_GET['kw']['title']:'' ?>邮件列表<?php $this->endBlock('title');?>
+
+<?php $this->block('buttons');?>
+<form name=form1 method="POST">
+    <input type="hidden" name="expload" value="导出数据" />
+    <input type="button" value="导出数据" onclick="javascript:{this.disabled=true;document.form1.submit();}">
+</form>
+<?php $this->endBlock('buttons');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+
+<form id="mainForm" method="post" action="?mod=feedback&act=mail_list">
+    <div class="searchPanel">
+        角色ID：<input type="text" id="js_rid" name="kw[id]" value="<?php echo $kw['kw_id']?>" style="width:40px;" />
+        邮件类型：<input type="text" id="js_rname" name="kw[type_id]" value="<?php echo $kw['kw_type_id']?>" style="width:80px;" />
+        <span id="js_extra_search">
+          发送日期：<input type="text" class="js_starttime" name="kw[reg_st]" value="<?php echo $_REQUEST['kw']['reg_st'];?>" style="width:80px;" />-<input type="text" name="kw[reg_et]" value="<?php echo $_REQUEST['kw']['reg_et'];?>" class="js_endtime" style="width:80px;" />
+        <input type="submit" value="搜索" class="btn" />
+        </span>
+    </div>
+    <div class="tableWrapper">
+        <div class="searchPanel">
+            请选择类型：<?php echo $type; ?><input type="submit" value="查看" />
+        </div>
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td>角色ID</td>
+                    <td>类型ID</td>
+                    <td>类型</td>
+                    <td>附件</td>
+                    <td>发送时间</td>
+                    <td>有效时间</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach($data['list'] as $v):
+                ?>
+                <tr>
+                    <td><?php echo $v['role_id']?></td>
+                    <td><?php echo $v['type_id']?></td>
+                    <td><?php echo $v['type']?></td>
+                    <td><?php echo $v['en']?></td>
+                    <td><?php echo date('Y-m-d H:i:s', $v['ctime'])?></td>
+                    <td><?php echo date('H:i:s', $v['havetime'])?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="text-align:center;">↑</td>
+                    <td colspan="9">
+                        <?php $this->loadBlock('pager')?>
+                        <!--
+                        <input name="uncheck" type="button" id="checkReverse" value="反选" />
+                        <input name="check" type="button" id="checkAll" value="全选" />
+                        <input name="check" type="button" id="checkAllNo" value="取消" />
+                        <?php echo $op?>
+                        -->
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+<script>
+
+
+$(document).ready(function(){
+
+    $("#checkAll").click(function(){
+        $("input[name='id[]']").each(function(){
+            this.checked = true;
+        });
+    });
+
+    $("#checkAllNo").click(function(){
+        $("input[name='id[]']").each(function(){
+            this.checked = false;
+        })
+    });
+
+    $("#checkReverse").click(function(){
+        $("input[name='id[]']").each(function(){
+            if (this.checked) {
+                this.checked = false;
+            }
+            else {
+                this.checked = true;
+            }
+        });
+    });
+});
+
+<?php
+if($alert){
+    echo "alert('{$alert}');";
+}
+?>
+</script>
+<?php $this->endBlock('content');?>

@@ -1,0 +1,113 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?><?php echo $_GET['kw']['title'] ? $_GET['kw']['title']:'' ?>英雄购买日志<?php $this->endBlock('title');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post" action="?mod=feedback&act=log_hero">
+    <div class="searchPanel">
+        角色ID：<input type="text" id="js_rid" name="kw[id]" value="<?php echo $kw['kw_id']?>" style="width:40px;" />
+        英雄ID：<input type="text" id="js_rid" name="kw[hero_id]" value="<?php echo $kw['kw_hero_id']?>" style="width:40px;" />
+        英雄品质：<input type="text" id="js_rid" name="kw[quality]" value="<?php echo $kw['kw_quality']?>" style="width:40px;" />
+        <span id="js_extra_search">
+          购买日期：<input type="text" class="js_starttime" name="kw[pay_st]" value="<?php echo $_REQUEST['kw']['pay_st'];?>" style="width:80px;" />-<input type="text" name="kw[pay_et]" value="<?php echo $_REQUEST['kw']['pay_et'];?>" class="js_endtime" style="width:80px;" />
+        <input type="submit" value="搜索" class="btn" />
+        </span>
+    </div>
+    <div class="searchPanel">
+        请选择英雄：<?php echo $type; ?><input type="submit" value="查看" />
+        请选择品质：<?php echo $hero_quality; ?><input type="submit" value="查看" />
+    </div>
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <!--
+                    <td style="width:20px;"></td>
+                    -->
+                    <td>角色ID</td>
+                    <td>英雄ID</td>
+                    <td>英雄名字</td>
+                    <td>英雄品质</td>
+                    <td>品质标识</td>
+                    <td>购买日期</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach($data['list'] as $v):
+                ?>
+                <tr>
+                    <!--
+                    <td style="text-align:center;"><input class="js_check_id" name="id[]" type="checkbox" value="<?php echo $v['id']?>"></td>
+                    -->
+                    <td><?php echo $v['role_id']?></td>
+                    <td><?php echo $v['hero_id']?></td>
+                    <td><?php echo $v['type']?></td>
+                    <td><?php echo $v['quality']?></td>
+                    <td><?php echo $v['hero_quality']?></td>
+                    <td><?php echo date('Y-m-d H:i:s', $v['ctime'])?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="text-align:center;">↑</td>
+                    <td colspan="9">
+                        <?php $this->loadBlock('pager')?>
+                        <!--
+                        <input name="uncheck" type="button" id="checkReverse" value="反选" />
+                        <input name="check" type="button" id="checkAll" value="全选" />
+                        <input name="check" type="button" id="checkAllNo" value="取消" />
+                        <?php echo $op?>
+                        -->
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+<script>
+
+
+$(document).ready(function(){
+
+    $("#checkAll").click(function(){
+        $("input[name='id[]']").each(function(){
+            this.checked = true;
+        });
+    });
+
+    $("#checkAllNo").click(function(){
+        $("input[name='id[]']").each(function(){
+            this.checked = false;
+        })
+    });
+
+    $("#checkReverse").click(function(){
+        $("input[name='id[]']").each(function(){
+            if (this.checked) {
+                this.checked = false;
+            }
+            else {
+                this.checked = true;
+            }
+        });
+    });
+});
+
+</script>
+<?php $this->endBlock('content');?>

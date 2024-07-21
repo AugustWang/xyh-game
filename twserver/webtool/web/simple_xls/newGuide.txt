@@ -1,0 +1,5 @@
+id	client_step	server_step	scene	view	viewParam	viewData
+1	1	1	CityFace		a2,a3
+2			BattleScene	EmBattleDlg	a4,b2
+3			BattleScene	WinView	b4,b6
+4		2	CityFace		b8

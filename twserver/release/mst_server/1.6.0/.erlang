@@ -1,0 +1,16 @@
+io:format("==========================================================~n").
+io:format("= Welcome To MengShouTang Game Server!~n").
+io:format("= Note:~n").
+io:format("=     1. Don't forget run `./rebar eunit` before release.~n").
+io:format("=     2. Hot update code: u() or m().~n").
+io:format("=     3. Debug switch: d().~n").
+io:format("=~n").
+io:format("= Help:~n").
+io:format("=     top(). u(). m(). d(). stop(). online().~n").
+io:format("=~n").
+io:format("= Shenzhen Turbo Technology Co., Ltd. All Rights Reserved.~n"),
+io:format("= http://www.szturbotech.com~n"),
+io:format("==========================================================~n").
+code:load_abs("./ebin/user_default").
+%% ┌ ┐└ ┘  ─  ┬  ┴ ├  ┤
+%% vim: ft=erlang :

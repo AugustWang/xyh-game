@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset= UTF-8">
+<title>Module mod_item</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" title="EDoc">
+</head>
+<body bgcolor="white">
+<div class="navbar"><a name="#navbar_top"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
+<hr>
+
+<h1>Module mod_item</h1>
+<ul class="index"><li><a href="#description">Description</a></li><li><a href="#index">Function Index</a></li><li><a href="#functions">Function Details</a></li></ul>物品模块.
+
+<p><b>Authors:</b> Rolong (<a href="mailto:rolong@vip.qq.com"><tt>rolong@vip.qq.com</tt></a>).</p>
+
+<h2><a name="description">Description</a></h2>物品模块
+<h2><a name="index">Function Index</a></h2>
+<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#add_item-3">add_item/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#add_items-2">add_items/2</a></td><td>批量添加物品
+  <pre>  Ids有两种可用格式：
+      1、[Tid1, Tid2, ...] 这种格式等同于 [{Tid1, 1}, {Tid2, 2}, ...]
+      2、[{Tid1, Num1}, {Tid2, Num2}, ...]</pre></td></tr>
+<tr><td valign="top"><a href="#count_unit-2">count_unit/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#db_delete-2">db_delete/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#db_init-1">db_init/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#db_insert-2">db_insert/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#db_update-2">db_update/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#del_item-4">del_item/4</a></td><td></td></tr>
+<tr><td valign="top"><a href="#del_items-3">del_items/3</a></td><td>批量删除物品
+  <pre>  Ids有两种可用格式：
+      1、[Tid1, Tid2, ...] 这种格式等同于 [{Tid1, 1}, {Tid2, 2}, ...]
+      2、[{Tid1, Num1}, {Tid2, Num2}, ...]
+  Dels为删除结果，格式如下：
+      Dels   : [{ItemId, NewNum}]
+      ItemId : 被删除的物品唯一ID
+      NewNum : 被删除后的物品的新的堆叠数，为0时则完全删除</pre></td></tr>
+<tr><td valign="top"><a href="#del_items_from_db-2">del_items_from_db/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#embed-2">embed/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_ids_by_sort-1">get_ids_by_sort/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_item-2">get_item/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_strengthen_rest_time-1">get_strengthen_rest_time/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#init_item-2">init_item/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#init_item-3">init_item/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#init_items-2">init_items/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#pack_equ-1">pack_equ/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#pack_prop-1">pack_prop/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#send_notice-2">send_notice/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#send_notice-3">send_notice/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#set_item-2">set_item/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#strengthen-5">strengthen/5</a></td><td></td></tr>
+</table>
+
+<h2><a name="functions">Function Details</a></h2>
+
+<h3 class="function"><a name="add_item-3">add_item/3</a></h3>
+<div class="spec">
+<p><tt>add_item(Rs, Tid, Num) -&gt; {ok, NewRs, PropAdds, EquAdds} | {error, Error}</tt>
+<ul class="definitions"><li><tt>Rs = NewRs</tt></li><li><tt>NewRs = #role{}</tt></li><li><tt>Tid = integer()</tt></li><li><tt>Num = integer()</tt></li><li><tt>PropAdds = EquAdds</tt></li><li><tt>EquAdds = [#item{}]</tt></li><li><tt>Error = full | incorrect_num | undef</tt></li></ul></p>
+</div>
+
+<h3 class="function"><a name="add_items-2">add_items/2</a></h3>
+<div class="spec">
+<p><tt>add_items(Rs, Ids) -&gt; {ok, NewRs, PropAdds, EquAdds} | {error, Reason}</tt>
+<ul class="definitions"><li><tt>Rs = #role{}</tt></li><li><tt>NewRs = #role{}</tt></li><li><tt>Ids = [integer()] | [{integer(), integer()}]</tt></li><li><tt>PropAdds = list()</tt></li><li><tt>EquAdds = list()</tt></li><li><tt>Reason = term()</tt></li></ul></p>
+</div><p>批量添加物品
+  <pre>  Ids有两种可用格式：
+      1、[Tid1, Tid2, ...] 这种格式等同于 [{Tid1, 1}, {Tid2, 2}, ...]
+      2、[{Tid1, Num1}, {Tid2, Num2}, ...]</pre></p>
+
+<h3 class="function"><a name="count_unit-2">count_unit/2</a></h3>
+<div class="spec">
+<p><tt>count_unit(Tab, Items) -&gt; Count</tt>
+<ul class="definitions"><li><tt>Tab = '?TAB_EQU' | '?TAB_PROP' | '?TAB_MAT'</tt></li><li><tt>Items = [#item{}]</tt></li><li><tt>Count = integer()</tt></li></ul></p>
+</div>
+
+<h3 class="function"><a name="db_delete-2">db_delete/2</a></h3>
+<div class="spec">
+<p><tt>db_delete(Rid, Tid) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="db_init-1">db_init/1</a></h3>
+<div class="spec">
+<p><tt>db_init(Rs) -&gt; {ok, NewRs} | {error, Reason}</tt>
+<ul class="definitions"><li><tt>Rs = #role{}</tt></li><li><tt>NewRs = #role{}</tt></li><li><tt>Reason = term()</tt></li></ul></p>
+</div>
+
+<h3 class="function"><a name="db_insert-2">db_insert/2</a></h3>
+<div class="spec">
+<p><tt>db_insert(Rid, Item) -&gt; {ok, Num} | {error, Reason}</tt>
+<ul class="definitions"><li><tt>Rid = integer()</tt></li><li><tt>Item = #item{}</tt></li><li><tt>Num = integer()</tt></li><li><tt>Reason = term()</tt></li></ul></p>
+</div>
+
+<h3 class="function"><a name="db_update-2">db_update/2</a></h3>
+<div class="spec">
+<p><tt>db_update(Rid, Items) -&gt; {true, NewItems} | {false, NewItems}</tt>
+<ul class="definitions"><li><tt>Rid = integer()</tt></li><li><tt>Items = NewItems</tt></li><li><tt>NewItems = [#item{}]</tt></li></ul></p>
+</div>
+
+<h3 class="function"><a name="del_item-4">del_item/4</a></h3>
+<div class="spec">
+<p><tt>del_item(X1, Id, Num, MyItems) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="del_items-3">del_items/3</a></h3>
+<div class="spec">
+<p><tt>del_items(Type, Ids, Items) -&gt; {ok, NewItems, Dels} | {error, Reason}</tt>
+<ul class="definitions"><li><tt>Type = by_id | by_tid</tt></li><li><tt>Ids = [integer()] | [{integer(), integer()}]</tt></li><li><tt>Items = NewItems</tt></li><li><tt>Items = [#item{}]</tt></li><li><tt>Dels = [{ItemId, NewNum}]</tt></li><li><tt>ItemId = integer()</tt></li><li><tt>NewNum = integer()</tt></li><li><tt>Reason = term()</tt></li></ul></p>
+</div><p>批量删除物品
+  <pre>  Ids有两种可用格式：
+      1、[Tid1, Tid2, ...] 这种格式等同于 [{Tid1, 1}, {Tid2, 2}, ...]
+      2、[{Tid1, Num1}, {Tid2, Num2}, ...]
+  Dels为删除结果，格式如下：
+      Dels   : [{ItemId, NewNum}]
+      ItemId : 被删除的物品唯一ID
+      NewNum : 被删除后的物品的新的堆叠数，为0时则完全删除</pre></p>
+
+<h3 class="function"><a name="del_items_from_db-2">del_items_from_db/2</a></h3>
+<div class="spec">
+<p><tt>del_items_from_db(Rid, T) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="embed-2">embed/2</a></h3>
+<div class="spec">
+<p><tt>embed(EquItem, GemItem) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_ids_by_sort-1">get_ids_by_sort/1</a></h3>
+<div class="spec">
+<p><tt>get_ids_by_sort(Sort) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_item-2">get_item/2</a></h3>
+<div class="spec">
+<p><tt>get_item(Id, MyItems) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_strengthen_rest_time-1">get_strengthen_rest_time/1</a></h3>
+<div class="spec">
+<p><tt>get_strengthen_rest_time(Item) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="init_item-2">init_item/2</a></h3>
+<div class="spec">
+<p><tt>init_item(Id, Tid) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="init_item-3">init_item/3</a></h3>
+<div class="spec">
+<p><tt>init_item(Id, Tid, Num) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="init_items-2">init_items/2</a></h3>
+<div class="spec">
+<p><tt>init_items(Rs, Ids) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="pack_equ-1">pack_equ/1</a></h3>
+<div class="spec">
+<p><tt>pack_equ(Item) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="pack_prop-1">pack_prop/1</a></h3>
+<div class="spec">
+<p><tt>pack_prop(Item) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="send_notice-2">send_notice/2</a></h3>
+<div class="spec">
+<p><tt>send_notice(Id, Dels) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="send_notice-3">send_notice/3</a></h3>
+<div class="spec">
+<p><tt>send_notice(Id, Prop, Equ) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="set_item-2">set_item/2</a></h3>
+<div class="spec">
+<p><tt>set_item(MyItem, MyItems) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="strengthen-5">strengthen/5</a></h3>
+<div class="spec">
+<p><tt>strengthen(Item, Rate, RateF, Rise, AddTime) -&gt; any()</tt></p>
+</div>
+<hr>
+
+<div class="navbar"><a name="#navbar_bottom"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
+<p><i>Generated by EDoc, Dec 28 2013, 11:58:21.</i></p>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<div class="tableWrapper">
+        <table class="grid">
+
+            <tr>
+                <td align="right"><select name="send_money_money_type">
+                        <option value="diamond">－钻石－</option>
+                        <option value="gold">－金币－</option>
+                    </select>
+                    ：</td>
+                <td align="left"><input type="text" name="send_money_money" /></td>
+            </tr>
+
+            <tfoot>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td align="left"><button onclick="javascript:gm_action();" id="send_money_button" type="button">发送</button></td>
+                </tr>
+            </tfoot>
+        </table>
+</div>
+
+<script>
+    function gm_action(){
+        var money_type = $(":input[name='send_money_money_type']").val();
+        var money = $(":input[name='send_money_money']").val();
+        var url = "?mod=<?php echo $mod;?>&act=<?php echo $act;?>&do=1";
+        $("button[id='send_money_button']").attr("disabled", "disabled");
+        $.get(url, {
+            id_type: "role_id",
+            id: "<?php echo $id;?>",
+            money_type: money_type,
+            money: money,
+            rand: Math.random()
+            }, function(data){
+            var divDialog = getDivDialog();
+            var dialog = $(divDialog).dialog({ 
+                autoOpen: false, 
+                width: 300 ,
+                buttons: [
+                {
+                    text: "Ok",
+                    click: function() {
+                        $( this ).dialog( "close" );
+                    }
+                }
+                ],
+                title: "NOTICE",
+            });
+            $(divDialog).html( data );
+            dialog.dialog( "open" );
+        });
+    }
+</script>

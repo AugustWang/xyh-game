@@ -1,0 +1,6 @@
+id	name	Icon	tableName	showClass
+1	过年七天乐
+2	欢乐庆元宵
+60	首冲活动	ui_butten_activities_Package1	FirstPay	ActivityFirstPay
+61	钻石大放送	ui_butten_activities_Package2	ActivityNum	ActivityGifts
+67	礼包兑换	ui_activities_diamond_search_libaoduihuan		ActivityCodeView

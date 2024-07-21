@@ -1,0 +1,154 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>在线列表<?php $this->endBlock('title');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post">
+    <div class="searchPanel">
+        当前线路：<?php echo $this->getNodeHtml();?>
+        共<?php echo $onlineNum?>在线&nbsp;&nbsp;
+        角色ID：<input type="text" name="kw_id" value="<?php echo $kw['kw_id']?>" style="width:80px;" />
+        帐号名称：<input type="text" name="kw_account" value="<?php echo $kw['kw_account']?>" style="width:80px;" />
+        角色名称：<input type="text" name="kw_name" value="<?php echo $kw['kw_name']?>" style="width:80px;" />
+        <input type="submit" value="搜索" class="btn" />
+    </div>
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td style="width:20px;"></td>
+                    <td>角色ID</td>
+                    <td>帐号名称</td>
+                    <td>角色名称</td>
+                    <td>金币</td>
+                    <td>钻石</td>
+                    <td>关卡</td>
+                    <td>操作</td>
+                </tr>
+            </thead>
+            <tbody>
+            <?php foreach($data['list'] as $v):?>
+            <tr>
+                <td style="text-align:center;"><input name="id[]" type="checkbox" value="<?php echo $v['id']?>"></td>
+                <td><?php echo $v['id']?></td>
+                <td><?php echo $v['aid']?></td>
+                <!--<td><?php echo $v['actived']?></td>-->
+                <td><?php echo $v['name']?></td>
+                <td><?php echo $v['gold']?></td>
+                <td><?php echo $v['diamond']?></td>
+                <td><?php echo $v['tollgate_newid']?></td>
+                <td><a href="#" id="<?php echo $v['id']?>" class="dialog-link ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>操作</a></td>
+            </tr>
+            <?php endforeach;?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="text-align:center;">↑</td>
+                    <td colspan="8">
+                        <?php $this->loadBlock('pager')?>
+                        <input name="uncheck" type="button" id="checkReverse" value="反选" />
+                        <input name="check" type="button" id="checkAll" value="全选" />
+                        <input name="check" type="button" id="checkAllNo" value="取消" />
+                        <?php echo $op?>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+<!-- ui-dialog -->
+<div id="dialog" title=""></div>
+
+<script>
+
+function action(obj){
+    var title = $(obj).text() + " " + $("#dialog").attr("title");
+    var divDialog = getDivDialog();
+    var url = $(obj).attr("href");
+    var dialog = $(divDialog).dialog({
+autoOpen: false,
+width: 600 ,
+buttons: [],
+title: title
+});
+dialog.load( url );
+dialog.dialog( "open" );
+}
+
+$(document).ready(function(){
+
+        $("#checkAll").click(function(){
+            $("input[name='id[]']").each(function(){
+                this.checked = true;
+                });
+            });
+
+        $("#checkAllNo").click(function(){
+            $("input[name='id[]']").each(function(){
+                this.checked = false;
+                })
+            });
+
+        $("#checkReverse").click(function(){
+            $("input[name='id[]']").each(function(){
+                if (this.checked) {
+                this.checked = false;
+                }
+                else {
+                this.checked = true;
+                }
+                });
+            });
+
+// Hover states on the static widgets
+$( ".dialog-link, .action-link, #icons li" ).hover(
+        function() {
+        $( this ).addClass( "ui-state-hover" );
+        },
+        function() {
+        $( this ).removeClass( "ui-state-hover" );
+        }
+        );
+
+$( "#dialog" ).dialog({
+autoOpen: false,
+width: 600,
+buttons: [
+]
+});
+
+
+// Link to open the dialog
+$( ".dialog-link" ).click(function( event ) {
+        var trObj = $(this).parent().parent();
+        var rid = trObj.children("td:eq(1)").text();
+        var aid = trObj.children("td:eq(2)").text();
+        var name = trObj.children("td:eq(3)").text();
+        var content = "<?php echo $actions;?>";
+        var id = $(this).attr("id");
+        content = content.replace(/{}/g, id);
+        var title = "#" + rid + " - " + aid + " " + name;
+        $("#dialog").attr("title", title);
+        $( "#dialog" ).html( content );
+        $( "#dialog" ).dialog( "option", "title", title );
+        $( "#dialog" ).dialog( "open" );
+        event.preventDefault();
+        });
+});
+
+</script>
+<?php $this->endBlock('content');?>

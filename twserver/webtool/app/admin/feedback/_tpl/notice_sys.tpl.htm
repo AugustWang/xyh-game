@@ -1,0 +1,61 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>
+系统广播
+<?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+
+<div class="tableWrapper">
+    <form method="post">
+        <table class="grid">
+            <!--tr>
+                <td align="right">
+                    <select name="id_type">
+                        <option value="role_id" selected="selected">角色ＩＤ</option>
+                        <option value="name">角色名称</option>
+                        <option value="account_id">帐号名称</option>
+                    </select>
+                    ：</td>
+                <td align="left">
+                    <input name="id" type="text" value="<?php echo $id ?>" />                </td>
+            </tr>
+            <tr>
+              <td align="right">To_ID                  ：</td>
+              <td align="left"><input type="text" name="toid" />(0=系统,>0=收件人id,不能为空)</td>
+            </tr>
+            <tr>
+              <td align="right">From_ID                  ：</td>
+              <td align="left"><input type="text" name="fromid" />(0=系统,>0=发件人id,不能为空)</td>
+            </tr>
+            <tr>
+              <td align="right">发件人名字               ：</td>
+              <td align="left"><input type="text" name="name" />(非空字符串)</td>
+            </tr-->
+            <tr>
+              <td align="right">广播内容                 ：</td>
+              <td align="left"><textarea id="text" name="body" cols="30" rows="10" />输入内容...</textarea>(非空字符串)</td>
+            </tr>
+            <!--tr>
+              <td align="right">邮件附件                 ：</td>
+              <td align="left"><input type="text" name="items" />([{Type,Num},{Type,{HeroId,Quality}}])</td>
+            </tr-->
+            <tfoot>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td align="left"><input type="submit" name="submit" value="发送" /></td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</div>
+
+<script>
+<?php
+if($alert){
+	echo "alert('{$alert}');";
+}
+?>
+</script>
+
+<?php $this->endBlock('content');?>

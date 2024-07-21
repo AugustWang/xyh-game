@@ -1,0 +1,49 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>在线峰值统计图<?php $this->endBlock('title');?>
+
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post">
+	<div class="searchPanel">請選擇日期(按天查看)：<?php echo $dates; ?><input type="submit" value="查看" />
+	</div>
+  <div class="tableWrapper">
+    <table class="grid nohover" id="gridview">
+      <thead>
+        <tr>
+          <td colspan="2">统计图</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center">
+              <div id="chartdiv" align="center">Chart will load here</div>
+              <script type="text/javascript">
+var dataString ='<chart palette="2" caption="在线峰值统计图" showLabels="1" showvalues="1" decimals="0" numberPrefix="" numberSuffix="人">\n\
+	<categories>\n\
+<?php foreach($categories as $v):?>
+		<category label="<?php echo $v?>" />\n\
+<?php endforeach;?>
+        </categories>\n\
+<dataset seriesName="最高在线人数">\n\
+<?php foreach($dataset_online as $v):?>
+		<set value="<?php echo $v?>" />\n\
+<?php endforeach;?>
+</dataset>\n\
+</chart>';
+
+if (GALLERY_RENDERER && GALLERY_RENDERER.search(/javascript|flash/i)==0)  FusionCharts.setCurrentRenderer(GALLERY_RENDERER); 
+var chart = new FusionCharts("Charts/MSBar3D.swf", "ChartId", "100%", "<?php echo $hight?>", "0", "0");
+chart.setXMLData( dataString );		   
+chart.render("chartdiv");
+              </script>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>
+<script>
+$('#js_ttime').datepick({dateFormat:'yyyy-mm-dd'});
+</script>
+<?php $this->endBlock('content');?>

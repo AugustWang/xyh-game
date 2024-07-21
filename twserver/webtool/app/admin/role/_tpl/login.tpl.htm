@@ -1,0 +1,61 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>
+直接登录玩家账号
+<?php $this->endBlock('title');?>
+<?php $this->block('pager');?>
+<span class="pageIndex"> <?php echo $data['page_index']?><?php echo $page ?>
+<select name="limit" onchange="document.getElementById('mainForm').submit();">
+  <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+  <option value="" disabled="disabled">---</option>
+  <option value="30">30行</option>
+  <option value="50">50行</option>
+  <option value="100">100行</option>
+  <option value="200">200行</option>
+</select>
+</span>
+<?php $this->endBlock('pager');?>
+<?php $this->block('content');?>
+<form id="mainForm" method="post" target="_blank">
+    <div class="searchPanel">
+   账号ID：<input type="text" style="width:90px;" name="acc_id" />
+				账号名称：<input type="text" style="width:90px;" name="acc_name" />
+                角色名称：<input type="text" style="width:90px;" name="role_name" />
+				<input type="submit" value=" 登录 "/>
+			×请注意，你的登录意味着系统将另一端的玩家踢下线
+  </div>
+</form>
+  <div class="tableWrapper">
+    <table width="100%" border="0" class="grid" id="list">
+      <thead>
+        <tr>
+          <td>管理员</td>
+          <td>IP</td>
+          <td>登录账号ID</td>
+          <td>登录账号名称</td>
+          <td>登录角色名称</td>
+          <td>时间</td>
+        </tr>
+      </thead>
+      <tbody>
+        <?php if($log)foreach($log as $val): ?>
+        <tr>
+			<td><?php echo $val['admin_name']; ?></td>
+            <td><?php echo $val['ip'].'(' . Utils::ip2addr($val['ip']) . ')'; ?></td>
+            <td><?php echo $val['acc_id']; ?></td>
+            <td><?php echo $val['acc_name']; ?></td>
+            <td><?php echo $val['role_name']; ?></td>
+            <td><?php echo date('Y-m-d H:i:s',$val['ctime']); ?></td>
+        </tr>
+        <?php endforeach; ?>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="10"><?php $this->loadBlock('pager')?></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+<?php if($msg){echo "<script>alert('{$msg}');</script>";} ?>
+<?php $this->endBlock('content');?>

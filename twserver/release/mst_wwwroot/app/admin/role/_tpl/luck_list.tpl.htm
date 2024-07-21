@@ -1,0 +1,58 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>玩家（ID：<?php echo $id; echo " ,幸运星数量:".$rt['luck_num']." ,幸运星钻石:".$rt['luck_dia']." ,使用幸运星数:".$rt['luck_use']." ,幸运星总价值:".$rt['luck_sum'];?>）幸运星流动明细<?php $this->endBlock('title');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post" action="?mod=role&act=luck_list&id=<?php echo $id;?>">
+    <!--<div class="searchPanel">请选择类型：<?php echo $type; ?><input type="submit" value="查看" /> </div>-->
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td>物品TID</td>
+                    <td>物品名</td>
+                    <td>类型</td>
+                    <td>数量</td>
+                    <td>时间</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach($data['list'] as $v):
+                ?>
+                <tr>
+                    <td><?php echo $v['tid']?></td>
+                    <td><?php echo $v['tid_name']?></td>
+                    <td><?php echo $v['type_name']?></td>
+                    <td><?php echo $v['num']?></td>
+                    <td><?php echo date("Y-m-d H:i:s", $v['ctime'])?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="text-align:center;">↑</td>
+                    <td colspan="4">
+                        <?php $this->loadBlock('pager')?>
+                        <?php echo $op?>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+<?php $this->endBlock('content');?>

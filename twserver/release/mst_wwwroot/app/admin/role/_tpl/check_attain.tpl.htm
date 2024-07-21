@@ -1,0 +1,70 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>成就列表<?php $this->endBlock('title');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post">
+    <!--<div class="searchPanel">
+    	当前线路：<?php echo $this->getNodeHtml();?>
+        共<?php echo $onlineNum?>在线&nbsp;&nbsp;
+		角色ID：<input type="text" name="kw_id" value="<?php echo $kw['kw_id']?>" style="width:80px;" />
+        帐号名称：<input type="text" name="kw_account" value="<?php echo $kw['kw_account']?>" style="width:80px;" />
+        角色名称：<input type="text" name="kw_name" value="<?php echo $kw['kw_name']?>" style="width:80px;" />
+        <input type="submit" value="搜索" class="btn" />
+    </div>-->
+    <!--<div class="searchPanel">请选择成就：<?php echo $type; ?><input type="submit" value="查看" /> </div>-->
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td>当前成就ID</td>
+                    <td>下个成就ID</td>
+                    <td>成就名字</td>
+                    <td>成就唯一ID</td>
+                    <td>完成情况</td>
+                    <td>领奖状态</td>
+                    <td>领奖状态ID</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($data as $v):?>
+                <tr>
+                    <td><?php echo $v[0]?></td>
+                    <td><?php echo $v[1]?></td>
+                    <td><?php echo $v['type']?></td>
+                    <td><?php echo $v[2]?></td>
+                    <td><?php echo $v[3]?></td>
+                    <td><?php echo $v['prize']?></td>
+                    <td><?php echo $v[4]?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <!--<tfoot>
+                <tr>
+                    <td style="text-align:center;">↑</td>
+                    <td colspan="8">
+                        <?php $this->loadBlock('pager')?>
+                        <input name="check" type="button" id="check" class="btnCheck" value="反选"/>
+                        <input name="uncheck" type="button" id="uncheck" class="btnUncheck" value="取消选中"/>
+                        <?php echo $op?>
+                    </td>
+                </tr>
+            </tfoot>-->
+        </table>
+    </div>
+</form>
+<?php $this->endBlock('content');?>

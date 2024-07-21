@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<server>http://183.232.32.39/admin/web/server_list.php</server> <!--服务器地址-->
+	<isAutoLogin>true</isAutoLogin>  <!--是否自动登录 -->
+	<isWarPass>false</isWarPass>    <!--是否战斗跳过 -->
+	<isNewPass>false</isNewPass>    <!--是否新手引导跳过 -->
+	<gameCenterLogin>true</gameCenterLogin>  <!--游戏中心登录-->
+	<checkUpdate>false</checkUpdate>  <!--是否检测游戏更新-->
+	<device_bar>true</device_bar>  <!--是否显示平台条-->
+</root>

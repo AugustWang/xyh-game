@@ -1,0 +1,79 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?><?php echo $_GET['kw']['title'] ? $_GET['kw']['title']:'' ?>宝珠统计数据<?php $this->endBlock('title');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" name="mainForm" method="post" action="?mod=feedback&act=log_jewel">
+    <div class="searchPanel">
+          日期：<input type="text" class="js_starttime" name="kw[time_st]" value="<?php echo $_REQUEST['kw']['time_st'];?>" style="width:80px;" />-<input type="text" name="kw[time_et]" value="<?php echo $_REQUEST['kw']['time_et'];?>" class="js_endtime" style="width:80px;" />
+        <input type="submit" name="search" value="搜索" class="btn" />
+        <input type="hidden" id="submit_type" name="submit_type" value="search" />
+        <input type="button" value="导出数据" onclick="javascript:{$('#submit_type').val('export');this.disabled=true;document.mainForm.submit();}">
+    </div>
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td>角色ID</td>
+                    <td>3钻石</td>
+                    <td>15钻石</td>
+                    <td>30钻石</td>
+                    <td>50钻石</td>
+                    <td>80钻石</td>
+                    <td>抽宝珠消耗钻石</td>
+                    <td>刷新酒馆次数</td>
+                    <td>刷新消耗钻石</td>
+                    <td>是否付费</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach($data as $v):
+                ?>
+                <tr>
+                    <td><?php echo $v['role_id']?></td>
+                    <td><?php echo $v['sum3']?></td>
+                    <td><?php echo $v['sum15']?></td>
+                    <td><?php echo $v['sum30']?></td>
+                    <td><?php echo $v['sum50']?></td>
+                    <td><?php echo $v['sum80']?></td>
+                    <td><?php echo $v['num']?></td>
+                    <td><?php echo $v['count18']?></td>
+                    <td><?php echo $v['sum18']?></td>
+                    <td><?php echo $v['pay']?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="text-align:center;">↑</td>
+                    <td colspan="9">
+                        <?php $this->loadBlock('pager')?>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+<script>
+<?php
+if($alert){
+    echo "alert('{$alert}');";
+}
+?>
+</script>
+<?php $this->endBlock('content');?>

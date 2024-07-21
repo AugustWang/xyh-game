@@ -1,0 +1,109 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?><?php echo $_GET['kw']['title'] ? $_GET['kw']['title']:'' ?>登录次数(默认显示1个月数据)<?php $this->endBlock('title');?>
+
+<?php $this->block('buttons');?>
+<?php $this->endBlock('buttons');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post" name="mainForm" action="?mod=feedback&act=login_count">
+    <div class="searchPanel">
+        <span id="js_extra_search">
+          最后登录日期：<input type="text" class="js_starttime" name="kw[login_st]" value="<?php echo $_REQUEST['kw']['login_st'];?>" style="width:80px;" />-<input type="text" name="kw[login_et]" value="<?php echo $_REQUEST['kw']['login_et'];?>" class="js_endtime" style="width:80px;" />
+        <input type="submit" name="search" value="搜索" class="btn" />
+        <input type="hidden" id="submit_type" name="submit_type", value="search" />
+        <input type="button" value="导出数据" onclick="javascript:{$('#submit_type').val('expload');this.disabled=true;document.mainForm.submit();}">
+        </span>
+    </div>
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td style="width:20px;"></td>
+                    <td>角色ID</td>
+                    <td>角色名称</td>
+                    <td>注册时间</td>
+                    <td>登出时间</td>
+                    <td>登录次数</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach($data['list'] as $v):
+                ?>
+                <tr>
+                    <td style="text-align:center;"><input class="js_check_id" name="id[]" type="checkbox" value="<?php echo $v['id']?>"></td>
+                    <td><?php echo $v['id']?></td>
+                    <td><?php echo $v['name']?></td>
+                    <td><?php echo date('Y-m-d H:i:s', $v['ctime'])?></td>
+                    <td><?php echo date('Y-m-d H:i:s', $v['logout_time'])?></td>
+                    <td><?php echo $v['login_count']?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="text-align:center;">↑</td>
+                    <td colspan="9">
+                        <?php $this->loadBlock('pager')?>
+                        <input name="uncheck" type="button" id="checkReverse" value="反选" />
+                        <input name="check" type="button" id="checkAll" value="全选" />
+                        <input name="check" type="button" id="checkAllNo" value="取消" />
+                        <?php echo $op?>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+<script>
+
+
+$(document).ready(function(){
+
+    $("#checkAll").click(function(){
+        $("input[name='id[]']").each(function(){
+            this.checked = true;
+        });
+    });
+
+    $("#checkAllNo").click(function(){
+        $("input[name='id[]']").each(function(){
+            this.checked = false;
+        })
+    });
+
+    $("#checkReverse").click(function(){
+        $("input[name='id[]']").each(function(){
+            if (this.checked) {
+                this.checked = false;
+            }
+            else {
+                this.checked = true;
+            }
+        });
+    });
+});
+
+<?php
+if($alert){
+	echo "alert('{$alert}');";
+}
+?>
+
+</script>
+<?php $this->endBlock('content');?>

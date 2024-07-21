@@ -1,0 +1,63 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?><?php echo $_GET['kw']['title'] ? $_GET['kw']['title']:'' ?>注册数据<?php $this->endBlock('title');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post" action="?mod=feedback&act=register">
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td>日期</td>
+                    <td>注册人数</td>
+                    <td>创建角色人数</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach($data as $v):
+                ?>
+                <tr>
+                    <td><?php echo $v['time']?></td>
+                    <td><?php echo $v['reg']?></td>
+                    <td><?php echo $v['name']?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="9">
+                        <?php $this->loadBlock('pager')?>
+                        <!--
+                        <input type="checkbox" name="chk_all" id="chk_all" />
+                        <input type="BUTTON" value="发邮件" onclick="javascript:{this.disabled=true;document.form1.submit();}">
+                        <input name="check" type="button" id="check" class="btnCheck" value="反选"/>
+                        <input name="uncheck" type="button" id="uncheck" class="btnUncheck" value="取消选中"/>
+                        <?php echo $op?>
+                        -->
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+<script type="text/javascript">
+$("#chk_all").click(function(){
+     $("input[name='id[]']").attr("checked",$(this).attr("checked"));
+});
+</script>
+<?php $this->endBlock('content');?>

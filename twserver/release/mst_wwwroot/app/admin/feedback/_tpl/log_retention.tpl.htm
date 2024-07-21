@@ -1,0 +1,95 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?><?php echo $_GET['kw']['title'] ? $_GET['kw']['title']:'' ?>留存数据<?php $this->endBlock('title');?>
+
+<?php $this->block('buttons');?>
+<form name=form1 method="POST">
+    <input type="hidden" name="expload" value="导出数据" />
+    <input type="button" value="导出数据" onclick="javascript:{this.disabled=true;document.form1.submit();}">
+</form>
+<?php $this->endBlock('buttons');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post" action="?mod=feedback&act=log_retention">
+    <!--
+    <div class="searchPanel">请选择日期：<?php echo $dates; ?><input type="submit" value="查看" />
+    </div>
+    -->
+    <div class="searchPanel">
+          日期：<input type="text" class="js_starttime" name="kw[reg_st]" value="<?php echo $_REQUEST['kw']['reg_st'];?>" style="width:80px;" />-<input type="text" name="kw[reg_et]" value="<?php echo $_REQUEST['kw']['reg_et'];?>" class="js_endtime" style="width:80px;" />
+          <input type="submit" value="查看" />
+    </div>
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td>日期</td>
+                    <td>注册人数</td>
+                    <td>2日留存</td>
+                    <td>3日留存</td>
+                    <td>4日留存</td>
+                    <td>5日留存</td>
+                    <td>6日留存</td>
+                    <td>7日留存</td>
+                    <td>8日留存</td>
+                    <td>9日留存</td>
+                    <td>10日留存</td>
+                    <td>15日留存</td>
+                    <td>30日留存</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach($data['list'] as $v):
+                ?>
+                <tr>
+                    <td><?php echo $v['reg_date']?></td>
+                    <td><?php echo $v['reg_num']?></td>
+                    <td><?php echo $v[2]?></td>
+                    <td><?php echo $v[3]?></td>
+                    <td><?php echo $v[4]?></td>
+                    <td><?php echo $v[5]?></td>
+                    <td><?php echo $v[6]?></td>
+                    <td><?php echo $v[7]?></td>
+                    <td><?php echo $v[8]?></td>
+                    <td><?php echo $v[9]?></td>
+                    <td><?php echo $v[10]?></td>
+                    <td><?php echo $v[15]?></td>
+                    <td><?php echo $v[30]?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="9">
+                        <?php $this->loadBlock('pager')?>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+<script type="text/javascript">
+
+<?php
+if($alert){
+    echo "alert('{$alert}');";
+}
+?>
+
+</script>
+<?php $this->endBlock('content');?>

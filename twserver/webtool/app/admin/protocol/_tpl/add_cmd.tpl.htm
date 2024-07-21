@@ -1,0 +1,25 @@
+package game.net.data
+{
+	import flash.utils.Dictionary;
+	import game.net.data.s.*;
+	public class AddCmd
+	{
+		public static var cmdData : Dictionary=new Dictionary()
+		public function AddCmd()
+		{
+		}
+		public static function init():void
+		{
+<?php foreach($data['list'] as $v):?>
+			cmdData[<?php echo $v['id']?>]=S<?php echo ucfirst($v['name'])?>;
+<?php endforeach;?>
+		}
+		public static function getClassByModule(module:int):Class
+		{
+			return cmdData[module];
+		}
+	}
+}
+
+
+// vim: filetype=php :

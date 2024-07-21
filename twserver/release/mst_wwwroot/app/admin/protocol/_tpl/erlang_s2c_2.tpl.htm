@@ -1,0 +1,18 @@
+-module(pt_pack_client).
+-export([p/3]).
+
+<?php foreach($data as $pt):?>
+p(<?php echo $pt['id']?>, [<?php echo $pt['fields']['arg']?>], Index_) ->
+<?php echo $pt['fields']['code'] ?>
+    Data = << <?php echo $pt['fields']['rt']?> >>,
+    Len = byte_size(Data),
+    {ok, << Len:16, Index_:8, <?php echo $pt['id']?>:16, Data/binary >>};
+
+p(Cmd, [], Index) -> {ok, <<0:16, Index:8, Cmd:16>>};
+
+<?php endforeach;?>
+p(Cmd, Data, _Index) -> 
+    io:format("undefined_pack_client_cmd:~w, data:~w", [Cmd, Data]),
+    {error, undefined_pack_client_cmd}.
+
+%% vim: ft=erlang :

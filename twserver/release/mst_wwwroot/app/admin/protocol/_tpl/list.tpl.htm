@@ -1,0 +1,63 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>通信协议列表<?php $this->endBlock('title');?>
+
+<?php $this->block('buttons');?>
+<?php $this->endBlock('buttons');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post">
+    <div class="searchPanel">
+        模块号：<?php echo $module_id ?>
+        协议号：<?php echo $protocol_id ?>
+        <input type="submit" value="搜索" class="btn" />
+    </div>
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td>协议号</td>
+                    <td>名称</td>
+                    <td>C2S</td>
+                    <td>S2C</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($data['list'] as $v):?>
+                <tr>
+                    <td><?php echo $v['id']?></td>
+                    <td><?php echo $v['name']?></td>
+                    <td><pre><?php print_r($v['c2s'])?></pre></td>
+                    <td><pre><?php print_r($v['s2c'])?></pre></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <!--<tfoot>
+                <tr>
+                    <td style="text-align:center;">↑</td>
+                    <td colspan="12">
+                        <?php $this->loadBlock('pager')?>
+                        <input name="check" type="button" id="check" class="btnCheck" value="反选"/>
+                        <input name="uncheck" type="button" id="uncheck" class="btnUncheck" value="取消选中"/>
+                        <?php echo $op?>
+                    </td>
+                </tr>
+            </tfoot> -->
+        </table>
+    </div>
+</form>
+<?php $this->endBlock('content');?>

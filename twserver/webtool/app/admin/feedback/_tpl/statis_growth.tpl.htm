@@ -1,0 +1,121 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?><?php echo $_GET['kw']['title'] ? $_GET['kw']['title']:'' ?>步骤停留统计<?php $this->endBlock('title');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post" action="?mod=feedback&act=statis_growth">
+    <div class="searchPanel">
+        <!--
+        角色ID：<input type="text" id="js_rid" name="kw[id]" value="<?php echo $kw['kw_id']?>" style="width:40px;" />
+        英雄ID：<input type="text" id="js_rid" name="kw[hero_id]" value="<?php echo $kw['kw_hero_id']?>" style="width:40px;" />
+        英雄品质：<input type="text" id="js_rid" name="kw[quality]" value="<?php echo $kw['kw_quality']?>" style="width:40px;" />
+        -->
+        <span id="js_extra_search">
+          日期：<input type="text" class="js_starttime" name="kw[pay_st]" value="<?php echo $_REQUEST['kw']['pay_st'];?>" style="width:80px;" />-<input type="text" name="kw[pay_et]" value="<?php echo $_REQUEST['kw']['pay_et'];?>" class="js_endtime" style="width:80px;" />
+        <input type="submit" value="搜索" class="btn" />
+        </span>
+    </div>
+    <!--
+    <div class="searchPanel">
+        请选择英雄：<?php echo $type; ?><input type="submit" value="查看" />
+        请选择品质：<?php echo $hero_quality; ?><input type="submit" value="查看" />
+    </div>
+    -->
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td>停留用户总量</td>
+                    <td>登录开场动画</td>
+                    <td>激活第1关</td>
+                    <td>通过第1关</td>
+                    <td>签到</td>
+                    <td>激活第2关</td>
+                    <td>通过第2关</td>
+                    <td>第1次强化</td>
+                    <td>第2次强化</td>
+                    <td>通过第3关</td>
+                    <td>激活第4关</td>
+                    <td>通过第4关</td>
+                    <td>激活第5关</td>
+                    <td>通过第5关</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach($data as $v):
+                ?>
+                <tr>
+                    <td><?php echo $v[1]?></td>
+                    <td><?php echo $v[2]?></td>
+                    <td><?php echo $v[3]?></td>
+                    <td><?php echo $v[4]?></td>
+                    <td><?php echo $v[5]?></td>
+                    <td><?php echo $v[6]?></td>
+                    <td><?php echo $v[7]?></td>
+                    <td><?php echo $v[8]?></td>
+                    <td><?php echo $v[9]?></td>
+                    <td><?php echo $v[10]?></td>
+                    <td><?php echo $v[11]?></td>
+                    <td><?php echo $v[12]?></td>
+                    <td><?php echo $v[13]?></td>
+                    <td><?php echo $v[14]?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="text-align:center;">↑</td>
+                    <td colspan="9">
+                        <?php $this->loadBlock('pager')?>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+<script>
+
+
+$(document).ready(function(){
+
+    $("#checkAll").click(function(){
+        $("input[name='id[]']").each(function(){
+            this.checked = true;
+        });
+    });
+
+    $("#checkAllNo").click(function(){
+        $("input[name='id[]']").each(function(){
+            this.checked = false;
+        })
+    });
+
+    $("#checkReverse").click(function(){
+        $("input[name='id[]']").each(function(){
+            if (this.checked) {
+                this.checked = false;
+            }
+            else {
+                this.checked = true;
+            }
+        });
+    });
+});
+
+</script>
+<?php $this->endBlock('content');?>

@@ -1,0 +1,57 @@
+<div class="tableWrapper">
+    <table class="grid">
+        <?php
+        foreach($table_fields as $k =>$v){
+            $input_params .= $k.': $(":input[name=\'param_'.$k.'\']").val(),';
+            echo '<tr><td align="right">'.$v['name'].'：</td><td align="left"><input type="text" name="param_'.$k.'" '.$v['attr'].'/>'.$v['tips'].'</td></tr>';
+        }
+        ?>
+        <tfoot>
+            <tr>
+                <td>&nbsp;</td>
+                <td align="left"><button onclick="javascript:gm_action();" id="gm_action_button" type="button">发送</button></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<script>
+    function gm_action(){
+        params = {
+            <?php
+            echo $input_params;
+            foreach($params as $k => $v){
+                echo $k.': '.$v.',';
+            }
+            ?>
+            mod: "<?php echo $this->input['mod'];?>",
+            act: "<?php echo $this->input['act'];?>",
+            id: "<?php echo $this->input['id'];?>",
+            op: 1,
+            rand: Math.random()
+        };
+        gm_action_do("./", params, 300)
+    }
+
+    function gm_action_do(url, params, width ){
+        $("button[id='gm_action_button']").attr("disabled", "disabled");
+        $.get(url, params, function(data){
+            var divDialog = getDivDialog();
+            var dialog = $(divDialog).dialog({ 
+                autoOpen: false, 
+                width: width ,
+                buttons: [
+                {
+                    text: "Ok",
+                    click: function() {
+                        $( this ).dialog( "close" );
+                    }
+                }
+                ],
+                title: "NOTICE",
+            });
+            $(divDialog).html( data );
+            dialog.dialog( "open" );
+        });
+    }
+</script>

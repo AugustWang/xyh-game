@@ -1,0 +1,71 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>游戏反馈<?php $this->endBlock('title');?>
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $page ?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+<?php $this->block('content');?>
+<form id="mainForm" method="post">
+	<div class="searchPanel">
+        角色ID：<input type="text" id="js_rid" name="kw[id]" value="<?php echo $this->input['kw']['id']?>" style="width:40px;" />
+       帐号名称：<input type="text" style="width:170px;" value="<?php echo $this->input['kw']['name'];?>" name="kw[name]" />
+       类型：<?php echo $kw['type']?>
+        日期：
+       <input type="text" style="width:170px;" class="js_starttime" value="<?php echo $this->input['kw']['start_time'];?>" name="kw[start_time]" />
+        - <input type="text" style="width:170px;" class="js_endtime" value="<?php echo $this->input['kw']['end_time'];?>" name="kw[end_time]" /><input type="submit" value="查看" />
+	</div>
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+				    <td style="width:30px;">ID</td>
+                    <td style="width:120px;">时间</td>
+                    <td style="width:120px;">角色id</td>
+                    <td style="width:120px;">角色名</td>
+					<td style="width:120px;">IP</td>
+                    <td style="width:50px;">Type</td>
+                    <td>内容</td>
+                    <td>回复</td>
+
+                </tr>
+            </thead>
+            <tbody>
+              <?php if($data): ?>
+                <?php foreach($data as $k=>$v):?>
+                <tr>
+					<td><?php echo $k;?></td>
+                    <td><?php echo $v['addtime']; ?></td>
+					<td><?php echo $v['id'];?></td>
+					<td><?php echo $v['aid'];?></td>
+					<td><?php echo $v['client_ip']; ?></td>
+                    <td><?php echo $v['type']; ?></td>
+                    <td><?php echo $v['content']; ?></td>
+                    <td><?php echo $v['action']; ?></td>
+                </tr>
+                <?php endforeach;?>
+                <?php else: ?>
+                <tr><td colspan="7">无反馈..</td></tr>
+                <?php endif; ?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="7">
+                        <?php $this->loadBlock('pager')?>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+
+<?php $this->endBlock('content');?>

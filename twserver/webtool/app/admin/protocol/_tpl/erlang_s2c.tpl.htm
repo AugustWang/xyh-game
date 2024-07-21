@@ -1,0 +1,18 @@
+-module(pt_pack).
+-export([p/2]).
+
+<?php foreach($data as $pt):?>
+p(<?php echo $pt['id']?>, [<?php echo $pt['fields']['arg']?>]) ->
+<?php echo $pt['fields']['code']?>
+    Data = << <?php echo $pt['fields']['rt']?> >>,
+    Len = byte_size(Data),
+    {ok, << Len:16, <?php echo $pt['id']?>:16, Data/binary >>};
+
+p(Cmd, []) -> {ok, <<0:16, Cmd:16>>};
+
+<?php endforeach;?>
+p(Cmd, Data) -> 
+    io:format("undefined_pack_cmd:~w, data:~w", [Cmd, Data]),
+    {error, undefined_pack_cmd}.
+
+%% vim: ft=erlang :

@@ -1,0 +1,41 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>编辑公告<?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+<div class="tableWrapper">
+    <form method="post">
+        <table class="grid">
+            <tr>
+                <td class="label">开始时间：</td>
+                <td><input type="text" class="js_starttime" name="items[start_time]" value="<?php echo date('Y-m-d H:i:s', $data['start_time']);?>" style="width:130px;" /></td>
+            </tr>
+            <tr>
+                <td class="label">结束时间：</td>
+                <td><input type="text" class="js_endtime" name="items[end_time]" value="<?php echo date('Y-m-d H:i:s', $data['end_time']);?>" style="width:130px;" /></td>
+            </tr>
+            <tr>
+                <td class="label">类型：</td>
+                <td>
+                    <?php echo $type; ?>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">时间：</td>
+                <td><input type="text" name="items[time]" value="<?php if($data['time']){ echo $data['time']; } else{ echo 0; }?>" /><font color="#FF0000">(分钟)</font>广播时间间隔,公告默认为0</td>
+            </tr>
+            <tr>
+                <td class="label">内　　容：</td>
+                <td><textarea name="items[msg]" style="width:500px; height:160px;"><?php echo $data['msg']?></textarea><font color="#FF0000">广播内容长度小于30</font></td>
+            </tr>
+            <tr>
+                <td class="label"></td>
+                <td>
+                    <input type="submit" name="submit" class="bigBtn" value="提交" />
+                    <input type="button" class="bigBtn" value="返回" onclick="location.replace('<?php echo $goback?>');" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<?php $this->endBlock('content');?>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<item id="server" value="http://42.121.111.191/server_list.php" />
+</root>

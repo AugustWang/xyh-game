@@ -1,0 +1,9 @@
+idNume	tier	rmb	diamond	rate	rateCen	mcard	shopid	double
+"com.mst.diamond_60"	1	6	60	1	10		1	0
+"com.mst.diamond_315"	5	30	315	0.95	10.5		2	0
+"com.mst.diamond_1078"	15	98	1078	0.91	11		3	0
+"com.mst.diamond_1702"	22	148	1702	0.87	11.5		4	0
+"com.mst.diamond_3696"	48	308	3696	0.83	12		5	0
+"com.mst.diamond_5376"	54	448	5600	0.8	12.5		6	0
+"com.mst.diamond_7725"	60	618	7725	0.8	12.5		7	0
+"com.mst.diamond_yueka"	5	30	300	1	10	1	8	0

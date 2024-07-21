@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset= UTF-8">
+<title>Module lib_role</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" title="EDoc">
+</head>
+<body bgcolor="white">
+<div class="navbar"><a name="#navbar_top"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
+<hr>
+
+<h1>Module lib_role</h1>
+<ul class="index"><li><a href="#description">Description</a></li><li><a href="#index">Function Index</a></li><li><a href="#functions">Function Details</a></li></ul>角色相关API库.
+
+<p><b>Authors:</b> Rolong (<a href="mailto:rolong@vip.qq.com"><tt>rolong@vip.qq.com</tt></a>).</p>
+
+<h2><a name="description">Description</a></h2>角色相关API库
+<h2><a name="index">Function Index</a></h2>
+<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#add_attr-2">add_attr/2</a></td><td>批量增加属性.</td></tr>
+<tr><td valign="top"><a href="#add_attr-3">add_attr/3</a></td><td>增加属性.</td></tr>
+<tr><td valign="top"><a href="#add_attr_ok-4">add_attr_ok/4</a></td><td>成功增加属性.</td></tr>
+<tr><td valign="top"><a href="#check_phone_number-1">check_phone_number/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#db_init-3">db_init/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#db_update-1">db_update/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#exec_cmd-1">exec_cmd/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_new_id-2">get_new_id/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_offline_pid-2">get_offline_pid/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_online_pid-2">get_online_pid/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_role_pid-2">get_role_pid/2</a></td><td>获取角色PID.</td></tr>
+<tr><td valign="top"><a href="#get_role_pid_from_ets-2">get_role_pid_from_ets/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#init_skills-1">init_skills/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#jewel_init-1">jewel_init/1</a></td><td>初始化宝珠状态数据.</td></tr>
+<tr><td valign="top"><a href="#jewel_update-1">jewel_update/1</a></td><td>保存宝珠状态数据到数据库.</td></tr>
+<tr><td valign="top"><a href="#notice-1">notice/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#notice-2">notice/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#notice-3">notice/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#online_check-0">online_check/0</a></td><td></td></tr>
+<tr><td valign="top"><a href="#reset_password-3">reset_password/3</a></td><td>重置密码.</td></tr>
+<tr><td valign="top"><a href="#save_to_db-2">save_to_db/2</a></td><td>Rs里的数据回存到数据库
+ 'save_to_db.</td></tr>
+<tr><td valign="top"><a href="#send_verify_code-1">send_verify_code/1</a></td><td>发送验证码.</td></tr>
+<tr><td valign="top"><a href="#send_verify_code2-2">send_verify_code2/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#spend-3">spend/3</a></td><td>消耗属性.</td></tr>
+<tr><td valign="top"><a href="#spend_ok-4">spend_ok/4</a></td><td>成功消耗属性.</td></tr>
+<tr><td valign="top"><a href="#stop-0">stop/0</a></td><td></td></tr>
+<tr><td valign="top"><a href="#time2diamond-1">time2diamond/1</a></td><td>CD时间换算成钻石.</td></tr>
+<tr><td valign="top"><a href="#time2power-1">time2power/1</a></td><td>时间换算成疲劳值（体力值）.</td></tr>
+<tr><td valign="top"><a href="#tracer-1">tracer/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#zip_kvs-1">zip_kvs/1</a></td><td></td></tr>
+</table>
+
+<h2><a name="functions">Function Details</a></h2>
+
+<h3 class="function"><a name="add_attr-2">add_attr/2</a></h3>
+<div class="spec">
+<p><tt>add_attr(Attrs, Rs) -&gt; NewRs</tt>
+<ul class="definitions"><li><tt>Attrs = [{AttrType, Value}]</tt></li><li><tt>AttrType = gold | diamond</tt></li><li><tt>Value = integer()</tt></li><li><tt>Rs = #role{}</tt></li><li><tt>NewRs = #role{}</tt></li></ul></p>
+</div><p>批量增加属性</p>
+
+<h3 class="function"><a name="add_attr-3">add_attr/3</a></h3>
+<div class="spec">
+<p><tt>add_attr(MoneyType, Value, Rs) -&gt; NewRs</tt>
+<ul class="definitions"><li><tt>MoneyType = gold | diamond</tt></li><li><tt>Value = integer()</tt></li><li><tt>Rs = #role{}</tt></li><li><tt>NewRs = #role{}</tt></li></ul></p>
+</div><p>增加属性</p>
+
+<h3 class="function"><a name="add_attr_ok-4">add_attr_ok/4</a></h3>
+<div class="spec">
+<p><tt>add_attr_ok(MoneyType, LogType, RsA, RsB) -&gt; NewRsB</tt>
+<ul class="definitions"><li><tt>MoneyType = gold | diamond</tt></li><li><tt>LogType = integer()</tt></li><li><tt>RsA = #role{}</tt></li><li><tt>RsB = #role{}</tt></li><li><tt>NewRsB = #role{}</tt></li></ul></p>
+</div><p>成功增加属性</p>
+
+<h3 class="function"><a name="check_phone_number-1">check_phone_number/1</a></h3>
+<div class="spec">
+<p><tt>check_phone_number(Num) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="db_init-3">db_init/3</a></h3>
+<div class="spec">
+<p><tt>db_init(Key, Val, Rs) -&gt; {ok, NewRs} | {error, Reason}</tt>
+<ul class="definitions"><li><tt>Key = account_id | role_id | name</tt></li><li><tt>Val = integer() | binary()</tt></li><li><tt>Rs = NewRs</tt></li><li><tt>NewRs = #role{}</tt></li><li><tt>Reason = term()</tt></li></ul></p>
+</div>
+
+<h3 class="function"><a name="db_update-1">db_update/1</a></h3>
+<div class="spec">
+<p><tt>db_update(Rs) -&gt; Result</tt>
+<ul class="definitions"><li><tt>Rs = #role{}</tt></li><li><tt>Result = integer() | {error, Reason}</tt></li><li><tt>Reason = term()</tt></li></ul></p>
+</div>
+
+<h3 class="function"><a name="exec_cmd-1">exec_cmd/1</a></h3>
+<div class="spec">
+<p><tt>exec_cmd(T) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_new_id-2">get_new_id/2</a></h3>
+<div class="spec">
+<p><tt>get_new_id(X1, Rs) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_offline_pid-2">get_offline_pid/2</a></h3>
+<div class="spec">
+<p><tt>get_offline_pid(X1, AccountId) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_online_pid-2">get_online_pid/2</a></h3>
+<div class="spec">
+<p><tt>get_online_pid(X1, AccountId) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_role_pid-2">get_role_pid/2</a></h3>
+<div class="spec">
+<p><tt>get_role_pid(KeyType, Key) -&gt; false | pid()</tt>
+<ul class="definitions"><li><tt>KeyType = role_id | account_id | name</tt></li><li><tt>Key = integer() | binary()</tt></li></ul></p>
+</div><p>获取角色PID</p>
+
+<h3 class="function"><a name="get_role_pid_from_ets-2">get_role_pid_from_ets/2</a></h3>
+<div class="spec">
+<p><tt>get_role_pid_from_ets(Type, Id) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="init_skills-1">init_skills/1</a></h3>
+<div class="spec">
+<p><tt>init_skills(Data) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="jewel_init-1">jewel_init/1</a></h3>
+<div class="spec">
+<p><tt>jewel_init(Rs) -&gt; NewRs</tt>
+<ul class="definitions"><li><tt>Rs = NewRs</tt></li><li><tt>NewRs = #role{}</tt></li></ul></p>
+</div><p>初始化宝珠状态数据</p>
+
+<h3 class="function"><a name="jewel_update-1">jewel_update/1</a></h3>
+<div class="spec">
+<p><tt>jewel_update(Rs) -&gt; ok | error</tt>
+<ul class="definitions"><li><tt>Rs = #role{}</tt></li></ul></p>
+</div><p>保存宝珠状态数据到数据库</p>
+
+<h3 class="function"><a name="notice-1">notice/1</a></h3>
+<div class="spec">
+<p><tt>notice(Rs) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="notice-2">notice/2</a></h3>
+<div class="spec">
+<p><tt>notice(X1, Rs) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="notice-3">notice/3</a></h3>
+<div class="spec">
+<p><tt>notice(X1, Sender, V) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="online_check-0">online_check/0</a></h3>
+<div class="spec">
+<p><tt>online_check() -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="reset_password-3">reset_password/3</a></h3>
+<div class="spec">
+<p><tt>reset_password(Account, VerifyCode, Password) -&gt; {ok, Num} | {error, Reason}</tt>
+<ul class="definitions"><li><tt>Account = binary()</tt></li><li><tt>VerifyCode = integer()</tt></li><li><tt>Password = binary()</tt></li><li><tt>Num = integer()</tt></li><li><tt>Reason = aid | verify_code | term()</tt></li></ul></p>
+</div><p>重置密码</p>
+
+<h3 class="function"><a name="save_to_db-2">save_to_db/2</a></h3>
+<div class="spec">
+<p><tt>save_to_db(Rs, Save) -&gt; {true, NewRs} | {false, NewRs}</tt>
+<ul class="definitions"><li><tt>Rs = NewRs</tt></li><li><tt>NewRs = #role{}</tt></li><li><tt>Save = role | items | heroes | tavern | jewel | sign | attain | arena | fbinfo</tt></li></ul></p>
+</div><p>Rs里的数据回存到数据库
+ 'save_to_db</p>
+
+<h3 class="function"><a name="send_verify_code-1">send_verify_code/1</a></h3>
+<div class="spec">
+<p><tt>send_verify_code(Account) -&gt; {ok, Msg} | {error, Reason}</tt>
+<ul class="definitions"><li><tt>Account = term()</tt></li><li><tt>Msg = term()</tt></li><li><tt>Reason = term()</tt></li></ul></p>
+</div><p>发送验证码</p>
+
+<h3 class="function"><a name="send_verify_code2-2">send_verify_code2/2</a></h3>
+<div class="spec">
+<p><tt>send_verify_code2(PhoneNum, Code) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="spend-3">spend/3</a></h3>
+<div class="spec">
+<p><tt>spend(MoneyType, Value, Rs) -&gt; {ok, NewRs} | {error, Reason}</tt>
+<ul class="definitions"><li><tt>MoneyType = gold | diamond</tt></li><li><tt>Value = integer()</tt></li><li><tt>Rs = #role{}</tt></li><li><tt>NewRs = #role{}</tt></li><li><tt>Reason = term()</tt></li></ul></p>
+</div><p>消耗属性</p>
+
+<h3 class="function"><a name="spend_ok-4">spend_ok/4</a></h3>
+<div class="spec">
+<p><tt>spend_ok(MoneyType, LogType, RsA, RsB) -&gt; NewRsB</tt>
+<ul class="definitions"><li><tt>MoneyType = gold | diamond</tt></li><li><tt>LogType = integer()</tt></li><li><tt>RsA = #role{}</tt></li><li><tt>RsB = #role{}</tt></li><li><tt>NewRsB = #role{}</tt></li></ul></p>
+</div><p>成功消耗属性</p>
+
+<h3 class="function"><a name="stop-0">stop/0</a></h3>
+<div class="spec">
+<p><tt>stop() -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="time2diamond-1">time2diamond/1</a></h3>
+<div class="spec">
+<p><tt>time2diamond(Time) -&gt; integer()</tt>
+<ul class="definitions"><li><tt>Time = integer()</tt></li></ul></p>
+</div><p>CD时间换算成钻石</p>
+
+<h3 class="function"><a name="time2power-1">time2power/1</a></h3>
+<div class="spec">
+<p><tt>time2power(Rs) -&gt; NewRs</tt>
+<ul class="definitions"><li><tt>Rs = #role{}</tt></li><li><tt>NewRs = #role{}</tt></li></ul></p>
+</div><p>时间换算成疲劳值（体力值）</p>
+
+<h3 class="function"><a name="tracer-1">tracer/1</a></h3>
+<div class="spec">
+<p><tt>tracer(Aid) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="zip_kvs-1">zip_kvs/1</a></h3>
+<div class="spec">
+<p><tt>zip_kvs(Rs) -&gt; any()</tt></p>
+</div>
+<hr>
+
+<div class="navbar"><a name="#navbar_bottom"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
+<p><i>Generated by EDoc, Dec 28 2013, 11:58:20.</i></p>
+</body>
+</html>

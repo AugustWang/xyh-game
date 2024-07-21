@@ -1,0 +1,47 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?><?php echo $data['id'] ? '编辑用户组' : '新增用户组' ;?><?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+<div class="tableWrapper">
+    <form method="post">
+        <table class="gridview">
+            <tr>
+                <td class="label">组名称：<input type="hidden" name="data[id]" value="<?php echo $data['id']?>"></td>
+                <td><input type="text" name="data[name]" value="<?php echo $data['name']?>" />
+				<input type="hidden" name="do" value="<?php echo $data['id'] ? 'edited' : 'added' ;?>">
+				</td>
+            </tr>
+            <tr>
+                <td class="label">权限：</td>
+                <td>
+      <ul class="menu" style="width:100%;">
+      <?php
+    	$allMenu = Admin::getAdminMenu(true, true);
+		foreach($allMenu as $pid=>$mparent):
+		?>
+      <li style="float:left;width:180px;"><a href="javascript:void(0);" class="main"><span><?php echo $mparent['title']; ?></span></a>
+	    <ul>
+	      <?php foreach($mparent['sub'] as $sid=>$sub): ?>
+          <li><label><input name="data[menu][]" value="<?php echo $pid.$sid; ?>" type="checkbox" <?php echo in_array($pid.$sid, (array)$data['menu']) ? 'checked="checked"' :''; ?> /><?php echo $sub['title']; ?></a></label></li>
+		  <?php endforeach; ?>
+        </ul>
+	  </li>
+	  <?php
+	  endforeach;
+	   ?>
+
+	  </ul><div style="clear:both;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="label"></td>
+                <td>
+                    <input type="submit" name="submit" class="bigBtn" value="提交" />
+                    <input type="button" class="bigBtn" value="返回" onclick="location.replace('<?php echo $goback?>');" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<?php $this->endBlock('content');?>

@@ -1,0 +1,88 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?><?php echo $_GET['kw']['title'] ? $_GET['kw']['title']:'' ?>兑换码<?php $this->endBlock('title');?>
+
+<?php $this->block('buttons');?>
+<input type="button" class="btn" value="生成兑换码" onclick="location.replace('?mod=feedback&act=create_activate');"/>
+<input type="button" class="btn" value="兑换码统计" onclick="location.replace('?mod=feedback&act=log_activate');"/>
+<?php $this->endBlock('buttons');?>
+
+<?php $this->block('pager');?>
+<span class="pageIndex">
+    <?php echo $data['page_index']?>
+    <select name="limit" onchange="document.getElementById('mainForm').submit();">
+        <option value="<?php echo $limit?>" checked="checked">每页显示<?php echo $limit?>行</option>
+        <option value="" disabled="disabled">---</option>
+        <option value="30">30行</option>
+        <option value="50">50行</option>
+        <option value="100">100行</option>
+        <option value="200">200行</option>
+    </select>
+</span>
+<?php $this->endBlock('pager');?>
+
+<?php $this->block('content');?>
+<form id="mainForm" method="post" name="mainForm" action="?mod=feedback&act=activate">
+    <div class="searchPanel">
+        key：<input type="text" id="js_rname" name="kw[name]" value="<?php echo $kw['kw_name']?>" style="width:80px;" />
+        角色ID：<input type="text" id="js_rid" name="kw[id]" value="<?php echo $kw['kw_id']?>" style="width:40px;" />
+        奖励类型ID：<input type="text" id="js_type" name="kw[type]" value="<?php echo $kw['kw_type']?>" style="width:40px;" />
+        <span id="js_extra_search">
+          创建日期：<input type="text" class="js_starttime" name="kw[reg_st]" value="<?php echo $_REQUEST['kw']['reg_st'];?>" style="width:80px;" />-<input type="text" name="kw[reg_et]" value="<?php echo $_REQUEST['kw']['reg_et'];?>" class="js_endtime" style="width:80px;" />
+          到期日期：<input type="text" class="js_starttime" name="kw[login_st]" value="<?php echo $_REQUEST['kw']['login_st'];?>" style="width:80px;" />-<input type="text" name="kw[login_et]" value="<?php echo $_REQUEST['kw']['login_et'];?>" class="js_endtime" style="width:80px;" />
+        <input type="submit" name="search" value="搜索" class="btn" />
+        <input type="hidden" id="submit_type" name="submit_type", value="search" />
+        <input type="button" value="导出数据" onclick="javascript:{$('#submit_type').val('expload');this.disabled=true;document.mainForm.submit();}">
+        </span>
+    </div>
+    <div class="tableWrapper">
+        <table class="grid" id="gridview">
+            <thead>
+                <tr>
+                    <td>激活码</td>
+                    <td>奖励类型</td>
+                    <td>账号ID</td>
+                    <td>创建时间</td>
+                    <td>到期时间</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach($data['list'] as $v):
+                ?>
+                <tr>
+                    <td><?php echo $v['key']?></td>
+                    <td><?php echo $v['type']?></td>
+                    <td><?php echo $v['role_id']?></td>
+                    <td><?php echo date('Y-m-d H:i:s', $v['time'])?></td>
+                    <td><?php echo date('Y-m-d H:i:s', $v['time'] + 30 * 86400)?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="text-align:center;">↑</td>
+                    <td colspan="9">
+                        <?php $this->loadBlock('pager')?>
+                        <!--
+                        <input type="checkbox" name="chk_all" id="chk_all" />
+                        <input type="BUTTON" value="发邮件" onclick="javascript:{this.disabled=true;document.form1.submit();}">
+                        <input name="check" type="button" id="check" class="btnCheck" value="反选"/>
+                        <input name="uncheck" type="button" id="uncheck" class="btnUncheck" value="取消选中"/>
+                        <?php echo $op?>
+                        -->
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</form>
+<script>
+
+<?php
+if($alert){
+    echo "alert('{$alert}');";
+}
+?>
+</script>
+<?php $this->endBlock('content');?>

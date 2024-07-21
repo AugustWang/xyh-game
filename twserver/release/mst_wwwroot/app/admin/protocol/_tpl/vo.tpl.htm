@@ -1,0 +1,53 @@
+package game.net.data.vo
+{
+	import flash.utils.ByteArray;
+	import game.net.data.DataBase;
+	import game.net.data.vo.*;
+	import game.net.data.IData;
+
+    public class <?php echo $data['_obj_name']?> extends DataBase
+	{
+<?php foreach($data['vars'] as $v):?>
+		public var <?php echo $v['name']?> : <?php echo $v['type']?>;  
+<?php endforeach;?>
+		
+		public function <?php echo $data['_obj_name']?>()
+		{
+		}
+		
+		/**
+		 *
+		 * @param data
+		 */
+		override public function deSerialize(data:ByteArray):void
+		{
+			super.deSerialize(data);
+<?php foreach($data['vars'] as $v):?>
+<?php if($v['type'] == 'Vector.<int>'){?>
+			<?php echo $v['name']?>=readArrayInt();
+<?php }else if($v['type'] == 'Vector.<IData>'){?>
+			<?php echo $v['name']?>=readObjectArray(<?php echo $v['arg']?>);  
+<?php }else{?>
+			<?php echo $v['name']?>=data.<?php echo $v['de_fun']?>();  
+<?php }?>
+<?php endforeach;?>
+		}
+		
+		override public function serialize():ByteArray
+		{
+			var byte:ByteArray= new ByteArray();
+<?php foreach($data['vars'] as $v):?>
+<?php if($v['type'] == 'Vector.<int>'){?>
+			writeInts(<?php echo $v['name']?>,byte);  
+<?php }else if($v['type'] == 'Vector.<IData>'){?>
+            writeObjects(<?php echo $v['name']?>,byte);  
+<?php }else{?>
+            byte.<?php echo $v['se_fun']?>(<?php echo $v['name']?>);  
+<?php }?>
+<?php endforeach;?>
+			return byte;
+		}
+	}
+}
+
+// vim: filetype=php :

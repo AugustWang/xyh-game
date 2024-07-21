@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset= UTF-8">
+<title>Module lib_admin</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" title="EDoc">
+</head>
+<body bgcolor="white">
+<div class="navbar"><a name="#navbar_top"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
+<hr>
+
+<h1>Module lib_admin</h1>
+<ul class="index"><li><a href="#description">Description</a></li><li><a href="#index">Function Index</a></li><li><a href="#functions">Function Details</a></li></ul>WEB管理后台调用的API.
+
+<p><b>Authors:</b> Rolong (<a href="mailto:erlang6@qq.com"><tt>erlang6@qq.com</tt></a>).</p>
+
+<h2><a name="description">Description</a></h2>WEB管理后台调用的API
+<h2><a name="index">Function Index</a></h2>
+<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#add_attain-3">add_attain/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#add_attr-3">add_attr/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#add_attr-4">add_attr/4</a></td><td></td></tr>
+<tr><td valign="top"><a href="#add_diamond-2">add_diamond/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#add_gold-2">add_gold/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#add_heroes_exp-2">add_heroes_exp/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#add_item-3">add_item/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#add_item-4">add_item/4</a></td><td></td></tr>
+<tr><td valign="top"><a href="#add_item_by_sort-3">add_item_by_sort/3</a></td><td></td></tr>
+<tr><td valign="top"><a href="#add_power-2">add_power/2</a></td><td></td></tr>
+<tr><td valign="top"><a href="#get_online_roleid-0">get_online_roleid/0</a></td><td>获取所有在线的角色ID，用于后台在线列表.</td></tr>
+<tr><td valign="top"><a href="#get_online_roleid-1">get_online_roleid/1</a></td><td>获取所有在线的角色ID.</td></tr>
+<tr><td valign="top"><a href="#role_debug-1">role_debug/1</a></td><td></td></tr>
+<tr><td valign="top"><a href="#set_growth-2">set_growth/2</a></td><td></td></tr>
+</table>
+
+<h2><a name="functions">Function Details</a></h2>
+
+<h3 class="function"><a name="add_attain-3">add_attain/3</a></h3>
+<div class="spec">
+<p><tt>add_attain(Rid, Type, Num) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="add_attr-3">add_attr/3</a></h3>
+<div class="spec">
+<p><tt>add_attr(Rid, Attr, Num) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="add_attr-4">add_attr/4</a></h3>
+<div class="spec">
+<p><tt>add_attr(IdType, Id, AttrName, AttrVal) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="add_diamond-2">add_diamond/2</a></h3>
+<div class="spec">
+<p><tt>add_diamond(Rid, Num) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="add_gold-2">add_gold/2</a></h3>
+<div class="spec">
+<p><tt>add_gold(Rid, Num) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="add_heroes_exp-2">add_heroes_exp/2</a></h3>
+<div class="spec">
+<p><tt>add_heroes_exp(Rid, Num) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="add_item-3">add_item/3</a></h3>
+<div class="spec">
+<p><tt>add_item(Rid, Tid, Num) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="add_item-4">add_item/4</a></h3>
+<div class="spec">
+<p><tt>add_item(IdType, Id, Tid, Num) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="add_item_by_sort-3">add_item_by_sort/3</a></h3>
+<div class="spec">
+<p><tt>add_item_by_sort(Rid, Sort, Num) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="add_power-2">add_power/2</a></h3>
+<div class="spec">
+<p><tt>add_power(Rid, Num) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="get_online_roleid-0">get_online_roleid/0</a></h3>
+<div class="spec">
+<p><tt>get_online_roleid() -&gt; [list(), ...]</tt><br></p>
+</div><p>获取所有在线的角色ID，用于后台在线列表</p>
+
+<h3 class="function"><a name="get_online_roleid-1">get_online_roleid/1</a></h3>
+<div class="spec">
+<p><tt>get_online_roleid(Type) -&gt; [integer(), ...]</tt>
+<ul class="definitions"><li><tt>Type = list</tt></li></ul></p>
+</div><p>获取所有在线的角色ID</p>
+
+<h3 class="function"><a name="role_debug-1">role_debug/1</a></h3>
+<div class="spec">
+<p><tt>role_debug(Rid) -&gt; any()</tt></p>
+</div>
+
+<h3 class="function"><a name="set_growth-2">set_growth/2</a></h3>
+<div class="spec">
+<p><tt>set_growth(Rid, Num) -&gt; any()</tt></p>
+</div>
+<hr>
+
+<div class="navbar"><a name="#navbar_bottom"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
+<p><i>Generated by EDoc, Dec 28 2013, 11:58:20.</i></p>
+</body>
+</html>

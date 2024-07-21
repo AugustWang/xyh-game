@@ -1,0 +1,40 @@
+<?php $this->setLayout('main');?>
+
+<?php $this->block('title');?>
+设置荣誉值
+<?php $this->endBlock('title');?>
+
+<?php $this->block('content');?>
+
+<div class="tableWrapper">
+    <form method="post">
+        <table class="grid">
+            <tr>
+                <td align="right">
+                    角色ID ：</td>
+                <td align="left">
+                    <input name="id" type="text" value="<?php echo $id ?>" />                </td>
+            </tr>
+            <tr>
+              <td align="right">荣誉值                  ：</td>
+              <td align="left"><input type="text" name="num" /></td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td align="left"><input type="submit" name="submit" value="发送" /></td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</div>
+
+<script>
+<?php
+if($alert){
+	echo "alert('{$alert}');";
+}
+?>
+</script>
+
+<?php $this->endBlock('content');?>

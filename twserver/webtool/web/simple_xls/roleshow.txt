@@ -1,0 +1,135 @@
+id	avatar	moveSpeed	attackTime	attackMusic	attackType	attackEffect	underAttackEffect	weaponID	photo	card	half_photo
+100	role_100	128	422	gedou	3		skill_101		photo_100		portrait_100
+101	role_101	128	396	gedou	3		skill_101		photo_101		portrait_101
+102	role_102	154	573	gedou	3		skill_101		photo_102		portrait_102
+103	role_103	154	682	gedou	2	skill_2011	skill_126		photo_103		portrait_103
+104	role_104	128	755	gedou	2	skill_2011	skill_126		photo_104		portrait_104
+105	role_105	154	669	gedou	3		skill_101		photo_166
+106	role_106	154	333	gedou	3		skill_101		photo_106		portrait_106
+107	role_107	128	818	gedou	3		skill_101		photo_107		portrait_107
+108	role_108	154	455	gedou	3		skill_101		photo_108		portrait_108
+109	role_109	154	1178	gedou	2	skill_2003	skill_102		photo_109		portrait_109
+110	role_110	154	1083	gedou	2	skill_2003	skill_102		photo_110		portrait_110
+111	role_111	154	186	gedou	3		skill_101		photo_111		portrait_111
+112	role_112	154	1029	gedou	3		skill_101		photo_112		portrait_112
+113	role_113	154	430	gedou	3		skill_101		photo_113		portrait_113
+114	role_114	128	228	gedou	3		skill_101		photo_114		portrait_114
+115	role_115	128	666	gedou	3		skill_101		photo_115		portrait_115
+116	role_116	128	803	gedou	2	skill_2009	skill_102		photo_116		portrait_116
+117	role_117	154	1078	gedou	2	skill_2010	skill_125		photo_117		portrait_117
+118	role_118	154	651	gedou	2	skill_2010	skill_125		photo_118		portrait_118
+119	role_119	154	1078	gedou	2	skill_2010	skill_125		photo_119		portrait_119
+120	role_120	115	735	gedou	3		skill_101		photo_120		portrait_120
+121	role_121	128	470	gedou	3		skill_101		photo_121		portrait_121
+122	role_122	154	440	gedou	3		skill_101		photo_122		portrait_122
+123	role_123	154	615	gedou	3		skill_101		photo_123		portrait_123
+124	role_124	180	1020	gedou	3		skill_101		photo_124		portrait_124
+125	role_125	128	266	gedou	3		skill_101		photo_125		portrait_125
+126	role_126	154	760	gedou	3		skill_101		photo_126		portrait_126
+127	role_127	128	1269	gedou	3		skill_101		photo_127		portrait_127
+128	role_128	154	656	gedou	2	skill_2011	skill_126		photo_128		portrait_128
+129	role_129	154	444	gedou	2	skill_2008	skill_124		photo_129		portrait_129
+130	role_130	115	750	gedou	2	skill_2008	skill_124		photo_130		portrait_130
+131	role_131	115	364	gedou	3		skill_101		photo_131		portrait_131
+132	role_132	154	451	gedou	3		skill_101		photo_132		portrait_132
+133	role_133	128	848	gedou	3		skill_101		photo_133		portrait_133
+134	role_134	141	722	gedou	3		skill_101		photo_134		portrait_134
+135	role_135	167	472	gedou	3		skill_101		photo_135		portrait_135
+136	role_136	154	749	gedou	2	skill_2009	skill_102		photo_136		portrait_136
+137	role_137	154	550	gedou	3		skill_101		photo_137		portrait_137
+139	role_139	128	517	gedou	2	skill_2010	skill_101		photo_139		portrait_139
+140	role_140	154	474	gedou	3		skill_101		photo_140		portrait_140
+141	role_141	141	606	gedou	3		skill_101		photo_141		portrait_141
+142	role_142	102	436	gedou	2	skill_2011	skill_126		photo_142		portrait_141
+143	role_143	180	762	gedou	2	skill_2011	skill_126		photo_143		portrait_143
+144	role_144	128	366	gedou	3		skill_101		photo_144		portrait_144
+145	role_145	115	547	gedou	3		skill_101		photo_145		portrait_145
+146	role_146	167	389	gedou	2	skill_2009	skill_102		photo_146		portrait_146
+147	role_147	141	775	gedou	2	skill_2009	skill_102		photo_147		portrait_147
+148	role_148	154	620	gedou	3		skill_101		photo_148		portrait_148
+149	role_149	128	622	gedou	2	skill_2008	skill_124		photo_149		portrait_149
+150	role_150	206	933	gedou	3		skill_101		photo_150		portrait_150
+151	role_151	115	418	gedou	3		skill_101		photo_151		portrait_151
+152	role_152	180	1029	gedou	2	skill_2009	skill_102		photo_152		portrait_152
+153	role_153	167	397	gedou	3		skill_101		photo_153		portrait_153
+154	role_154	141	664	gedou	2	skill_2010	skill_125		photo_154		portrait_154
+155	role_155	128	579	gedou	3		skill_101		photo_155		portrait_155
+156	role_156	180	500	gedou	2	skill_2011	skill_126		photo_526		portrait_511
+157	role_157	154	500	gedou	2	skill_2010	skill_101		photo_157		portrait_157
+158	role_158	140	500	gedou	3		skill_101		photo_158		portrait_158
+159	role_159	170	500	gedou	2	skill_2011	skill_101		photo_159		portrait_159
+160	role_160	90	760	gedou	2	skill_2009	skill_102		photo_160		portrait_160
+161	role_161	130	738	gedou	3		skill_101		photo_161		portrait_161
+162	role_162	130	276	gedou	3		skill_101		photo_162		portrait_162
+163	role_163	90	460	gedou	2	skill_2010	skill_125		photo_163		portrait_163
+501	role_501	110	737	gedou	3		skill_101		photo_501		portrait_501
+502	role_502	110	794	gedou	2	skill_2011	skill_126		photo_502		portrait_502
+503	role_503	80	280	gedou	2	skill_2012	skill_126		photo_503		portrait_503
+504	role_504	130	618	gedou	3		skill_101		photo_504		portrait_504
+505	role_505	120	491	gedou	3		skill_101		photo_505		portrait_505
+506	role_506	90	650	gedou	3		skill_101		photo_506		portrait_506
+507	role_507	90	715	gedou	2	skill_2009	skill_102		photo_507		portrait_507
+508	role_508	150	444	gedou	3		skill_101		photo_508		portrait_508
+509	role_509	90	708	gedou	2	skill_2010	skill_125		photo_509		portrait_509
+510	role_510	170	903	gedou	4		skill_106		photo_510		portrait_176
+511	role_511	170	820	gedou	4		skill_106		photo_511		portrait_511
+164	role_164	110	780	gedou	3		skill_101		photo_164		portrait_164
+165	role_165	100	462	gedou	3		skill_101		photo_165		portrait_165
+166	role_166	140	669	gedou	3		skill_101		photo_166		portrait_166
+167	role_167	120	336	gedou	3		skill_101		photo_167		portrait_167
+168	role_168	130	575	gedou	3		skill_101		photo_168		portrait_168
+169	role_169	110	524	gedou	3		skill_101		photo_169		portrait_169
+170	role_170	170	181	gedou	3		skill_101		photo_170		portrait_170
+171	role_171	170	700	gedou	2	skill_2007	skill_101		photo_171		portrait_171
+172	role_172	100	488	gedou	3		skill_101		photo_172		portrait_172
+173	role_173	150	268	gedou	3		skill_101		photo_173		portrait_173
+174	role_174	90	602	gedou	2	skill_2009	skill_102		photo_174		portrait_174
+175	role_175	90	1081	gedou	2	skill_2009	skill_102		photo_175		portrait_175
+176	role_176	90	500	gedou	2	skill_2009	skill_102		photo_510		portrait_176
+177	role_177	110	737	gedou	3		skill_101		photo_177		portrait_167
+178	role_178	110	737	gedou	3		skill_101		photo_178		portrait_178
+179	role_179	90	737	gedou	3		skill_101		photo_179		portrait_179
+180	role_180	90	737	gedou	3		skill_101		photo_180		portrait_180
+181	role_181	90	737	gedou	3		skill_101		photo_181		portrait_181
+182	role_182	110	737	gedou	3		skill_101		photo_182		portrait_182
+183	role_183	90	307	gedou	2	skill_2009	skill_102		photo_183		portrait_183
+184	role_184	90	1328	gedou	2	skill_2008	skill_106		photo_184		portrait_184
+185	role_185	90	1129	gedou	2	skill_2009	skill_102		photo_185		portrait_185
+524	role_524	150	339	gedou	2	skill_2012	skill_126		photo_524		portrait_524
+525	role_525	110	1018	gedou	3		skill_101		photo_525		portrait_525
+526	role_526	90	1545	gedou	2	skill_2009	skill_102		photo_526		portrait_526
+186	role_186	110	1140	gedou	2	skill_2012	skill_126		photo_186		portrait_186
+187	role_187	30							photo_187
+188	role_188	110	737	gedou	3		skill_101		photo_188		portrait_188
+189	role_189	110	737	gedou	2		skill_101		photo_189		portrait_189
+190	role_190	110	517	gedou	3		skill_101		photo_190		portrait_190
+191	role_191	110	344	gedou	4		skill_101		photo_191		portrait_191
+192	role_192	110	790	gedou	2	skill_2012	skill_126		photo_192		portrait_192
+193	role_193	110	1700	gedou	3		skill_101		photo_193		portrait_193
+194	role_194	30							photo_194
+195	role_195	30							photo_195
+515	role_515	140	1333	gedou	3		skill_101		photo_515		portrait_515
+512	role_512	120	440	gedou	3		skill_101		photo_512		portrait_512
+513	role_513	110	890	gedou	3		skill_101		photo_513		portrait_513
+514	role_514	90	1300	gedou	4		skill_106		photo_514		portrait_514
+516	role_516	90	1530	gedou	2	skill_2012	skill_126		photo_516		portrait_516
+517	role_517	150	890	gedou	3		skill_101		photo_517		portrait_517
+518	role_518	130	800	gedou	2		skill_101		photo_518		portrait_518
+519	role_519	90	1300	gedou	2	skill_2009	skill_102		photo_519		portrait_519
+520	role_520	130	591	gedou	3		skill_101		photo_520		portrait_520
+521	role_521	90	343	gedou	2	skill_2012	skill_126		photo_521		portrait_521
+522	role_522	170	868	gedou	2	skill_2013	skill_102		photo_522		portrait_522
+523	role_523	90	1470	gedou	2	skill_2014	skill_136		photo_523		portrait_523
+1001	role_1001	110	737	gedou	3		skill_101		photo_1001		portrait_1001
+1002	role_1002	110	737	gedou	3		skill_101		photo_1002		portrait_1002
+1003	role_1003	110	737	gedou	3		skill_101		photo_1003		portrait_1003
+1004	role_1004	110	737	gedou	3		skill_101		photo_1004		portrait_1004
+1005	role_1005	110	737	gedou	3		skill_101		photo_1005		portrait_1005
+1006	role_1006	110	737	gedou	3		skill_101		photo_1006		portrait_1006
+1007	role_1007	110	737	gedou	3		skill_101		photo_1007		portrait_1007
+1008	role_1008	110	737	gedou	3		skill_101		photo_1008		portrait_1008
+1009	role_1009	30	1400		2		skill_101		photo_1009		portrait_1009
+1010	role_1010	30			2		skill_101		photo_1010		portrait_1010
+1011	role_1011	30			2		skill_101		photo_1011		portrait_1011
+1012	role_1012	30							photo_1012		portrait_1012
+1013	role_1013	30	934	gedou	2	skill_2011	skill_126		photo_1013		portrait_1013
